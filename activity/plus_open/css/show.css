@@ -1,0 +1,214 @@
+body{
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    font-family: Microsoft YaHei,sans-self;
+}
+
+h3{
+    font-weight:200;
+    font-size:35px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+h4{
+    font-weight:200;
+    font-size:26px;
+    -webkit-margin-before: 24px;
+    -webkit-margin-after: 0;
+}
+
+.loading{
+    position:absolute;
+    z-index: 999;
+    top:0;
+    left:0;
+    width:640px;
+    background:url(http://static.qiezipai.cn/activity/plus_open/image/start.gif) no-repeat center; 
+}
+.main_container{
+    position:absolute;
+    transform: translate3d(0px, 0px, 0px); 
+    transform-style: preserve-3d;
+
+    display: none;
+}
+
+#guide_hand{
+    width:90px;
+    height:80px;
+    position:absolute;
+    z-index:999;
+    left:500px;
+    bottom:250px;
+    background:url(http://static.qiezipai.cn/activity/plus_open/image/guidehand.png) no-repeat center;
+}
+.background{
+    width:100%;
+    height:100%;
+    background-image:url(http://static.qiezipai.cn/activity/plus_open/image/bg.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center 0;
+}
+#board{
+    position:absolute;
+    left:0;
+    background-image:url(http://static.qiezipai.cn/activity/plus_open/image/board.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center 0;
+}
+
+.pic_click{
+    position:absolute;
+    opacity:1;
+    background:#fff;
+    z-index:99;
+}
+.modal_show{
+    position:fixed;
+    z-index:999;
+    background:rgba(0,0,0,0.8);
+    width:100%;
+    display:none;
+}
+
+.modal_header{
+    position:absolute;
+    height:38px;
+    width:38px;
+    left:40px;
+    top:40px;
+    background:url(http://static.qiezipai.cn/activity/plus_open/image/X.png) no-repeat center;
+}
+.modal_cantent{
+    min-width:430px;
+    min-height:200px;
+    margin-top:30%;
+    background:url(http://static.qiezipai.cn/activity/plus_open/image/loading.gif) no-repeat center;
+}
+.modal_title{
+    text-align:center;
+    color:#fff;
+    margin-top:66px;
+    letter-spacing:1px;
+}
+.show_image{
+    
+}
+.show_vertical{
+    margin-top:-10%;
+    margin-left:105px;
+    width:430px;
+}
+.show_horizonal{
+    margin-top:5%;
+    margin-left:40px;
+    width:560px;
+}
+#exit_arrow{
+    position:absolute;
+    right:180px;
+    top:50%;
+    width:36px;
+    height:34px;
+}
+.exit_click{
+    position:absolute;
+    width:280px;
+    right:0;
+    top:0;
+}
+/*********door***********/
+
+.door_container{
+    width:640px;
+    background: url(http://static.qiezipai.cn/activity/plus_open/image/door_bg.png) no-repeat center top;
+    display: none;
+}
+
+#door{
+    width:124px;
+    position:absolute;
+    left:322px;
+    top:415px;
+    z-index: 999;
+}
+#door_open{
+    opacity: 0;
+    width:124px;
+    position:absolute;
+    left:322px;
+    top:415px;
+}
+#door_arrow{
+    position:absolute;
+    left:382px;
+    top:555px;
+    z-index: 9999;
+}
+
+/**********square************/
+
+.square_container{
+    width:640px;
+    display: none;
+} 
+.square{
+    position:absolute;
+    bottom:0;
+    background:url(http://static.qiezipai.cn/activity/plus_open/image/square_bg.png) no-repeat center bottom;
+    width:640px;
+}
+#square_arrow{
+    position:absolute;
+    left:345px;
+    bottom:150px;
+}
+.sky{
+    width:760px;
+    background: url(http://static.qiezipai.cn/activity/plus_open/image/sky.png) no-repeat left top;
+}
+.plane{
+    width:75px;
+    height:46px;
+    position:absolute;
+    left:-80px;
+    top:300px;
+    z-index: 999;
+}
+
+/*********share**********/
+.share_container{
+    display: none;
+    width:640px;
+    background: url(http://static.qiezipai.cn/activity/plus_open/image/share_bg.png) no-repeat center top;
+}
+
+.share_link{
+    position:absolute;
+    width:640px;
+    height:100px;
+    left:0;
+    top:850px;
+}
+
+
+.shareguide_container{
+    display: none;
+    position:fixed;
+    top:0;
+    width:640px;
+    background: rgba(0,0,0,0.8);
+}
+.shareguide_container img{
+    position:absolute;
+    top:0;
+    width:640px;
+    z-index: 999;
+}
+
+.preload{
+    display: none;
+}

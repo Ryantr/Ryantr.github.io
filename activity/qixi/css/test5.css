@@ -1,0 +1,217 @@
+body{
+    padding:0;
+    margin:0;
+    width:640px;
+    height:100%;
+    font-family: Microsoft YaHei,sans-self;
+}
+input{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    tap-highlight-color:rgba(0,0,0,0);
+
+}
+.container{
+    width:640px;
+    height:100%;
+}
+.btn_container{
+    width:640px;
+    height:auto;
+    text-align:center;
+    padding-bottom:50px;
+}
+.btn{
+    width:505px;
+    height:91px;
+    margin-top:30px;
+    font-size:28px;
+    font-family: Microsoft YaHei,sans-self;
+    font-weight:100;
+    padding-bottom:13px;
+    border-style:none;
+    outline:0;
+}
+/*************************/
+
+.container_1{
+    background:#77b4bb;
+}
+.head_1{
+    background:url(http://static.qiezipai.cn/activity/qixi/image/bg/test5-1.png) no-repeat top center;
+    height:510px;
+}
+.btn_1{
+    color:#28767f;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/test5-1-normal.png) no-repeat bottom center;
+}
+.btn1-down{
+    height:79px;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/test5-1-down.png) no-repeat bottom center;
+    padding-bottom:0;
+}
+
+/************************/
+.container_2{
+    background:#67c2bf;
+    display: none;
+}
+.head_2{
+    background:url(http://static.qiezipai.cn/activity/qixi/image/bg/test5-2.png) no-repeat top center;
+    height:510px;
+}
+.btn_2{
+    color:#298083;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/test5-2-normal.png) no-repeat bottom center;
+}
+.btn2-down{
+    height:79px;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/test5-2-down.png) no-repeat bottom center;
+    padding-bottom:0;
+}
+
+/**********************/
+.container_3{
+    background:#657391;
+    display: none;
+}
+.head_3{
+    background:url(http://static.qiezipai.cn/activity/qixi/image/bg/test-3.png) no-repeat top center;
+    height:510px;
+}
+.btn_3{
+    color:#203d78;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/test-3-normal.png) no-repeat bottom center;
+}
+.btn3-down{
+    height:79px;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/test-3-down.png) no-repeat bottom center;
+    padding-bottom:0;
+}
+
+
+/**********************/
+.container_result{
+    width:640px;
+    height:auto;
+    background:#60c4b2;
+    display: none;
+}
+
+.result_egg{
+    position:relative;
+    width:640px;
+}
+.wait_shadow{
+    position:absolute;
+    bottom:0;
+    z-index: 80;
+}
+.result_wait{
+    position:relative;
+    z-index: 99;
+}
+.result_title{
+    height:160px;
+    width:640px;
+    position:relative;
+}
+.card_bg{
+    position:absolute;
+    top:-240px;
+    width:512px;
+    left:64px;
+}
+.title_container{
+    height:80px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    width:490px;
+    position:absolute;
+    left:75px;
+    bottom:50px;
+    text-align: center;
+}
+.sale_code{
+    letter-spacing: 2px;
+    line-height: 70px;
+    font-weight: 100;
+    font-size:32px;
+    z-index:99;
+    color:#39b192;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+.sale_code span{
+    font-weight: 300;
+    font-size: 38px;
+    color:#676767;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+.title_container p{
+    font-size: 24px;
+    font-weight: 100px;
+    color:#9b9b9b;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+.result_btn_container{
+    width:540px;
+    margin-top: 30px;
+    margin-left: 50px;
+    padding-bottom: 50px;
+}
+.btn_result{
+    width:251px;
+    height:101px;
+    font-size:28px;
+    font-family: Microsoft YaHei,sans-self;
+    font-weight:100;
+    padding-bottom:15px;
+    border-style:none;
+    outline:0;
+    margin-top: 30px;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/result/result-normal.png) no-repeat top center;
+}
+.btn_down{
+    float:right;
+}
+.result-down{
+    background:url(http://static.qiezipai.cn/activity/qixi/image/result/result-down.png) no-repeat top center;
+}
+/******************/
+
+.modal_share{
+    width:640px;
+    background:rgba(0,0,0,0.7);
+    position:fixed;
+    top:0;
+    left: -640px;
+    z-index: 999;
+}
+.share_guide{
+    position:fixed;
+    top:0;
+    left:-640px;
+    width:640px;
+}
+.shown{
+    display: block;
+}
+
+.result1{
+    display: none;
+}
+.result2{
+    display: none;
+}
+.result3{
+    display: none;
+}
+
+
+.result_wait_loading{
+    display: none;
+}

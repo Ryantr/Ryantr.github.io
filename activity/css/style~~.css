@@ -1,0 +1,235 @@
+/*****初始化***/
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl, dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,iframe{
+	margin: 0;
+	padding: 0;
+	bottom: 0px;
+	font-style:normal;
+}
+h1,h2,h3,h4,h5,h6{font-size:100%;line-height: 1.3;}
+h1 {font-size:1em; font-weight:normal; color:#FFF;}
+body,button,input,select,textarea {font-family:Microsoft YaHei,sans-self;font-size:16px; line-height:1.5;}
+ol,ul{list-style:none;}
+html,body{ width:100%; height:100%;}
+body{background-color:#ecedee};		
+p{}
+
+/**************/
+
+.header { 	position:absolute;
+			background-image:url(../image/background.png);
+			background-repeat:no-repeat;
+			background-size:cover;
+			top:0;
+			width:100%;
+			height:42%;}
+
+.header .tx{ position:relative;
+			 text-align:center;
+			 margin-top:10%;
+		}
+.header .tx img {
+		width:75px;
+		height: 75px;
+		border-radius:37.5px;
+		}
+
+.title_tx {
+		position:relative;
+		text-align:center;
+		margin-top:3%;
+		}
+.title_tx h1{}
+.title_tx span{color:#F00}	
+	
+
+.text_phone { position:absolute;
+			  text-align:center;
+			  top:45%;
+			  width:100%;
+		
+	}
+.text_phone #text_phone{
+				height:46px;
+				width:85%;
+				border-radius:5px;	
+				border-style:none;
+				background-color:#CCC;
+				color:#FFF;
+				text-align:center;
+				}
+				
+.text_phone #text_phone:focus {
+			background-color:#FFF;		
+			color:#000;
+			
+	}
+
+.text_phone #submit{width:85%;
+					height:46px;
+					background-color:#CCC;
+					border-radius:23px;
+					margin-top:3%;
+					border-style:none;
+					color:#FFF;
+					-webkit-appearance:none;
+				}
+
+.title_li {	position:absolute;
+		   	top:65%;
+			width:70%;
+			left:15%;
+			}
+			
+.title_li li {
+			color:#333;
+			line-height:2em;
+			vertical-align:middle;
+			font-size:0.8em;
+	
+	}
+.title_li img {margin:0 auto;}
+
+li{}
+
+
+.footer_m{
+			width:100%;
+			height:55px;
+			
+			position:absolute;
+			bottom:0;
+			background-color:#53dcbc;
+			line-height:55px;
+			}
+.footer_m img{ width:25%;line-height:55px;vertical-align:middle;margin-left:10px;}
+.footer_m a { padding-left:40%;}
+
+
+/*******************page_2***********************/
+
+.header_2 {	position:relative;
+			top:0;
+			width:100%;
+			text-align:center;
+			margin-top:10%;}
+
+				
+.header_2 img {
+			width:40%;
+			}
+			
+.title_hongbao {
+			position:relative;
+			text-align:center;
+			margin-top:4%;
+			
+	
+		}
+.title_hongbao h1{
+			color:#F60;
+			font-size:1.5em;
+			line-height:1.5em;
+	}
+.title_hongbao p {
+			font-size:0.9em;
+			font-weight:lighter;
+	}
+			
+.btn_main {
+	 		position:relative;
+			text-align:center;
+			margin-top:4%;
+			width:100%;}
+
+.btn_main button{
+			width:85%;
+			height:46px;
+			background-color:#63d1c3;
+			border-radius:23px;
+			margin-top:3%;
+			border-style:none;
+			color:#FFF;
+	
+		}
+.footer_m p{ 
+			display:inline;
+			font-size:0.7em;
+			color:#FFF;
+			padding-left:15%;
+			}
+			
+			
+
+
+
+.guide img {position:absolute;top:10px;max-width:100%;z-index:9999;}
+.mask{margin:0;padding:0;border:none;width:100%;height:100%;background:#333;opacity:0.6;filter:alpha(opacity=60);z-index:999;position:fixed;top:0;left:0;display:none;}
+
+@media screen and (min-width:1000px) 
+{
+	.header { 
+		background-position:center;
+		background-size:contain;
+		}
+	.header .tx img {
+		width:150px;
+		}
+	.header .tx{
+		margin-top:40px;
+		}
+	.title_tx {
+		margin-top:20px;
+		}
+	.text_phone { 
+		left:25%;
+		top:48%;
+		width:50%;
+		}	
+	.title_li {	
+		top:70%;
+		width:50%;
+		left:25%;
+			}
+	.footer_m{
+		width:50%;
+		left:25%;
+		height:55px;
+		bottom:0;
+		background-color:#53dcbc;
+		line-height:55px;
+			}		
+			
+	.header_2 {	
+		margin-top:40px;}
+						
+	.header_2 img {
+			width:150px;
+			}
+	.title_hongbao {
+			margin-top:20px;
+		}
+	.btn_main {
+			margin-top:30px;
+			width:50%;
+			left:25%;}
+	
+}
+@media screen and (min-width:770px) 
+{
+
+}
+
+
+@media screen and (max-width: 580px) {}
+
+
+
+@media screen and (max-width: 380px){}
+
+
+@media screen and (max-height: 520px)
+{
+.text_phone #text_phone{height:40px;}
+.text_phone #submit{height:40px;}
+}

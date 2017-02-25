@@ -1,0 +1,306 @@
+
+
+   /*****初始化***/
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl, dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,iframe{
+    margin: 0;
+    padding: 0;
+    font-style:normal;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+body,button,input,select,textarea {font-family:STHeiti,LiHei Pro Medium,Microsoft YaHei,sans-self;font-size:16px; line-height:1.5;}
+ol,ul{list-style:none;}
+html,body{ width:100%; height:100%;}
+body{overflow:hidden;}
+h4{
+  font-size:28px;
+  font-weight: 400;
+  line-height:28px;
+}
+/**************/
+
+.headerContainer{
+  position:relative;
+  width:750px;
+  height:512px;
+  background:no-repeat center;
+  background-size:cover;
+  background-color:#ccc;
+}
+.headerName{
+  position:absolute;
+  bottom:30px;
+  right:200px;
+  font-size:34px;
+  font-weight:400;
+  color:#fff;
+  text-shadow: 0px 2px 0 #333;
+}
+.headerTxContainer{
+  position:absolute;
+  bottom:-47px;
+  right:20px;
+  width:150px;
+  height:150px;
+  border:1px solid #d4d4d4;
+  background-color:#fff;
+}
+.headerTx{
+  width:140px;
+  height:140px;
+  margin:5px;
+}
+
+.cardContainer{
+  padding-top:40px;
+}
+.card{
+  margin-top:30px;
+  width:750px;
+  padding-bottom:30px;
+  border-bottom:2px solid #e0e0e0;
+}
+.cardTx{
+  width:80px;
+  height:80px;
+  float:left;
+  margin-left:22px;
+  background:no-repeat center;
+  background-size:cover;
+}
+.cardContent{
+  width:610px;
+  margin-left:122px;
+  padding-top:7px;
+}
+.name{
+  color:#576b95;
+}
+.momentContent{
+  margin-top:15px;
+  line-height:34px;
+  color:#272727;
+}
+
+.momentImgOne{
+  margin-top:28px;
+  max-height:351px;
+  max-width:384px;
+}
+.momentImgContainer{
+  width:330px;
+  margin-top:28px;
+}
+.momentImgTwo{
+  width:158px;
+  height:158px;
+  display:inline-block;
+  background:no-repeat center;
+  background-size:cover;
+}
+.dateContainer{
+  padding-right: 10px;
+  font-size:24px;
+  color:#999;
+  margin-top:30px;
+  font-weight:100;
+}
+.commentIcon{
+  float:right;
+  width:38px;
+  height:28px;
+}
+.commentContainer{
+  position:relative;
+  /*padding-left:58px;*/
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top:22px;
+  padding-bottom:10px;
+  width:570px;
+  margin-top:32px;
+  background-color:#f3f3f5;
+}
+.likeIcon{
+  position:absolute;
+  left:20px;
+  top:30px;
+}
+.arrowIcon{
+  position:absolute;
+  top:-10px;
+  left:20px;
+}
+.like{
+  color:#576b94;
+  line-height:35px;
+  padding-bottom:25px;
+  padding-left:38px;
+}
+.comment{
+  margin-top: 10px;
+  line-height:35px;
+}
+.commentName{
+  color:#576b94;
+}
+.fold{
+  height:250px;
+  overflow: hidden;
+}
+.foldOpen{
+  height:350px;
+}
+.unflod{
+  margin-top: 230px;
+}
+.foldbtn{
+  color:#576b94;
+}
+
+.emotion{
+  position:relative;
+  width:42px;
+  height:42px;
+  padding-left:20px;
+  padding-right:20px;
+}
+.emotion img{
+  width:42px;
+  height:42px;
+  left:10px;
+  position:absolute;
+  top:-5px;
+}
+
+.footerContainer{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.footerBtn{
+  height:80px;
+  line-height: 80px;
+  width:450px;
+  margin:auto;
+  border-radius: 5px;
+  background-color: #32debf;
+  text-align: center;
+}
+.shareBtn{
+  margin-top: 15px;
+}
+.footerBtn p{
+  margin-top: 5px;
+  font-size: 28px;
+  color:#fff;
+}
+.ps{
+  margin-top: 10px;
+  font-size: 18px;
+  color:#808080;
+}
+
+
+
+.loadingContainer{
+  position:fixed;
+  z-index: 999;
+  top:0;
+  left:0;
+  height:100%;
+  width:750px;
+  background-color: #fff;
+  text-align: center;
+}
+#loadImg{
+  margin-top:50%;
+}
+
+@keyframes myfirst
+{
+  from {transform:rotate(0deg);
+        -ms-transform:rotate(0deg);   /* IE 9 */
+        -moz-transform:rotate(0deg);  /* Firefox */
+        -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+          -o-transform:rotate(0deg);}
+  to {transform:rotate(360deg);
+        -ms-transform:rotate(360deg);   /* IE 9 */
+        -moz-transform:rotate(360deg);  /* Firefox */
+        -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+          -o-transform:rotate(360deg);}
+}
+@-moz-keyframes myfirst /* Firefox */
+{
+  from {transform:rotate(0deg);
+        -ms-transform:rotate(0deg);   /* IE 9 */
+        -moz-transform:rotate(0deg);  /* Firefox */
+        -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+          -o-transform:rotate(0deg);}
+  to {transform:rotate(360deg);
+        -ms-transform:rotate(360deg);   /* IE 9 */
+        -moz-transform:rotate(360deg);  /* Firefox */
+        -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+          -o-transform:rotate(360deg);}
+}
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+  from {transform:rotate(0deg);
+        -ms-transform:rotate(0deg);   /* IE 9 */
+        -moz-transform:rotate(0deg);  /* Firefox */
+        -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+          -o-transform:rotate(0deg);}
+  to {transform:rotate(360deg);
+        -ms-transform:rotate(360deg);   /* IE 9 */
+        -moz-transform:rotate(360deg);  /* Firefox */
+        -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+          -o-transform:rotate(360deg);}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+  from {transform:rotate(0deg);
+        -ms-transform:rotate(0deg);   /* IE 9 */
+        -moz-transform:rotate(0deg);  /* Firefox */
+        -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+          -o-transform:rotate(0deg);}
+  to {transform:rotate(360deg);
+        -ms-transform:rotate(360deg);   /* IE 9 */
+        -moz-transform:rotate(360deg);  /* Firefox */
+        -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+          -o-transform:rotate(360deg);}
+}
+.rotateLoading{
+  animation: myfirst 2.5s linear infinite;
+  -moz-animation: myfirst 2.5s linear infinite; /* Firefox */
+  -webkit-animation: myfirst 2.5s linear infinite;  /* Safari 和 Chrome */
+  -o-animation: myfirst 2.5s linear infinite;
+}
+
+
+.modalContainer{
+  display: none;
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color: rgba(0,0,0,0.8);
+}
+.shareguide{
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+.qrContainer{
+  display: none;
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color: rgba(0,0,0,0.8);
+}

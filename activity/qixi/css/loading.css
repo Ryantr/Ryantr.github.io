@@ -1,0 +1,74 @@
+
+body{
+    width:640px;
+    padding:0;
+    margin:0;
+    overflow: hidden;
+    background: #ff9898; 
+}
+input{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    tap-highlight-color:rgba(0,0,0,0);
+}
+.waiting{
+    background: url(http://static.qiezipai.cn/activity/qixi/image/waiting.gif) no-repeat center;
+    background-size:cover;
+}
+.page_cover{
+    width:640px;
+    position:absolute;
+    top:0;
+    background: #ff9898; 
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+}
+.page_cover_bg{
+
+    background: url(http://static.qiezipai.cn/activity/qixi/image/bg/guide_1.png) no-repeat center;
+    background-size:cover; 
+}
+.loading_page{
+    overflow: hidden;
+    position:relative;
+    height:3400px;
+    display: none;
+    /*background: url(http://static.qiezipai.cn/activity/qixi/image/loading.png) no-repeat top center;*/
+}
+.loading{
+    width:640px;
+    position:absolute;
+    top:0;
+}
+.btn_test{
+    position:absolute;
+    width:640px;
+    background: #ff9898; 
+    height:150px;
+    text-align: center;
+    bottom:100px;
+}
+.btn{
+    width:505px;
+    height:91px;
+    font-size:28px;
+    font-family: Microsoft YaHei,sans-self;
+    font-weight:100;
+    padding-bottom:13px;
+    border-style:none;
+    outline:0;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/1-normal.png) no-repeat bottom center;
+}
+
+.btn-down{
+    height:79px;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/1-down.png) no-repeat bottom center;
+    padding-bottom:0;
+}
+
+.fly{
+    top:-2000px !important;
+    -webkit-transition: top 0.7s ease;
+    -o-transition: top 0.7s ease;
+    transition: top 0.7s ease;
+    -moz-transition: top 0.7s ease;
+}

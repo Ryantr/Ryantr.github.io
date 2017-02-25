@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" /> 
+  <meta name="viewport" content="target-densitydpi=device-dpi,width=750" > 
+  <title>朋友圈</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/util750.js" type="text/javascript"></script>
+
+  <script src="../js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/func.js" type="text/javascript"></script>
+
+</head>
+<body>
+<input type="hidden" id="username" value="李炜">
+<input type="hidden" id="usertx" value="./image/testtx.jpg">
+<input type="hidden" id="coverurl" value="./image/cover/boycover1.jpg">
+
+<div class="loadingContainer">
+  <img class="rotateLoading" id="loadImg" src="./image/loading.png">
+  <h4>Loading...</h4>
+</div>
+
+<div class="girlContainer">
+  <div class="headerContainer" style="">
+    <h3 class="headerName userName"></h3>
+    <div class="headerTxContainer">
+        <img class="headerTx" src="">
+    </div>
+  </div> 
+
+  <div class="cardContainer">
+    <div class="card">
+      <div class="cardTx userTx"></div>
+        <div class="cardContent">
+          <h4 class="name userName">用户名</h4>
+          <h4 class="momentContent">这到底怎么选啊摔！</h4>
+          <img class="momentImgOne" data-src="./image/figure/1.jpg">
+          <h5 class="dateContainer">12月15日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">莱昂纳多，德普，李佩斯，布拉德.皮特，爱德华.诺顿，罗伯特.帕丁森</h4>
+            <h4 class="comment"><span class="commentName">莱昂纳多</span>：北鼻选我！</h4>
+            <h4 class="comment"><span class="commentName">布拉德.皮特</span>：哈尼选我！</h4>
+            <h4 class="comment"><span class="commentName">德普</span>：甜心选我！</h4>
+            <h4 class="comment"><span class="commentName">王思聪</span>：亲爱的选我！</h4>
+            <h4 class="comment"><span class="commentName userName">用户名</span>回复<span class="commentName">王思聪</span>：抱歉，没找到你<span class="emotion"><img src="./image/smile.png"></span></h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/sunli.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">孙俪</h4>
+          <h4 class="momentContent">其实<span class="userName">梅花图</span>也曾是芈月的候选人之一，<span class="userName">梅花图</span>在颜值和演技上都没问题，但你的饭量实在太大了，这会大大增加拍摄成本，按照剧组的预算，你最多只能活到第二集。</h4>
+
+          <img class="momentImgOne" data-src="./image/figure/2.jpg">
+
+          <h5 class="dateContainer">12月10日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">孙俪，方中信，邓超，刘涛，高云翔，高圆圆</h4>
+            <h4 class="comment"><span class="commentName">胡歌</span>：妈蛋，又黑我家<span class="userName">梅花图</span><span class="emotion"><img src="./image/fuck.png"></span></h4>
+            <h4 class="comment"><span class="commentName">蒋欣</span>：没能和<span class="userName">梅花图</span>这么优秀的青年演员合作真是可惜。好妹妹，下次有机会一起吃盒饭</h4>
+            <h4 class="comment"><span class="commentName">刘涛</span>：<span class="userName">梅花图</span>，吃的这么多还不胖</h4>
+            <h4 class="comment"><span class="commentName userName">用户名</span>：呵呵哒</h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx userTx"></div>
+        <div class="cardContent">
+          <h4 class="name userName">用户名</h4>
+          <h4 class="momentContent">分分钟被叫阿姨<span class="emotion"><img src="./image/bye.png"></span></h4>
+          <img class="momentImgOne" data-src="./image/figure/3.jpg">
+          <h5 class="dateContainer">12月1日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">王思聪，胡歌，霍建华，王凯，吴彦祖，吴亦凡，鹿晗，彭于晏，宁泽涛，陈伟霆</h4>
+            <h4 class="comment"><span class="commentName">吴亦凡</span>：大叔配阿姨，我配你</h4>
+            <h4 class="comment"><span class="commentName">余文乐</span>：我比你高阿</h4>
+            <h4 class="comment"><span class="commentName">王思聪</span>：你是我见过白富美中最漂亮的阿姨</h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/banzhang.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">班长</h4>
+          <h4 class="momentContent">学校广场的广场舞大妈跳出了寂静岭的风采</h4>
+          <img class="momentImgOne" data-src="./image/figure/4.jpg">
+          <h5 class="dateContainer">11月30日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">辅导员，导师，高数老师，街舞协会会长，大崔，班长，导员助理</h4>
+            <h4 class="comment"><span class="commentName userName">用户</span>：有点吓人</h4>
+            <h4 class="comment"><span class="commentName">导员助理</span>：学习运动精神，年轻人要不怕吃苦努力奋斗</h4>
+            <h4 class="comment"><span class="commentName">街舞协会会长</span>：加入他们吧</h4>
+            <h4 class="comment"><span class="commentName">班长</span>：大妈，北京雾霾对你影响大么？大妈：影响能不大么！首先你得看清楚，我是你大爷。</h4>
+          </div>
+        </div>
+    </div> <!--card4-->
+ 
+    <div class="card">
+      <div class="cardTx userTx"></div>
+        <div class="cardContent">
+          <h4 class="name userName">用户名</h4>
+          <h4 class="momentContent">除了有钱和美貌，我一无所有，不过没关系，因为我#主要看气质#</h4>
+          <img class="qizhi" style="width:300px;height:300px;margin-top:28px;" src="">
+
+          <h5 class="dateContainer">11月23日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">王凯，胡歌，霍建华，王俊凯，杨幂，蔡依林，谢娜，angelababy，黄晓明，钟汉良，李易峰，吴亦凡，林志玲，舒淇，王珞丹</h4>
+            <h4 class="comment"><span class="commentName">胡歌</span>：你很有气质，这也是我选择你的原因</h4>
+            <h4 class="comment"><span class="commentName userName">用户</span>回复<span class="commentName">胡歌</span>：么么哒<span class="emotion"><img src="./image/love.png"></h4>
+            <h4 class="comment"><span class="commentName">王凯</span>回复<span class="commentName">胡歌</span>：咱俩打一架吧</h4>
+            <h4 class="comment"><span class="commentName">赵丽颖</span>：口亨</h4>
+            <h4 class="comment"><span class="commentName">蔡依林</span>：学习了，我也发#主要看气质# </h4>
+          </div>
+        </div>
+    </div> <!--card--> 
+
+    <div class="card">
+      <div class="cardTx userTx" ></div>
+        <div class="cardContent">
+          <h4 class="name userName">用户名</h4>
+          <h4 class="momentContent">明天双十一，手已剁，明天准备开始吃土，听说学校操场附近的土质不错<span class="emotion"><img src="./image/bye.png"></span></h4>
+          <img class="momentImgOne" data-src="./image/figure/6.jpg">
+          
+          <h5 class="dateContainer">11月11日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">大崔，马云，王旭师兄</h4>
+            <h4 class="comment"><span class="commentName">王思聪</span>：傻瓜，我刚已经把你购物车结了。</h4>
+            <h4 class="comment"><span class="commentName">胡歌</span>：我的卡，你随便刷，但有一个前提，你得帮我养猫</h4>
+            <h4 class="comment"><span class="commentName">霍建华</span>回复<span class="commentName">胡歌</span>：想都别想！你的猫在我手里！哼！</h4>
+          </div>
+        </div>
+    </div> <!--card--> 
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/caikangyong.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">蔡康永</h4>
+          <h4 class="momentContent">录完了最后一集，只有康和熙的康熙。</h4>
+          <img class="momentImgOne" data-src="./image/figure/7.jpg">
+          
+          <h5 class="dateContainer">10月16日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">小s，大s，<span class="userName">用户名</span>，汪小菲，范玮琪，陈建州，陈汉典，柯景腾，王伟忠，萧敬腾，王力宏，林俊杰，周杰伦，蔡依林，阮经天，陈意涵，郭采洁，赵又廷，马冬，金星，高晓松，吴宗宪，张菲，费玉清</h4>
+            <h4 class="comment"><span class="commentName">小s</span>：白说话，吻我。</h4>
+            <h4 class="comment"><span class="commentName">柯震东</span>：舍不得<span class="emotion"><img src="./image/cry.png"></span></h4>
+            <h4 class="comment"><span class="commentName">王思聪</span>回复<span class="commentName">柯震东</span>：里面还可以用手机？</h4>
+            <h4 class="comment"><span class="commentName">柯震东</span>回复<span class="commentName">王思聪</span>：干！出来了啦！</h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/qiangdong.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">刘强东</h4>
+          <h4 class="momentContent">今天是和小天的大喜之日，感谢大家捧场~</h4>
+          <div class="momentImgContainer">
+            <div class="momentImgTwo" style="background-image:url(./image/figure/8-1.jpg)"></div>
+            <div class="momentImgTwo" style="background-image:url(./image/figure/8-2.jpg);margin-left:6px;"></div>
+          </div> 
+          
+          <h5 class="dateContainer">10月1日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like"><span class="userName">用户名</span>，马云，马化腾，胡海泉，章泽天，王思聪</h4>
+            <h4 class="comment"><span class="commentName">章泽天</span>：<span class="userName">用户名</span>，你今天比我还美</h4>
+            <h4 class="comment"><span class="commentName userName">用户名</span>回复<span class="commentName">章泽天</span>：<span class="emotion"><img src="./image/smile.png"></span>，怪我咯</h4>
+            <h4 class="comment"><span class="commentName">刘强东</span>回复<span class="commentName">章泽天</span>：小天在我心中永远是最美哒</h4>
+            <h4 class="comment"><span class="commentName">王思聪</span>回复<span class="commentName">刘强东</span>：<span class="emotion"><img src="./image/spit.png"></span></h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/ma.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">老妈</h4>
+          <h4 class="momentContent">梅长苏太帅！为靖王捉急！</h4>
+          <img class="momentImgOne" data-src="./image/figure/9.jpg">
+          
+          <h5 class="dateContainer">9月23日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">爸爸，<span class="userName">用户名</span>，胡歌，王凯，霍建华</h4>
+            <h4 class="comment"><span class="commentName">胡歌</span>：妈，妈，妈<span class="emotion"><img src="./image/laugh.png"></span></h4>
+            <h4 class="comment"><span class="commentName">王凯</span>：我说伯母，我要是不那么捉急，还能演到55集吗……</h4>
+            <h4 class="comment"><span class="commentName">老爸</span>：我说老太婆，能把晚饭先做了吗</h4>
+            <h4 class="comment"><span class="commentName userName">用户</span>回复<span class="commentName">老爸</span>：苦了您了</h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx userTx" ></div>
+        <div class="cardContent">
+          <h4 class="name userName">用户名</h4>
+          <h4 class="momentContent">最帅的逆行</h4>
+          <img class="momentImgOne" data-src="./image/figure/10.jpg">
+          
+          <h5 class="dateContainer">8月23日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">校会主席，宁泽涛，王凯，校长，韩寒，隔壁老王，白百合，邓超，郑恺，胡歌</h4>
+            <h4 class="comment"><span class="commentName">宁泽涛</span>：转走啦</h4>
+            <h4 class="comment"><span class="commentName">霍建华</span>：转走啦</h4>
+            <h4 class="comment"><span class="commentName">李易峰</span>：转走啦</h4>
+            <h4 class="comment"><span class="commentName">黄磊</span>：向消防官兵致敬</h4>
+
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/ningzetao.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">宁泽涛</h4>
+          <h4 class="momentContent">我最要感谢的一个人<span class="userName">用户名</span>，如果不是她给予爱的鼓励与鞭策，就没有我的今天，我想这块奖牌是属于我们的，今晚我在家等你宝贝。</h4>
+          <img class="momentImgOne" data-src="./image/figure/11.jpg">
+          
+          <h5 class="dateContainer">8月6日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like"><span class="userName">用户名</span>，彭于晏，angelababy，黄晓明，刘翔，姚明，胡歌，赵又廷</h4>
+            <h4 class="comment"><span class="commentName userName"></span>：好哒~</h4>
+            <h4 class="comment"><span class="commentName"> 彭于晏</span>回复<span class="commentName userName">用户</span>：什么时候翻我牌子</h4>
+            <h4 class="comment"><span class="commentName"> 王思聪</span>回复<span class="commentName userName">用户名</span>：什么时候翻我牌子</h4>
+            <h4 class="comment"><span class="commentName"> 赵丽颖</span>回复<span class="commentName userName">用户名</span>：<span class="emotion"><img src="./image/contempt.png"></span></h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/liuye.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">刘烨</h4>
+          <h4 class="momentContent">诺一想用我手机给夏天打电话，我判断他这样属于早恋，作为一个父亲，我该怎么办？在线等。</h4>
+          <img class="momentImgOne" data-src="./image/figure/12.jpg">
+          
+          <h5 class="dateContainer">7月13日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">黄磊，谢娜，张亮，胡军，林永健，陆毅</h4>
+            <h4 class="comment"><span class="commentName userName">用户</span>：啊啊啊啊！诺一太可爱惹~</h4>
+            <h4 class="comment"><span class="commentName">  刘烨</span>回复<span class="commentName userName">用户名</span>：你怎么当他大姐姐的，赶快帮我解决实际问题</h4>
+          
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/huanglei.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">黄磊</h4>
+          <h4 class="momentContent">极限挑战第二季已在筹备中，我代表节目组向<span class="userName">用户</span>发出真诚的邀请，来做我们的嘉宾吧，一举干掉跑男团</h4>
+          <img class="momentImgOne" data-src="./image/figure/13.jpg">
+          
+          <h5 class="dateContainer">7月8日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">孙红雷，黄渤，王迅，张艺兴，小猪，郑恺，李晨，王祖蓝</h4>
+            <h4 class="comment"><span class="commentName">张艺兴</span>：<span class="userName">用户</span>，快来！</h4>
+            <h4 class="comment"><span class="commentName">郑恺</span>：<span class="userName">用户</span>，你要是去极限挑战，我就跳槽<span class="emotion"><img src="./image/hand.png"></span></h4>
+            <h4 class="comment"><span class="commentName">  李晨</span>回复<span class="commentName">郑恺</span>：我也是<span class="emotion"><img src="./image/hand.png"></span></h4>
+            <h4 class="comment"><span class="commentName">  邓超</span>回复<span class="commentName">郑恺</span>：狗带</h4>
+            <h4 class="comment"><span class="commentName userName">用户</span>：神算子，这次不约，不想你们为了我把关系搞僵</h4>
+            <h4 class="comment"><span class="commentName">  黄磊</span>回复<span class="commentName userName">用户名</span>：没事，我等你</h4>
+          
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/exbiao.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">ex的绿茶小婊砸</h4>
+          <h4 class="momentContent">我和男票参加了茄子拍的情侣活动，求转发求投票，么么哒</h4>
+          <img style="width:610px;margin-top:28px;"  src="./image/figure/qiezipai.jpg">
+          
+          <h5 class="dateContainer">6月14日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">ex，辅导员，王旭师兄，大崔，13级师妹晓婷，雪儿，14级师妹CiCi</h4>
+            <h4 class="comment"><span class="commentName">ex</span>：宝贝，这次绝壁拿第一</h4>
+            <h4 class="comment"><span class="commentName">大崔</span>：已转</h4>
+            <h4 class="comment"><span class="commentName">  13级师妹晓婷</span>：已转</h4>
+            <h4 class="comment"><span class="commentName">   14级师妹CiCi</span>：拍的好好看</h4>
+            <h4 class="comment"><span class="commentName">   王旭师兄</span>：单身狗受到10w+伤害</h4>
+            
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/wangxu.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">王旭师兄</h4>
+          <h4 class="momentContent">昨天CCAV上播放的总理接见的是我们团队，谢谢大家的关心~B轮也融完了，欢迎大家去AppStore下载PLUS最新版用户端哦~</h4>
+          <div class="momentImgContainer">
+            <div class="momentImgTwo" style="background-image:url(./image/figure/15-1.jpg)"></div>
+            <div class="momentImgTwo" style="background-image:url(./image/figure/15-2.jpg);margin-left:6px;"></div>
+          </div>
+          <h5 class="dateContainer">5月4日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">小文师姐，李开复，罗永浩，周鸿祎，马云，马化腾，苏芒，辅导员，院长，校长</h4>
+            <h4 class="comment"><span class="commentName">校长</span>：好样的，为校争光，再接再厉！</h4>
+            <h4 class="comment"><span class="commentName userName">用户</span>：恭喜</h4>
+            <h4 class="comment"><span class="commentName">  师兄</span>回复<span class="commentName userName">用户</span>：<span class="userName">用户</span>啊，用空来给我们代言吧</h4>
+            <h4 class="comment"><span class="commentName">  马云</span>：C轮我投了，不准找别人啊</h4>
+            <h4 class="comment"><span class="commentName">黄灿灿</span>：王总，我可以去你们那实习前台嘛</h4>
+        
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/guodegang.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">郭德纲</h4>
+          <h4 class="momentContent">有人说我和志颖之间差了一个四爷<span class="emotion"><img src="./image/smile.png"></span></h4>
+          <img class="momentImgOne" data-src="./image/figure/16.jpg">
+          
+          <h5 class="dateContainer">4月30日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">于谦，姜昆，汪涵，柳岩，黄晓明，赵薇，华少，马东，宋丹丹，冯小刚，曾志伟，孟非</h4>
+            <h4 class="comment"><span class="commentName">赵本山</span>：幸亏我没去</h4>
+            <h4 class="comment"><span class="commentName userName">用户</span>：叔，别哭</h4>
+            <h4 class="comment"><span class="commentName">林志颖</span>：<span class="emotion"><img src="./image/crylaugh.png"></span></h4>
+            <h4 class="comment"><span class="commentName">  郭德纲</span>回复<span class="commentName">林志颖</span>：叫爸爸</h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/13shimei.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">13级师妹晓婷</h4>
+          <h4 class="momentContent">新鲜营养面膜</h4>
+          <div class="momentImgContainer">
+            <div class="momentImgTwo" style="background-image:url(./image/figure/17-1.jpg)"></div>
+            <div class="momentImgTwo" style="background-image:url(./image/figure/17-2.jpg);margin-left:6px;"></div>
+          </div>
+          <h5 class="dateContainer">4月7日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">14级师妹CiCi，ex，导员助理，班长，大崔</h4>
+            <h4 class="comment"><span class="commentName userName">用户名</span>：师妹还在卖呢？</h4>
+            <h4 class="comment"><span class="commentName">刘刚-PLUS CTO</span>：再刷屏，狗带去</h4>
+            <h4 class="comment"><span class="commentName">  13级师妹晓婷</span>回复<span class="commentName userName">用户名</span>：嗯呐~师姐我做到省代啦</h4>
+            <h4 class="comment"><span class="commentName">王旭师兄</span>：约吗？</h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/jinxing.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">金星</h4>
+          <h4 class="momentContent">给我发红包我私信你见你第一面的印象，完美</h4>
+          <img class="momentImgOne" data-src="./image/figure/18.jpg">
+          
+          <h5 class="dateContainer">3月25日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">宋丹丹，高晓松，老罗，贾玲，angelababy，黄晓明，谢娜，何炅，陈漫</h4>
+            <h4 class="comment"><span class="commentName">赵丽颖</span>：金姐快告我！</h4>
+            <h4 class="comment"><span class="commentName userName">用户</span>回复<span class="commentName">赵丽颖</span>：看标题</h4>
+            <h4 class="comment"><span class="commentName">金星</span>：是给我红包，不是点赞啦</h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">  <!--全文-->
+      <div class="cardTx userTx"></div>
+        <div class="cardContent">
+          <h4 class="name userName">用户</h4>
+          <div class="fold">
+            <h4 class="momentContent">真心找个炮友，长期短期都可以</h4>
+            <h4 class="momentContent unflod">过年了…我这有一箱子鞭炮，不敢点</h4>
+          </div>
+          <h4 class="foldbtn">全文</h4>
+          <h5 class="dateContainer">3月25日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">胡歌，王思聪，杨幂，陈赫，郑恺，李晨，angelababy</h4>
+            <h4 class="comment"><span class="commentName">王思聪</span>：我裤子都脱了你就让我看这个？</h4>
+            <h4 class="comment"><span class="commentName">杨洋</span>：亲爱的以后不许再这样开玩笑！</h4>
+            <h4 class="comment"><span class="commentName">Angelababy</span>：会玩，我给晓明也试下</h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/chenglong.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">成龙</h4>
+          <h4 class="momentContent">无所谓啦，能让你们开心也不错~</h4>
+          
+          <div class="momentImgContainer">
+            <div class="momentImgTwo" style="background-image:url(./image/figure/20-1.jpg)"></div>
+            <div class="momentImgTwo" style="background-image:url(./image/figure/20-2.jpg);margin-left:6px;"></div>
+          </div>
+          <h5 class="dateContainer">2月20日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">房祖名，李连杰，习大大，彭麻麻，赵本山，冯小刚，张艺谋，章子怡，汪峰，angelababy，黄晓明，谢娜，金秀贤，何炅，范冰冰，郭德纲，刘亦菲，王思聪</h4>
+            <h4 class="comment"><span class="commentName userName">用户</span>：duang~</h4>
+            <h4 class="comment"><span class="commentName">范冰冰</span>：duang~</h4>
+            <h4 class="comment"><span class="commentName">章子怡</span>：duang~</h4>
+            <h4 class="comment"><span class="commentName">巩俐</span>：duang~</h4>
+          </div>
+        </div>
+    </div> <!--card-->
+    
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/chenman.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">陈漫</h4>
+          <h4 class="momentContent">据说摄影师看到的都是蓝黑色</h4>
+          <img class="momentImgOne" data-src="./image/figure/21.jpg">
+          
+          <h5 class="dateContainer">2月25日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like">范冰冰，刘亦菲，汤唯，陈坤，赵薇，章子怡，汪峰，桂纶镁，林志玲</h4>
+            <h4 class="comment"><span class="commentName userName">用户</span>：看来我有做摄影师的潜质哦~</h4>
+            <h4 class="comment"><span class="commentName">陈漫</span>回复<span class="commentName userName">用户</span>：你呀还是别来抢我饭碗咯</h4>
+            <h4 class="comment"><span class="commentName">范冰冰</span>：为啥我是白金色</h4>
+          </div>
+        </div>
+    </div> <!--card-->
+
+    <div class="card">
+      <div class="cardTx" style="background-image:url(./image/tx/kunling.jpg)"></div>
+        <div class="cardContent">
+          <h4 class="name">昆凌</h4>
+          <h4 class="momentContent">谢谢你，给我这个梦幻的婚礼。</h4>
+          <img class="momentImgOne" data-src="./image/figure/22.jpg">
+          
+          <h5 class="dateContainer">1月18日<span class="commentIcon"><img src="./image/comment.png"></span></h5>
+          <div class="commentContainer">
+            <img class="likeIcon" src="./image/14.png">
+            <img class="arrowIcon" src="./image/commentarrow.png">
+            <h4 class="like"><span class="userName">用户名</span>，Angelababy，安钧璨，刘畊宏，罗志祥，方文山，潘玮柏，林俊杰，余文乐，桂纶镁，张惠妹</h4>
+            <h4 class="comment"><span class="commentName userName">用户</span>：好好照顾我杰伦小公举<span class="emotion"><img src="./image/crylaugh.png"><img src="./image/however.png" style="left:60px"><img src="./image/however.png" style="left:114px"></span></h4>
+            <h4 class="comment"><span class="commentName">侯佩岑</span>：<span class="emotion"><img src="./image/contempt.png"></span></h4>
+            <h4 class="comment"><span class="commentName">蔡依林</span>：<span class="emotion"><img src="./image/contempt.png"></span></h4>
+            <h4 class="comment"><span class="commentName">Hebe</span>：<span class="emotion"><img src="./image/however.png"></span></h4>
+            <h4 class="comment"><span class="commentName">王思聪</span>回复<span class="commentName userName">用户名</span>：给我个机会，我会照顾好你</h4>
+            <h4 class="comment"><span class="commentName userName">用户名</span>回复<span class="commentName">王思聪</span>：鸽吻</h4>
+          </div>
+        </div>
+    </div> <!--card-->
+  </div><!--cardcontainer-->
+
+</div>
+
+<div class="footerContainer">
+    <div class="footerBtn actBtn">
+      <p>生成自己的 2015年朋友圈</p>
+    </div>
+    <div class="footerBtn shareBtn">
+      <p>分享出去 惊呆小伙伴</p>
+    </div>
+    <p class="ps">（此朋友圈纯属虚构，过年乐呵呵~）</p>
+</div>
+
+<div class="modalContainer">
+  <img class="shareguide" src="./image/shareguide.png">
+</div>
+</body>
+
+<!-- <script src="./js/jweixin-1.0.0.js" type="text/javascript"></script>
+<script src="http://static.1sight.cn/activity/dance/js/weixin_share.js" type="text/javascript"></script> -->
+</html>

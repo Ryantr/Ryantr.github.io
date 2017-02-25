@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta content="target-densitydpi=device-dpi,width=640" name="viewport">
+    <title>PLUS</title>
+    <script src="http://static.qiezipai.cn/activity/js/util.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://static.qiezipai.cn/activity/js/jquery-1.10.1.min.js"></script>
+    <!--<script async="async" src="http://static.qiezipai.cn/activity/js/jweixin-1.0.0.js" type="text/javascript"></script>
+    <script async="async" src="js/weixin_share.js" type="text/javascript"></script>  -->
+    <style>
+    body{
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    font-family: Microsoft YaHei,sans-self;
+    }
+    h1{
+    font-weight:300;
+    font-size:35px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    letter-spacing:1px;
+    }
+    .share_result{
+    width:640px;
+    height:1008px;
+    background:#fff url(image/share_succ.png) no-repeat center top;
+    }
+    .share_result h1{
+        position:absolute;
+        left:200px;
+        top:317px;
+    }
+    </style>
+</head>
+
+<body>
+<div class="share_result">
+    <h1>领取码:123456</h1>
+</div>
+</body>
+
+<script type="text/javascript">
+$(function(){
+    var win_H = $(window).height();
+    // $(".share_result").css("height",win_H);
+})
+</script>
+</html>

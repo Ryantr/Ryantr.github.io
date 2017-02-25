@@ -1,0 +1,109 @@
+body{
+    padding:0;
+    margin:0;
+    width:640px;
+    height:100%;
+    font-family: Microsoft YaHei,sans-self;
+}
+input{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    tap-highlight-color:rgba(0,0,0,0);
+
+}
+.container{
+    width:640px;
+    height:100%;
+    background:#ff9796;
+}
+.btn_container{
+    width:640px;
+    height:auto;
+    margin-top: 70px;
+    padding-bottom:50px;
+}
+.btn_boy{
+    width:256px;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/boy.png);
+    height:350px;
+    float: left;
+    margin-left: 50px;
+    position: relative;
+}
+.btn_girl{
+    width:256px;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/girl.png);
+    height:350px;
+    float: right;
+    margin-right: 50px;
+    position: relative;
+}
+/*************************/
+
+.container_1{
+    display: block;
+}
+.head_1{
+    background:url(http://static.qiezipai.cn/activity/qixi/image/bg/sex.png) no-repeat center;
+    height:470px;
+}
+.btn_1{
+    width:251px;
+    height:101px;
+    font-size:28px;
+    font-family: Microsoft YaHei,sans-self;
+    font-weight:100;
+    padding-bottom:15px;
+    border-style:none;
+    outline:0;
+    position:absolute;
+    bottom:0;
+    color:#a15c15;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/condition-1-normal.png) no-repeat bottom center;
+}
+.btn1-down{
+    height:87px;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/condition-1-down.png) no-repeat bottom center;
+    padding-bottom:0;
+}
+
+
+/************************/
+.container_2{
+    text-align: center;
+    height:auto;
+    display: none;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/bg/ex.png) no-repeat top center;
+}
+
+.btn_2{
+    width:484px;
+    height:101px;
+    border-style:none;
+    outline:0;
+    padding-bottom: 15px;
+    font-size:28px;
+    font-family: Microsoft YaHei,sans-self;
+    color:#a15c15;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/condition-2-normal.png) no-repeat bottom center;
+}
+.btn2-down{
+    height:87px;
+    background:url(http://static.qiezipai.cn/activity/qixi/image/btn/condition-2-down.png) no-repeat bottom center;
+    padding-bottom:0;
+}
+.head_2{
+    height:125px;
+}
+#btn1{
+    margin-top:165px;
+}
+#btn2{
+    margin-top: 165px;
+}
+#btn3{
+    margin-top: 165px;
+    padding-bottom: 90px;
+}
+/**********************/
+

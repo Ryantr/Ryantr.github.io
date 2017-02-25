@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" /> 
+    <meta content="target-densitydpi=device-dpi,width=640,user-scalable=no" name="viewport">
+    <title>七夕</title>
+    <script src="http://static.qiezipai.cn/activity/js/util.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://static.qiezipai.cn/activity/js/jquery-1.10.1.min.js"></script>
+    <link href="http://static.qiezipai.cn/activity/qixi/css/test3.css" rel="stylesheet" type="text/css" />
+    <!-- <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script> -->
+</head>
+<body>
+    <div class="container container_1">
+        <div class="head_1"></div>
+        <div class="btn_container">
+            <input class="btn btn_1" type="button" value="性格不合，两个人谈不来" ontouchstart="down(this,'btn1-down');" ontouchend="up(this,'btn1-down,container_2','1','container_2');"ontouchmove="move(this,'btn1-down')" data-num="4">
+            <input class="btn btn_1" type="button" value="距离太远，没信心走下去" ontouchstart="down(this,'btn1-down');" ontouchend="up(this,'btn1-down,container_2','1','container_2');"ontouchmove="move(this,'btn1-down')" data-num="3">
+            <input class="btn btn_1" type="button" value="要想生活过得去，头上就得添点绿" ontouchstart="down(this,'btn1-down');" ontouchend="up(this,'btn1-down,container_2','1','container_2');"ontouchmove="move(this,'btn1-down')" data-num="1">
+            <input class="btn btn_1" type="button" value="从异地熬成夫妻" ontouchstart="down(this,'btn1-down');" ontouchend="up(this,'btn1-down','1','container_2');"ontouchmove="move(this,'btn1-down')" data-num="5">
+        </div>
+    </div>
+    
+
+    <div class="container container_2">
+        <div class="head_2"></div>
+        <div class="btn_container">
+            <input class="btn btn_2" type="button" value="故地重游" ontouchstart="down(this,'btn2-down');" ontouchend="up(this,'btn2-down','2','container_3');"ontouchmove="move(this,'btn2-down')" data-num="5">
+            <input class="btn btn_2" type="button" value="会一个人悄悄地想起她" ontouchstart="down(this,'btn2-down');" ontouchend="up(this,'btn2-down','2','container_3');"ontouchmove="move(this,'btn2-down')" data-num="4">
+            <input class="btn btn_2" type="button" value="不敢和朋友说起自己曾来过这里" ontouchstart="down(this,'btn2-down');" ontouchend="up(this,'btn2-down','2','container_3');"ontouchmove="move(this,'btn2-down')" data-num="2">
+            <input class="btn btn_2" type="button" value="早已想不起当年的那些事" ontouchstart="down(this,'btn2-down');" ontouchend="up(this,'btn2-down','2',container_3');" ontouchmove="move(this,'btn2-down')" data-num="1">
+        </div>
+    </div>
+
+    <div class="container container_3">
+        <div class="head_3"></div>
+        <div class="btn_container">
+            <input class="btn btn_3" type="button" value="拍一张有爱的合影" ontouchstart="down(this,'btn3-down');" ontouchend="up(this,'btn3-down','3');"ontouchmove="move(this,'btn3-down')">
+            <input class="btn btn_3" type="button" value="为心爱的人做一顿晚餐" ontouchstart="down(this,'btn3-down');" ontouchend="up(this,'btn3-down','3');"ontouchmove="move(this,'btn3-down')">
+            <input class="btn btn_3" type="button" value="啪啪啪啪啪啪啪啪" ontouchstart="down(this,'btn3-down');" ontouchend="up(this,'btn3-down','3');"ontouchmove="move(this,'btn3-down')">
+            <input class="btn btn_3" type="button" value="在一起干什么都行" ontouchstart="down(this,'btn3-down');" ontouchend="up(this,'btn3-down','3');"ontouchmove="move(this,'btn3-down')">
+        </div>
+    </div>
+
+
+    <div class="container_result">
+
+        <div class="result_egg">
+            <img src="http://static.qiezipai.cn/activity/qixi/image/result/shadow.png" class="wait_shadow">
+            <img src="http://static.qiezipai.cn/activity/qixi/image/result/waiting.gif" class="result_wait_loading">
+            <img class="result_wait result1" src="http://static.qiezipai.cn/activity/qixi/image/result/result1-1.png" data-value="期待">
+            <img class="result_wait result2" src="http://static.qiezipai.cn/activity/qixi/image/result/result1-2.png" data-value="守护">
+            <img class="result_wait result3" src="http://static.qiezipai.cn/activity/qixi/image/result/result1-3.png" data-value="忍耐">
+        </div>
+        <div class="result_title">
+            <img class="card_bg" src="http://static.qiezipai.cn/activity/qixi/image/result/card_bg.png">
+            <div class="title_container">
+                <h5 class="sale_code">优惠码：<span>FqFqFq</span></h5>
+                <p>下载IOS版茄子拍App使用优惠</p>
+            </div>
+        </div>
+        <div class="result_btn_container">
+            <input class="btn_result btn_share" type="button" value="分享" ontouchstart="down(this,'result-down');" ontouchend="up(this,'result-down','4');"ontouchmove="move(this,'result-down')">
+            <input class="btn_result btn_down" type="button" value="下载茄子拍" ontouchstart="down(this,'result-down');" ontouchend="up(this,'result-down','5');"ontouchmove="move(this,'result-down')">
+        </div>
+    </div>
+
+
+    <div class="modal_share">
+        <img class="share_guide" src="http://static.qiezipai.cn/activity/qixi/image/result/share_guide.png">
+    </div>
+</body>
+<script src="http://static.qiezipai.cn/activity/qixi/js/test.js" type="text/javascript"></script>
+<script src="http://static.qiezipai.cn/activity/js/jweixin-1.0.0.js" type="text/javascript"></script>
+<script src="http://static.qiezipai.cn/activity/qixi/js/weixin_share.js" type="text/javascript"></script>
+</html>

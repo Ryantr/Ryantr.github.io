@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" /> 
+
+  <meta name="viewport" content="target-densitydpi=device-dpi,width=640" > 
+  <title>和7位男神摄影师</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="../js/util.js" type="text/javascript"></script>
+
+  <script src="../js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.transit.min.js" type="text/javascript"></script>
+  <script src="./js/main.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <input id="appId" type="hidden" value="">
+    <input id="timestamp" type="hidden" value="">
+    <input id="noncestr" type="hidden" value="">
+    <input id="signature" type="hidden" value="">
+    <input id="openId" type="hidden" value="123123">
+    <input id="shareUrl" type="hidden" value="">
+
+
+  <div class="mainContainer">
+    <audio id="backaudio"  autobuffer autoloop loop controls="false">
+      <source src="media/backaudio.mp3">
+    </audio>
+    <img id="audioBtn" class="audiorotate" src="./image/audiobtn.png">
+
+<!--     <div class="step9 mainContainer step">
+      <img class="share bg lazy" data-src="./image/bgshare.gif">
+    </div> -->
+
+    <div class="step8 mainContainer step">
+      <div class="shareHeader">
+        <div class="txShareContainer"></div>
+        <h4 class="resulth4">万水千山总是情，排名第一行不行</br>快分享给你的小伙伴</br>为你的男神摄影师拉票吧~</h4>
+        <img  class="lazy resultbtn" id="checkresult" data-src="./image/resultbtnend.png">
+        <span style="padding-right:30px"></span>
+        <img  class="lazy resultbtn" id="checkshare"  data-src="./image/sharebtnend.png">
+      </div>
+      <img class="reward lazy" data-src="./image/cardend.png"> 
+      <input type="button" id="getphone" value="参与抽奖">
+      <img class="footerad lazy" data-src="./image/footerend.png">
+    </div>
+
+    <div class="step7 mainContainer step">
+      <img class="paris bg lazy" data-src="./image/bgparis.png">
+      <img id="cloudparis" class="lazy" data-src="./image/cloudparis.png">
+      <img id="buildparis" class="bg lazy" data-src="./image/buildparis.png">
+      <div class="info infoparis" id="pariscard1" style="background-image:url('./image/pariscard/cardgao.png')">
+        <div class="txCard choseTx" style="background-image:url('image/tx/gao.png')" data-num="photographer-1" data-value="1">
+        </div>
+      </div>
+      <div class="info infoparis" id="pariscard2" style="background-image:url(./image/pariscard/cardchuan.png)">
+        <div class="txCard choseTx" style="background-image:url(./image/tx/chuan.png)" data-num="photographer-2" data-value="2">
+        </div>
+      </div>
+      <div class="info infoparis" id="pariscard3" style="background-image:url(./image/pariscard/cardgolden.png)">
+        <div class="txCard choseTx" style="background-image:url(./image/tx/golden.png)" data-num="photographer-3" data-value="3">
+        </div>
+      </div>
+      <div class="info infoparis" id="pariscard4" style="background-image:url(./image/pariscard/cardlei.png)">
+        <div class="txCard choseTx" style="background-image:url(./image/tx/lei.png)" data-num="photographer-4" data-value="4">
+        </div>
+      </div>
+      <div class="info infoparis" id="pariscard5" style="background-image:url(./image/pariscard/cardwei.png)">
+        <div class="txCard choseTx" style="background-image:url(./image/tx/wei.png)" data-num="photographer-5" data-value="5">
+        </div>
+      </div>
+      <div class="info infoparis" id="pariscard6" style="background-image:url(./image/pariscard/cardyi.png)">
+        <div class="txCard choseTx" style="background-image:url(./image/tx/yi.png)" data-num="photographer-6" data-value="6">
+        </div>
+      </div>
+      <div class="info infoparis" id="pariscard7" style="background-image:url(./image/pariscard/cardyu.png)">
+        <div class="txCard choseTx" style="background-image:url(./image/tx/yu.png)" data-num="photographer-7" data-value="7">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="step6 mainContainer step">
+      <img id="skykl" class="lazy" data-src="./image/skykl.gif">
+      <img id="jztskl" class="lazy" data-src="./image/jztskl.png">
+      <img id="sandkl" class="lazy" data-src="./image/sandkl.png">
+      <img id="jztlkl" class="lazy" data-src="./image/jztlkl.png">
+      <img class="kl bg lazy" data-src="./image/bgkl.png"> 
+      <div class="info" style="background-image:url(./image/cardkl.png)">
+      </div>
+    </div>
+
+    <div class="step5 mainContainer step">
+      <img id="skylas" class="lazy" data-src="./image/skylas.png">
+      <img id="lightlas" class="lazy" data-src="./image/lightlas.png">
+      <img id="wheellas" class="lazy" data-src="./image/wheellas.png">
+      <img class="las bg lazy" data-src="./image/bglas.png"> 
+      <div class="info" style="background-image:url(./image/cardlas.png)">
+      </div>
+    </div>
+
+    <div class="step4 mainContainer step">
+      <img id="qepole" class="lazy" data-src="./image/qepole.gif">
+      <img class="pole bg lazy" data-src="./image/bgpole.png"> 
+      <div class="info" style="background-image:url(./image/cardpole.png)">
+      </div>
+    </div>
+
+    <div class="step3 mainContainer step">
+      <img class="sydney bg lazy" data-src="./image/bgsydney.png"> 
+      <img id="watersydney" class="lazy" data-src="./image/watersydney.png">
+      <img id="dssydney" class="lazy" data-src="./image/dssydney.png">
+      <img id="housesydney" class="lazy" data-src="./image/housesydney.png">
+      <div class="info" style="background-image:url(./image/cardsydney.png)">
+      </div>
+    </div>
+
+    <div class="step2 mainContainer step">
+      <img id="skyjp" class="lazy" data-src="./image/skyjp.png"> 
+      <img id="sunjp" class="lazy" data-src="./image/sunjp.png"> 
+      <img id="monjp" class="lazy" data-src="./image/monjp.png"> 
+      <img class="jp bg lazy" data-src="./image/bgjp.png"> 
+      <img id="dljp" class="lazy" data-src="./image/dljp.png">
+      <div class="info" style="background-image:url(./image/cardjp.png)">
+      </div>
+    </div>
+
+    <div class="step1 mainContainer step">
+      <img class="bj bg lazy" data-src="./image/bgbj.png"> 
+      <img data-src="./image/carbj.png" id="carbj" class="lazy">
+      <img data-src="./image/fogbj.png" id="fogbj" class="lazy">
+      <div class="info" style="background-image:url(./image/cardbj.png)">
+      </div>
+    </div>
+
+
+  </div>
+  <div class="mainContainer loadingContainer">
+    <img src="./image/loadtitle.png" id="loadTitle">
+    <img src="./image/loadtitle2.png" id="loadTitle2">
+    <h4 id="persentage">0%</h4>
+    <img src="./image/earth.png" id="earth">
+    <img src="./image/enter.png" id="enter">
+  </div>
+  <!--摄影师modal-->
+  <div class="modalInfo photographer-1">
+      <div class="modalContainer">
+          <div class="modalHeader">
+             <img class="modalHeaderImg" src="./image/tx/gaolg.jpg">
+             <img class="close" src="./image/close.png">
+             <img class="modalHeaderTag" src="./image/gao.png">
+          </div>
+          <div class="modalTitle">
+             <h4>高赟鹏（水瓶座）<span style="padding-right:40px;"></span>拍摄风格：古风时尚</h4>
+             <img class="modalBtn" src="./image/button.png">
+          </div>
+      </div>
+  </div>
+
+  <div class="modalGuide">
+    
+    <input type="button" id="guideok" value="OK">
+    <img id="guidetx" src="./image/guidetx.png">
+  </div>
+
+
+  <div class="modalInfo photographer-2">
+      <div class="modalContainer">
+          <div class="modalHeader">
+             <img class="modalHeaderImg" src="./image/tx/chuanlg.jpg">
+             <img class="close" src="./image/close.png">
+             <img class="modalHeaderTag" src="./image/chuan.png">
+          </div>
+          <div class="modalTitle">
+             <h4>刘小川（天蝎座）<span style="padding-right:40px;"></span>拍摄风格：夜景人像</h4>
+             <img class="modalBtn" src="./image/button.png">
+          </div>
+      </div>
+  </div>
+  <div class="modalInfo photographer-3">
+      <div class="modalContainer">
+          <div class="modalHeader">
+             <img class="modalHeaderImg" src="./image/tx/goldenlg.jpg">
+             <img class="close" src="./image/close.png">
+             <img class="modalHeaderTag" src="./image/golden.png">
+          </div>
+          <div class="modalTitle">
+             <h4>Golden（狮子座）<span style="padding-right:40px;"></span>拍摄风格：电影时尚</h4>
+             <img class="modalBtn" src="./image/button.png">
+          </div>
+      </div>
+  </div>
+  <div class="modalInfo photographer-4">
+      <div class="modalContainer">
+          <div class="modalHeader">
+             <img class="modalHeaderImg" src="./image/tx/leilg.jpg">
+             <img class="close" src="./image/close.png">
+             <img class="modalHeaderTag" src="./image/lei.png">
+          </div>
+          <div class="modalTitle">
+             <h4>雷敏（双鱼座）<span style="padding-right:40px;"></span>拍摄风格：欧美情绪</h4>
+             <img class="modalBtn" src="./image/button.png">
+          </div>
+      </div>
+  </div>
+  <div class="modalInfo photographer-5">
+      <div class="modalContainer">
+          <div class="modalHeader">
+             <img class="modalHeaderImg" src="./image/tx/weilg.jpg">
+             <img class="close" src="./image/close.png">
+             <img class="modalHeaderTag" src="./image/wei.png">
+          </div>
+          <div class="modalTitle">
+             <h4>李维刚（巨蟹座）<span style="padding-right:40px;"></span>拍摄风格：情绪胶片</h4>
+             <img class="modalBtn" src="./image/button.png">
+          </div>
+      </div>
+  </div>
+  <div class="modalInfo photographer-6">
+      <div class="modalContainer">
+          <div class="modalHeader">
+             <img class="modalHeaderImg" src="./image/tx/yilg.jpg">
+             <img class="close" src="./image/close.png">
+             <img class="modalHeaderTag" src="./image/yi.png">
+          </div>
+          <div class="modalTitle">
+             <h4>一叶城（金牛座）<span style="padding-right:40px;"></span>拍摄风格：日系清新</h4>
+             <img class="modalBtn" src="./image/button.png">
+          </div>
+      </div>
+  </div>
+  <div class="modalInfo photographer-7">
+      <div class="modalContainer">
+          <div class="modalHeader">
+             <img class="modalHeaderImg" src="./image/tx/yulg.jpg">
+             <img class="close" src="./image/close.png">
+             <img class="modalHeaderTag" src="./image/yu.png">
+          </div>
+          <div class="modalTitle">
+             <h4>刘宇（双子座）<span style="padding-right:40px;"></span>拍摄风格：油画风格</h4>
+             <img class="modalBtn" src="./image/button.png">
+          </div>
+      </div>
+  </div>
+
+  <!--摄影师modal-->
+
+  <div class="modalInfo qrContainer"  id="qrContainer">
+      <div class="modalContainer">
+        <img class="closeother" src="./image/close.png" data-obj="qrContainer">
+        <img id="qrFans" src="./image/qrfans.png">
+      </div>
+  </div>
+  <!--摄影师tx-->
+  <div class="txContainer">
+    <div class="txCard chose" style="background-image:url(./image/tx/gao.png)" data-num="photographer-1" data-value="1">
+      <img class="txArrow" src="./image/arrow.png">
+    </div>
+    <div class="txCard chose" style="background-image:url(./image/tx/chuan.png)" data-num="photographer-2" data-value="2">
+      <img class="txArrow" src="./image/arrow.png">
+    </div>
+    <div class="txCard chose" style="background-image:url(./image/tx/golden.png)"  data-num="photographer-3" data-value="3">
+      <img class="txArrow" src="./image/arrow.png">
+    </div>
+    <div class="txCard chose" style="background-image:url(./image/tx/lei.png)"  data-num="photographer-4" data-value="4">
+      <img class="txArrow" src="./image/arrow.png">
+    </div>
+    <div class="txCard chose" style="background-image:url(./image/tx/wei.png)"  data-num="photographer-5" data-value="5">
+      <img class="txArrow" src="./image/arrow.png">
+    </div>
+    <div class="txCard chose" style="background-image:url(./image/tx/yi.png)"  data-num="photographer-6" data-value="6">
+      <img class="txArrow" src="./image/arrow.png">
+    </div>
+    <div class="txCard chose" style="background-image:url(./image/tx/yu.png)"  data-num="photographer-7" data-value="7"> 
+      <img class="txArrow" src="./image/arrow.png">
+    </div>
+  </div> <!--摄影师tx-->
+
+
+
+  <div class="modal_container_alert">
+      <div class="modal_body">
+          <p class="modal_body_title"></p>
+          <div class="modal_footer">
+              <p>确定</p>
+          </div>
+      </div>
+  </div>
+
+  <div class="modalInfo getInfo">
+    <div class="modalContainer infoForm">
+      <img class="closeother" src="./image/close.png" data-obj="getInfo">
+      <h4 class="getInfoh4">留下你的联系方式，以便通知中奖</br>手机号请别填错，万一中奖呢</h4>
+      <input id="infoName" type="text" class="userinfo" placeholder="请输入姓名">
+      <input id="infoPhone" type="tel" class="userinfo" placeholder="请输入手机号" maxlength="11">
+      <img id="sendphone" src="./image/sendphone.png">
+    </div>
+  </div>
+
+  <div class="modalInfo modalResult">
+    <div class="modalContainer voting_result ">
+      <img class="closeother" src="./image/close.png" data-obj="modalResult">
+      <div class="voting_result_title">
+        <p>男神排行榜</p>
+      </div>
+      <div class="result_container">
+        <div class="result_card">
+          <div class="head_container">
+            <img class="s_head" src="./image/tx/gao.png">
+            <img id="selected-1" class="selected_img" src="./image/selected.png">
+          </div>
+          <div class="p_container"  id="camer_1">
+            <h2>王浩然<span>1,124票</span></h2>
+            <div class="percent_bg">
+              <div class="percent_img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  
+  <div class="modalInfo shareGuideContainer">
+    <div class="modalContainer">
+      <img class="shareGuideImg" src="./image/shareguide.png">
+    </div>
+  </div>
+
+</body>
+</html>
