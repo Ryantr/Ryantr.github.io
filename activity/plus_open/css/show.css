@@ -24,7 +24,7 @@ h4{
     top:0;
     left:0;
     width:640px;
-    background:url(http://static.qiezipai.cn/activity/plus_open/image/start.gif) no-repeat center; 
+    background:url(../image/start.gif) no-repeat center; 
 }
 .main_container{
     position:absolute;
@@ -41,12 +41,12 @@ h4{
     z-index:999;
     left:500px;
     bottom:250px;
-    background:url(http://static.qiezipai.cn/activity/plus_open/image/guidehand.png) no-repeat center;
+    background:url(../image/guidehand.png) no-repeat center;
 }
 .background{
     width:100%;
     height:100%;
-    background-image:url(http://static.qiezipai.cn/activity/plus_open/image/bg.jpg);
+    background-image:url(../image/bg.jpg);
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center 0;
@@ -54,7 +54,7 @@ h4{
 #board{
     position:absolute;
     left:0;
-    background-image:url(http://static.qiezipai.cn/activity/plus_open/image/board.jpg);
+    background-image:url(../image/board.jpg);
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center 0;
@@ -80,13 +80,13 @@ h4{
     width:38px;
     left:40px;
     top:40px;
-    background:url(http://static.qiezipai.cn/activity/plus_open/image/X.png) no-repeat center;
+    background:url(../image/X.png) no-repeat center;
 }
 .modal_cantent{
     min-width:430px;
     min-height:200px;
     margin-top:30%;
-    background:url(http://static.qiezipai.cn/activity/plus_open/image/loading.gif) no-repeat center;
+    background:url(../image/loading.gif) no-repeat center;
 }
 .modal_title{
     text-align:center;
@@ -124,7 +124,7 @@ h4{
 
 .door_container{
     width:640px;
-    background: url(http://static.qiezipai.cn/activity/plus_open/image/door_bg.png) no-repeat center top;
+    background: url(../image/door_bg.png) no-repeat center top;
     display: none;
 }
 
@@ -158,7 +158,7 @@ h4{
 .square{
     position:absolute;
     bottom:0;
-    background:url(http://static.qiezipai.cn/activity/plus_open/image/square_bg.png) no-repeat center bottom;
+    background:url(../image/square_bg.png) no-repeat center bottom;
     width:640px;
 }
 #square_arrow{
@@ -168,7 +168,7 @@ h4{
 }
 .sky{
     width:760px;
-    background: url(http://static.qiezipai.cn/activity/plus_open/image/sky.png) no-repeat left top;
+    background: url(../image/sky.png) no-repeat left top;
 }
 .plane{
     width:75px;
@@ -183,7 +183,7 @@ h4{
 .share_container{
     display: none;
     width:640px;
-    background: url(http://static.qiezipai.cn/activity/plus_open/image/share_bg.png) no-repeat center top;
+    background: url(../image/share_bg.png) no-repeat center top;
 }
 
 .share_link{
