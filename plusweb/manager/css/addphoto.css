@@ -1,0 +1,309 @@
+div{
+    vertical-align: middle;
+}
+.worksHeaderContainer{
+    height:140px;
+    line-height: 140px;
+    width:1000px;
+    margin:auto;
+    border-bottom: 1px solid #e6e6e6; 
+}
+.worksHeaderContainer h3{
+    font-size: 16px;
+    color:#1a1a1a;
+    font-weight: 400;
+}
+#setNameTitle{
+    display: inline-block;
+}
+#setPricsTitle{
+    float: right;
+    color:#cc9b66;
+}
+.infoIcon{
+    display: inline-block; 
+    width:30px;
+    height:30px;
+    margin-left: 20px;
+    background: no-repeat center;
+    background-size: contain;
+    background-image:url(../image/infoicon0.png);
+    cursor: pointer;
+}
+.infoIcon:hover{
+    background-image:url(../image/infoicon1.png);
+}
+.addIcon{
+    position:relative;
+    display: inline-block; 
+    width:30px;
+    height:30px;
+    margin-left: 20px;
+    background: no-repeat center;
+    background-size: contain;
+    background-image:url(../image/addicon0.png); 
+    cursor: pointer; 
+}
+.addIcon:hover{
+    background-image:url(../image/addicon1.png);  
+}
+/***********************/
+.leftFormContainer{
+    display: inline-block;
+}
+.formContainer{
+    width:780px;
+    margin:auto;
+    padding:20px 110px 100px 110px;
+    border:1px solid #e5e5e5;
+    border-radius: 5px;
+    background-color:#fff;
+}
+.formTitle{
+    font-size: 16px;
+    color:#999;
+    margin-left:-6px;
+    margin-top: 80px;
+    padding-bottom: 4px;
+}
+label{
+    font-size: 14px;
+    color:#1a1a1a;
+    margin-left: 4px;
+}
+.inputContainer{
+    position:relative;
+    margin-top: 20px;
+    line-height: 44px;
+    width:400px;
+}
+.inputText{
+    width:282px;
+    height:40px;
+    margin-left:20px;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 16px;
+    color:#1a1a1a;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e0e0e0;
+}
+.inputText:focus{
+    border-color: #cc9b66;
+}
+.inputUnit{
+    position:absolute;
+    right:10px;
+    top:0;
+    font-size: 14px;
+    color:#808080;
+}
+textarea{
+    resize:none;
+    outline: none;
+}
+.textareaText{
+    width:278px;
+    height:84px;
+    padding: 8px 16px;
+    margin-left: 85px;
+    border:1px solid #e5e5e5;
+    font-size: 14px;
+    color:#1a1a1a;
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+}
+.textareaText:focus{
+    border:1px solid #cc9b66;
+}
+.textareaText::-webkit-input-placeholder{
+    color:#b2b2b2;
+    font-size: 14px;
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+}
+.textareaText:-moz-placeholder {
+    color:#b2b2b2;
+    font-size: 14px;
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+}
+.textareaText::-moz-placeholder {
+    color:#b2b2b2;
+    font-size: 14px;
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+}
+.textareaText:-ms-input-placeholder {
+    color:#b2b2b2;
+    font-size: 14px;
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+}
+.textaeraContainer{
+    position: relative;
+    margin-top: 20px;
+
+}
+.textareaLabel{
+    position:absolute;
+    top:13px;
+    left:0;
+}
+.btnContainer{
+    margin-top: 10px;
+    margin-left:-4px;
+    width:400px;
+}
+.tagBtn{
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 10px;
+    width:90px;
+    height:40px;
+    line-height: 40px;
+    background-color:#fafafa;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    font-size: 14px;
+    color:#1a1a1a;
+    text-align: center;
+    cursor: pointer;
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+}
+.tagBtn:hover{
+    border-color: #cc9b66;
+}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}
+
+.mainContainer{
+    padding-bottom: 100px;
+}
+
+
+/***********************/
+.uploadContainer{
+    float: right;
+    width:310px;
+}
+.uploadBox{
+    width:308px;
+    height:58px;
+    margin-top: 24px;
+    padding-top: 71px;
+    padding-bottom: 71px;
+    border:1px dashed #ccc;
+    text-align: center;
+    cursor: pointer;
+}
+.havePhoto{
+    padding:0;
+    height:38px;
+    line-height: 38px;
+}
+.havePhoto img{
+    width:20px;
+    height:20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+.havePhoto p{
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 12px;
+}
+.uploadIcon{
+    width:34px;
+}
+.uploadTitle{
+    font-size: 14px;
+    color:#999;
+    margin-top: 10px;
+}
+
+.imageContainer{
+    width:332px;
+    margin-top: 20px;
+    margin-left: -2px;
+    max-height:520px;
+    overflow-y: auto; 
+    overflow-x:hidden;
+}
+.uploadedimg{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left:2px;
+    width:100px;
+    height:100px;
+    background: no-repeat center;
+    background-size: cover;
+}
+.imgCover{
+    margin-top:0;
+    width:310px;
+    height:200px;
+}
+/*****************/
+
+.submitContainer{
+    width:100%;
+    margin-top: 120px;
+    text-align: center;
+}
+.Btn{
+    width:180px;
+    height:50px;
+    font-size: 16px;
+    color:#999;
+    border:1px solid #ccc;
+    background-color: rgba(255,255,255,0);
+    cursor: pointer;
+}
+.Btn:hover{
+    border:1px solid #cc9b66;
+    color:#fff;
+    background-color: #cc9b66;
+}
+#cancelBtn{
+    margin-left: 34px;
+}
+/********************/
+.modalContainerInfo{
+    position:fixed;
+    overflow: auto;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.7);
+    display: none;
+}
+.modalContent{
+    position:relative;
+    width:560px;
+    margin:auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding:20px 60px 80px 60px;
+    background-color:#fff;
+}
+.modalClose{
+    position:absolute;
+    top:-10px;
+    right:-10px; 
+    width:40px;
+    height:40px;
+    cursor: pointer;
+    background: url(../image/close.png) no-repeat center;
+}
+.modalContent h4{
+    margin-top: 50px;
+    line-height: 52px;
+    font-size: 18px;
+    color:#b2b2b2;
+}
+.modalContent p{
+    font-size: 14px;
+    line-height: 28px;
+    color:#4c4c4c;
+}

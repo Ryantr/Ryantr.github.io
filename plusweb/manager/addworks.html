@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" /> 
+
+  <meta name="viewport" content="target-densitydpi=device-dpi,width=640" > 
+  <title>PLUS</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="css/addphoto.css">
+    <link rel="stylesheet" href="css/foothead.css">
+<!--   // <script src="http://static.qiezipai.cn/activity/js/util.js" type="text/javascript"></script> -->
+  <link rel="shortcut icon" type="image/x-icon" href="../image/customicon.png">
+  <script src="http://static.qiezipai.cn/activity/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(function(){
+        var win_H = $(window).height();
+        var win_W= $(window).width();
+
+        if(win_W<=640){
+            mobi(win_H);
+            $("body").css("width",640);
+            
+        }
+        else{
+            $(".title").show();
+            position(win_H,win_W); 
+            $(".Appdown").on("click",function(){
+                window.location.href="https://itunes.apple.com/us/app/plus/id1023380370";
+            });
+        }
+
+        $(".headImg").on("click",function(){
+            window.location.href="../index.html";
+        })
+
+        $(window).resize(function(){
+            win_H = $(window).height();
+            win_W= $(window).width();
+            if(win_W > 640)
+            {
+                position(win_H,win_W);
+            }
+        })
+        
+        $(".infoIcon").on("click",function(){
+            $(".modalContainerInfo").show();
+            $("body").css("overflow","hidden");
+        })
+        $(".modalClose").on("click",function(){
+            $(".modalContainerInfo").hide();
+            $("body").css("overflow","auto");
+        })
+    });
+
+    function position(win_H,win_W){
+        if(win_W>640)
+        {
+            $(".navContainer").css("height",win_H*0.13);
+            var navH = $(".navContainer").height();
+            var headimgH = $(".headImg").height();
+            $(".headImg").css("top",(navH-headimgH)/2); //logo居中
+            var mainH = $(".mainContainer").height();
+            var foottop = win_H - navH - mainH - 260;
+            if(foottop > 40 )
+            {
+                $(".footerContainer").css("margin-top",foottop);
+            }else{
+                $(".footerContainer").css("margin-top",100);
+            }
+
+        }else{
+            $(".navContainer").css("height",120);
+            $(".headImg").css("margin-top",0);
+        }
+    };
+
+  </script>
+
+</head>
+
+<body>
+    <div class="navContainer">
+        <div class="colorful"></div>
+        <div class="firstNav">
+            <div class="headImg"></div>
+        </div>
+    </div>
+    <div class="mainContainer">
+        <div class="secondNavContainer  clearfix">
+            <div class="secondNav">
+                    <a href="" id="" class="setsNav">定制写真</a>
+                    <a href="" id="" class="setsNav">婚纱摄影</a>
+                    <a href="" id="" class="setsNav">婚纱摄影</a>
+                    <a href="" id="thelastCard" class="setsNav"></a>
+                <a href="" id="addSet">创建套系</a>
+            </div>
+        </div>
+
+        <div class="worksHeaderContainer clearfix">
+            <h3 id="setPricsTitle">￥3000元</h3>
+            <div id="setNameTitle"><h3>Summer Time</h3></div>
+        </div>
+
+        <div class="formContainer">
+            <div class="leftFormContainer">
+                <h4 class="formTitle">
+                    基本信息
+                </h4>
+                <div class="inputContainer">
+                    <label for="setName">
+                        作品名称
+                    <input type="text" class="inputText" name="setName" value="">
+                    </label>
+                </div>
+                <div class="textaeraContainer">
+                    <label class="textareaLabel">作品描述</label>
+                    <textarea name="additional" class="textareaText" placeholder="如：提供拍摄场地或者模特，费用另加"></textarea>
+                </div>
+                <div class="textaeraContainer">
+                    <label class="textareaLabel">作品描述</label>
+                    <textarea name="additional" class="textareaText" placeholder="如：提供拍摄场地或者模特，费用另加"></textarea>
+                </div>
+
+                <h4 class="formTitle">
+                    作品风格
+                </h4>
+                <div class="btnContainer">
+                    <div class="tagBtn">定制写真</div>
+                    <div class="tagBtn">定制写真</div>
+                    <div class="tagBtn">定制写真</div>
+                    <div class="tagBtn">定制写真</div>
+                    <div class="tagBtn">定制写真</div>
+                    <div class="tagBtn">定制写真</div>
+                    <div class="tagBtn">定制写真</div>
+                    <div class="tagBtn">定制写真</div>
+                    <div class="tagBtn">定制写真</div>
+                </div>
+            </div>
+            <div class="uploadContainer">
+                <h4 class="formTitle">
+                    作品集照片
+                </h4>
+                <div class="uploadBox havePhoto" id="uploadBtn">
+                    <img class="uploadIcon" src="image/upload.png">
+                    <p class="uploadTitle">上传图片</p>
+                </div>
+                <div class="imageContainer">
+                    <div class="uploadedimg imgCover" style="background-image:url(image/test.jpg)"></div>
+                    <div class="uploadedimg" style="background-image:url(image/test.jpg)"></div>
+                    <div class="uploadedimg" style="background-image:url(image/test.jpg)"></div>
+                    <div class="uploadedimg" style="background-image:url(image/test.jpg)"></div>
+                    <div class="uploadedimg" style="background-image:url(image/test.jpg)"></div>
+                    <div class="uploadedimg" style="background-image:url(image/test.jpg)"></div>
+                    <div class="uploadedimg" style="background-image:url(image/test.jpg)"></div>
+                    <div class="uploadedimg" style="background-image:url(image/test.jpg)"></div>
+                    <div class="uploadedimg" style="background-image:url(image/test.jpg)"></div>
+
+                </div>
+            </div>
+
+            <div class="submitContainer">
+                <input class="Btn" id="saveBtn" type="button" value="保存">
+                <input class="Btn" id="cancelBtn" type="button" value="取消">
+            </div>
+        </div>
+    </div>
+
+    <div class="modalContainerInfo">
+        <div class="modalContent">
+            <div class="modalClose"></div>
+            
+            <h4>基本信息</h4>
+            <p>套系类型：定制写真/个人</p>
+            <p>套系名称：Summer Time</p>
+            <p>服务城市：北京</p>
+            
+            <h4>服务信息</h4>
+            <p>服务价格：2500元</p>
+            <p>拍摄时长：2小时</p>
+            <p>原片张数：20张</p>
+            <p>拍摄服装：不提供</p>
+            <p>拍摄造型：不提供</p>
+            <p>原片赠送：全送</p>
+            <p>成品赠送：不送</p>
+            <p>交图天数：15天</p>
+            
+            <h4>服务条款</h4>
+            <p>支付定金的比例为全价的30%</p>
+            <p>改期请提前3天通知</p>
+            <p>拍摄前3天取消订单客户支付定金</p>
+
+        </div>
+    </div>
+
+
+    <div class="beian">
+        <h5>对PLUS Space有什么疑问或者建议可以通过以下方式联系我们  <span>application@1sight.cn</span></h5>
+        <p>PLUS © 2015 All rights reserved  |  www.plusx.cn  |  京ICP备15009106号-3</p>
+    </div>
+
+    
+</body>
+
+<script src="js/plupload.full.min.js"></script>
+<script src="js/qiniu.min.js"></script>
+<script src="js/upload.js"></script>
+</html>

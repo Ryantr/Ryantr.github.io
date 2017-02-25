@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" /> 
+  <!-- <meta name="viewport" content="width=device-width"> -->
+  <script type="text/javascript" src='http://static.1sight.cn/official/code/js/com_baidu.js'></script>
+  <title>PLUS</title>
+  <link href="http://static.1sight.cn/official/code/css/reset.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://static.1sight.cn/official/code/css/about.css">
+
+  <script src="http://static.1sight.cn/official/lib/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    $(function(){
+        var win_H = $(window).height();
+        var win_W = $(window).width();
+        if(win_W<=640)
+        {
+          mobi(win_H);
+          $(".modalContent video").attr("preload","none")
+        }
+        position(win_H,win_W);
+        $(window).resize(function() {
+          win_H = $(window).height();
+          win_W = $(window).width();
+          position(win_H,win_W);
+        });
+        
+        $(".headImg").on("click",function(){
+            window.location.href="/index";
+        })
+        $(".contentC").on("click",function(){
+            window.location.href="http://static.1sight.cn/official/code/more.html";
+        })
+        $(".videoIcon").on("click",function(){
+            $(".modalContainer").show();
+            var modal_H =$(".modalContent").height();
+            $(".modalContent").css("margin-top",(win_H-modal_H)/2);
+            $("body").css("overflow","hidden");
+        })
+        $("#close").on("click",function(){
+            $(".modalContainer").hide();
+            $("body").css("overflow","auto");
+        })
+
+    })
+
+    function position(win_H,win_W){
+      if(win_W<=640)
+      {
+        
+      }
+      else
+      {
+        $(".videoContainer").css("height",0.85*win_H);
+        $(".contentC").css("padding-bottom",0.21*win_H).css("padding-top",0.21*win_H);
+        if(win_W>640 && win_W < 1000)
+        {
+          $(".contentC img").css("width",win_W/1002*900);
+        }
+        // $(".contentC img").css("height",0.61*win_H);
+      }
+
+      if(win_W<1050 && win_W > 640)
+      {
+            var scale = win_W / 1050;
+            $(".nav").css("width",scale*940);
+      }
+    }
+  </script>
+</head>
+
+<body>
+    <div class="navContainer">
+        <div class="colorful"></div>
+        <div class="nav">
+            <div class="headImg"></div>
+        </div>
+        <div id="menuIcon"></div>
+    </div>
+    <div class="mainContainer">
+        <div class="videoContainer">
+            <div class="videoIcon"></div> 
+        </div>
+        <div class="contentB">
+            <img id="contentLogo" src="http://static.1sight.cn/official/code/image/logoblack.png">
+            <img id="contentArrowA" src="http://static.1sight.cn/official/code/image/about/content_arrow.png"> 
+            <h4 id="titleA">公司简介</h4>
+            <p id="p1"  class="p1_content">承影互联（北京）科技有限公司是一家致力于发展移动互联网摄影服务的公司，公司于2014年12月成立，现拥有北京及上海两个运营中心并在全球范围内签约摄影师1600余名，目前上线产品包括针对学生群体的约拍平台“茄子拍”、定制化摄影电商平台“PLUS精选摄影服务”、B2B商业摄影电商平台“PLUS精选商业摄影”和摄影师职业工具“PLUS SPACE”。<br/>
+Chengying (Beijing) Technology Limited Corporation is a mobile internet company focusing on developing photography, which was founded on December, 2014. It is now running two operation centers based in Beijing and Shanghai and has signed on more than 1600 photographers all over the world. So far, four products have been launched which are “QIEZIPAI” for students looking for personal photographers; “PLUS Selected Photographic Services” for high-end customers, “PLUS Selected Commercial Photography” for enterprise clients and “PLUS SPACE” for professional photographers.  </p>
+            <img id="contentArrowB" src="http://static.1sight.cn/official/code/image/about/content_arrow.png"> 
+            <h4 id="titleB">产品简介</h4>
+           <p id="p1" class="p1_content">“PLUS精选商业摄影”是承影互联旗下的B2B商业摄影电商平台，为企业级用户提供广告、产品、建筑、团队肖像及会议活动等一站式摄影摄像服务，所提供服务已覆盖中国90%的一二线城市，满足用户分布式摄影摄像需求；已合作企业包括百度、腾讯、京东、联想、领英、优酷土豆、在行、本来生活、发现周末、礼物说、氧气等。<br/>
+“PLUS Selected Commercial Photography” is an e-commerce platform under Chengying (Beijing) Technology Limited Corporation focusing on B2B commercial photography. PLUS is now providing one-stop photography services for enterprise clients including advertisements, merchandises, architectures, portraits and conferences. The photography services cover 90% metropolis of China and meet the distributed demands of clients. PLUS is cooperating with numerous well-known enterprises such as Baidu, Tencent, jd.com, Lenovo, LinkedIn, Youku Tudou, Zaihang, benlai.com, fxzhoumo.com, liwushuo.com, o2bra.com and so on.  
+</p>
+            
+        </div>
+        <div class="contentC">
+            <img src="http://static.1sight.cn/official/code/image/about/about_bg.jpg">
+        </div>
+    </div>
+    <div class="footerContainer">
+        <a href="http://plusx.cn/views/about.html" id="about"><h4>关于PLUS</h4></a>
+        <a href="http://plusx.cn/views/contact.html" id="contact"><h4>联系PLUS</h4></a>
+        <a href="http://plusx.cn/views/work.html" id="work"><h4>工作机会</h4></a>
+        
+    </div>
+    <div class="beian">
+        <p>PLUS © 2015 All rights reserved  |  www.plusx.cn  |  京ICP备15009106号-3</p>
+    </div>
+
+    <div class="modalContainer">
+      <div class="modalContent">
+        <img id="close" src="http://static.1sight.cn/official/code/image/about/close.png">
+        <video src="http://static.1sight.cn/official/code/video/plus.mov" controls="controls" preload="auto" poster="http://static.1sight.cn/official/code/image/about/video_bg.jpg" width="100%" height="100%">
+          <source src="http://static.1sight.cn/official/code/video/plus.mov" type="video/mov" />
+        </video>
+      </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" /> 
+
+  <meta name="viewport" content="target-densitydpi=device-dpi,width=640" > 
+  <title>PLUS</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="css/formsucc.css">
+    <link rel="stylesheet" href="../css/foothead.css">
+  <script src="http://static.qiezipai.cn/activity/js/util.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="../image/customicon.png">
+  <script src="http://static.qiezipai.cn/activity/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/mobi.js"></script> 
+  <script type="text/javascript">
+    $(function(){
+        var win_H = $(window).height();
+        var win_W= $(window).width();
+
+        if(win_W<=640){
+            mobi(win_H);
+            $("body").css("width",640);
+            $(".Appdown").attr("src","image/appMobibutton.png")
+            $(".titleMobi").show();
+            $(".Appdown").on("click",function(){
+                downmask();
+            })
+        }
+        else{
+            $(".title").show();
+            position(win_H,win_W); 
+            $(".Appdown").on("click",function(){
+                window.location.href="https://itunes.apple.com/us/app/plus/id1023380370";
+            });
+        }
+
+        $(".headImg").on("click",function(){
+            window.location.href="../index.html";
+        })
+
+        $(window).resize(function(){
+            win_H = $(window).height();
+            win_W= $(window).width();
+            if(win_W > 640)
+            {
+                position(win_H,win_W);
+            }
+        })
+       
+    });
+
+    function position(win_H,win_W){
+        if(win_W>640)
+        {
+            $(".navContainer").css("height",win_H*0.13);
+            var navH = $(".navContainer").height();
+            var headimgH = $(".headImg").height();
+            $(".headImg").css("top",(navH-headimgH)/2); //logo居中
+            var mainH = $(".mainContainer").height();
+            var foottop = win_H - navH - mainH - 260;
+            if(foottop > 40 )
+            {
+                $(".footerContainer").css("margin-top",foottop);
+            }else{
+                $(".footerContainer").css("margin-top",100);
+            }
+
+        }else{
+            $(".navContainer").css("height",120);
+            $(".headImg").css("margin-top",0);
+        }
+    };
+
+  </script>
+
+</head>
+
+<body>
+    <div class="navContainer">
+        <div class="colorful"></div>
+        <div class="headImg"></div>
+        <div id="menuIcon"></div>
+    </div>
+    <div class="mainContainer">
+        <div class="headerImg">
+            <img src="image/order.png">
+        </div>
+        <div class="title">
+            <h3>已成功提交商业订单</h3>
+            <p>PLUS将会在1个工作日内与您联系，明确商业拍摄需求</br>根据预算及需求，提供拍摄方案</br>方案确认后，登陆PLUS查看并支付订单费用</p>
+        </div>
+        <div class="titleMobi">
+            <h3>已成功提交商业订单</h3>
+            <p>PLUS将会在1个工作日内与您联系，</br>明确商业拍摄需求</br>根据预算及需求，提供拍摄方案</br>方案确认后，</br>登陆PLUS查看并支付订单费用</p>
+        </div>
+        <div class="btnContainer">
+            <img class="Appdown" src="image/appbutton.png">
+        </div>
+    </div>
+    
+
+    <div class="footerContainer">
+        <a href="../about.html" id="about"><h4>关于PLUS</h4></a>
+        <a href="../contact.html" id="contact"><h4>联系PLUS</h4></a>
+        <a href="../work.html" id="work"><h4>工作机会</h4></a>
+        <a href="../partner.html" id="partner"><h4>合作伙伴</h4></a>
+    </div>
+    <div class="beian">
+        <p>PLUS © 2015 All rights reserved  |  www.plusx.cn  |  京ICP备15009106号-3</p>
+    </div>
+    <div class="meunContainer">
+        <div id="meunClose"></div>
+        <a href="../about.html" id="mobi_about"><h4>关于PLUS</h4></a>
+        <a href="../contact.html" id="mobi_contact"><h4>联系PLUS</h4></a>
+        <a href="../work.html" id="mobi_work"><h4>工作机会</h4></a>
+        <a href="../partner.html" id="mobi_partner"><h4>合作伙伴</h4></a>
+        <h4 id="fans">关注我们</h4>
+        <div class="fansIcon">
+            <img id="fansWechat" src="../image/mobi/mobi_wechat.png">
+            <img id="fansWeibo" src="../image/mobi/mobi_weibo.png">
+        </div>
+    </div>
+</body>
+</html>

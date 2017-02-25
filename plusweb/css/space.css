@@ -1,0 +1,372 @@
+body{
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+    overflow: auto;
+}
+
+.navContainer{
+    position:relative;
+    width:100%;
+    height:120px;
+}
+.nav{
+    position:absolute;
+    width:940px;
+    height:120px;
+    margin:auto;
+    left:0;
+    right:0;
+}
+.headImg{
+    position:absolute;
+    width:140px;
+    height:30px; 
+    top:45px;
+    left:0;
+    background:url(../image/black_logo.png) no-repeat center;
+    cursor:pointer;
+}
+.othericon{
+    position:absolute;
+    width:40px;
+    height:40px; 
+    top:40px;
+    cursor:pointer;
+}
+
+#wechat{
+    right:60px;
+    background:url(../image/wechat.png) no-repeat center;
+}
+#weibo{
+    right:0;
+    background:url(../image/weibo.png) no-repeat center;
+}
+/****************/
+
+.contentFirst{
+    width:100%;
+    height:615px;
+    background:url(../image/space_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+.firstContainer{
+    position:relative;
+    width:940px;
+    height:100%;
+    margin:auto;
+    left:0;
+    right:0;
+}
+.iconContainer{
+    position:absolute;
+    left:0;
+    top:140px;
+    width:220px;
+    text-align: left:;
+}
+.iconContainer h5{
+    margin-top: 50px;
+    font-size: 24px;
+    color:#ffffff;
+    font-weight: 400;
+}
+.iconContainer p{
+    margin-top: 12px;
+    font-size: 16px;
+    color:#ffffff;
+    letter-spacing: 1px;
+}
+.applyBtn{
+    margin-top: 40px;
+    width:200px;
+    height:60px;
+    line-height: 60px;
+    background-color: #cc9b66;
+    color:#fff;
+    text-align: center;
+    cursor:pointer;
+}
+.applyBtn p{
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.phoneImg{
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+/*********************/
+.contentSecond{
+    width:100%;
+    margin-top: 10px;
+}
+
+.row{
+    width:100%;
+/*    height:210px;
+    margin-top: 120px;*/
+    text-align: center;
+}
+.item{
+    width:334px;
+    height:210px;
+    margin-top: 120px;
+    text-align: center;
+    display: inline-block;
+}
+.item h4{
+    font-size: 24px;
+    color:#1a1a1a;
+    margin-top: 36px;
+    font-weight: 400;
+}
+.item p {
+    font-size: 16px;
+    color:#808080;
+    margin-top: 14px;
+    line-height: 24px;
+}
+.plusLogo{
+    margin-top: 130px;
+    height:113px;
+}
+/********************/
+
+.contentThird{
+    width:100%;
+    height:550px;
+    margin-top: 130px;
+    position:relative;
+    background: url(../image/space_bg2.jpg) no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+/*********************/
+.footerContainer{
+    width:100%;
+    height:60px;
+    padding-top: 40px;
+    background-color: #ededed;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.footerContainer a{
+    margin-left: 29px;
+    margin-right: 29px;
+    text-decoration:none;
+}
+.footerContainer h4{
+    display:inline-block; 
+    font-size: 16px;
+    color:#757575;
+    font-weight: 400;
+}
+.beian{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    background-color: #333;
+    text-align: center;
+}
+.beian p{
+    font-size: 14px;
+    color:#808080;
+}
+.meunContainer{display: none;}
+/***********************/
+
+@media screen and (max-width: 1050px){
+    .item{
+        width:300px;
+    }
+
+    .titleContainer h3{
+        font-size: 40px;
+        letter-spacing: 1px;
+    }
+    .titleContainer h4{
+        font-size: 19px;
+        margin-top: 30px;
+        letter-spacing: 0px;
+    }
+}
+
+
+
+@media screen and (max-width: 640px){
+.navContainer{
+    width:560px;
+    height:120px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0;
+}
+.nav{
+    width:100%;
+    height:120px;
+    margin:auto;
+    left:0;
+    right:0;
+}
+.navContainer h4{
+    display: none;
+}
+.headImg{
+    top:0;
+    left:40px;
+    height:120px;
+    width:137px;
+    background-position: center left ;
+}
+.othericon{
+    display: none;
+}
+#menuIcon{
+    position:absolute;
+    top:0;
+    width:40px;
+    height:120px;
+    right:40px;
+    background: url(../image/mobi/menu.png) no-repeat center;
+    display: block;
+}
+
+
+.footerContainer{
+    display: none;
+}
+.beian{
+    display: none;
+}
+/***************/
+.contentFirst{
+    height:1178px;
+    background:url(../image/space_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+.firstContainer{
+    width:100%;
+}
+.iconContainer{
+    left:170px;
+    top:120px;
+    width:300px;
+    text-align: center;
+}
+.iconContainer img{
+    width:210px;
+}
+.iconContainer h5{
+    font-size: 30px;
+}
+.iconContainer p{
+    margin-top: 20px;
+    font-size: 22px;
+}
+.applyBtn{
+    margin-top: 100px;
+    width:300px;
+    height:90px;
+    line-height: 90px;
+}
+.applyBtn p{
+    font-size: 28px;
+}
+.phoneImg{
+    width:400px;
+    left:120px;
+}
+/*******************/
+
+.item{
+    width:640px;
+    margin-top: 120px;
+    padding-bottom: 60px;
+    display: block;
+}
+.item h4{
+    font-size: 28px;
+}
+
+.item p {
+    font-size: 22px;
+    margin-top: 24px;
+    line-height: 34px;
+}
+.plusLogo{
+    display: none;
+}
+/*******************/
+.contentThird{
+    width:100%;
+    height:275px;
+    margin-top: 40px;
+}
+
+/**************/
+.meunContainer{
+    position:fixed;
+    width:386px;
+    height:100%;
+    padding-left: 68px;
+    padding-top: 32px;
+    top:0;
+    right:-500px;
+    text-align: left;
+    background-color: #ededed;
+    overflow-y:auto;
+    display: block;
+    transition: right 1s;
+    -moz-transition: right 1s; /* Firefox 4 */
+    -webkit-transition: right 1s; /* Safari 和 Chrome */
+    -o-transition: right 1s;
+}
+.meunshow{
+    right:0;
+    transition: right 1s;
+    -moz-transition: right 1s; /* Firefox 4 */
+    -webkit-transition: right 1s; /* Safari 和 Chrome */
+    -o-transition: right 1s;
+}
+#meunClose{
+    position:absolute;
+    width:38px;
+    height:38px;
+    top:40px;
+    right:40px;
+    background: url(../image/mobi/close_menu.png) no-repeat center;
+    z-index: 9999;
+}
+.meunContainer a{
+    text-decoration:none;
+}
+.meunContainer h4{
+    margin-top: 94px;
+    font-size: 28px;
+    color:#808080;
+}
+#mobi_partner{
+    padding-bottom: 98px;
+    border-bottom: 1px solid #ccc;
+}
+#fans{
+    width:320px;
+    font-size: 22px;
+    color:#b2b2b2;
+    margin-top: 98px;
+    padding-top: 54px;
+    border-top: 1px solid #ccc;
+}
+.fansIcon{
+    margin-top: 54px;
+    width:100%;
+}
+.fansIcon img{
+    width:100px;
+}
+#fansWeibo{
+    margin-left: 40px;
+}
+}

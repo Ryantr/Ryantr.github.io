@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" /> 
+
+  <!-- <meta name="viewport" content="target-densitydpi=device-dpi,width=640" >  -->
+  <title>PLUS</title>
+  <link rel="stylesheet" href="http://static.1sight.cn/plusmanager/css/reset.css">
+  <link rel="stylesheet" href="http://static.1sight.cn/plusmanager/manager/css/manager.css">
+  <link rel="stylesheet" href="http://static.1sight.cn/plusmanager/manager/css/foothead.css">
+<!--   // <script src="http://static.qiezipai.cn/activity/js/util.js" type="text/javascript"></script> -->
+  <link rel="shortcut icon" type="image/x-icon" href="http://static.qiezipai.cn/plusweb/image/customicon.png">
+  <script src="http://static.qiezipai.cn/activity/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(function(){
+        var win_H = $(window).height();
+        var win_W= $(window).width();
+
+        position(win_H,win_W); 
+
+        $(".headImg").on("click",function(){
+            window.location.href="";
+        })
+        $(window).resize(function(){
+            win_H = $(window).height();
+            win_W= $(window).width();
+            if(win_W > 640)
+            {
+                position(win_H,win_W);
+            }
+        })
+
+    });
+
+    function position(win_H,win_W){
+        if(win_W>640)
+        {
+            $(".navContainer").css("height",win_H*0.13);
+            var navH = $(".navContainer").height();
+            var headimgH = $(".headImg").height();
+            $(".headImg").css("top",(navH-headimgH)/2); //logo居中
+            var txTop = (navH - 34)/2;
+            
+            $(".userInfo").css("padding-top",txTop).css("padding-bottom",txTop);
+            var mainH = $(".mainContainer").height();
+
+
+        }
+    };
+
+  </script>
+
+</head>
+
+<body>
+    <div class="navContainer">
+        <div class="colorful"></div>
+        <div class="firstNav">
+            
+            <div class="userInfo">
+                <div class="userTx"></div>
+                <h5 class="userName" style="background-image:url();">鲍鲍</h5>
+                <p class="userExit">退出</p>
+            </div>
+            <div class="headImg"></div>
+        </div>
+        
+    </div>
+    <div class="mainContainer">
+        <div class="secondNavContainer  clearfix">
+            <div class="secondNav">
+                    <a href="" id="" class="setsNav">定制写真</a>
+                    <a href="" id="" class="setsNav">婚纱摄影</a>
+                    <a href="" id="" class="setsNav">婚纱摄影</a>
+                    <a href="" id="thelastCard" class="setsNav"></a>
+                <a href="" id="addSet">创建套系</a>
+            </div>
+        </div>
+        <div class="title1">
+            <h3>你所创建的拍摄服务套系如下：</h3>
+        </div>
+        <div class="setCardContainer clearfix">
+            <div class="setCard">
+                <div class="setImgContainer">
+                    <img class="setImg" src="">
+                </div>
+                <div class="setName">
+                    <h4>套餐名称<span class="setPrice">￥4500元</span></h4>
+                </div>
+                <div class="setInfo">
+                    <p>作品数量：5套</p>
+                    <p>服务城市：北京</p>
+                    <p>原片300张，精修20张</p>
+                </div>
+                <div class="setBtnContainer clearfix">
+                    <div class="setBtn setEditor"></div
+                    ><div class="setBtn setUpload"></div
+                    ><div class="setBtn setOnline"></div
+                    ><div class="setBtn setDelete"></div>
+                </div>
+            </div>
+
+            <div class="setCard">
+                <div class="setImgContainer">
+                    <img class="setImg" src="">
+                </div>
+                <div class="setName">
+                    <h4>套餐名称<span class="setPrice">￥4500元</span></h4>
+                </div>
+                <div class="setInfo">
+                    <p>作品数量：5套</p>
+                    <p>服务城市：北京</p>
+                    <p>原片300张，精修20张</p>
+                </div>
+                <div class="setBtnContainer clearfix">
+                    <div class="setBtn setEditor"></div
+                    ><div class="setBtn setUpload"></div
+                    ><div class="setBtn setOnline"></div
+                    ><div class="setBtn setDelete"></div>
+                </div>
+            </div>
+       
+
+        </div>
+
+       
+
+
+    <div class="beian">
+        <h5>对PLUS Space有什么疑问或者建议可以通过以下方式联系我们  <span>application@1sight.cn</span></h5>
+        <p>PLUS © 2015 All rights reserved  |  www.plusx.cn  |  京ICP备15009106号-3</p>
+    </div>
+
+    
+</body>
+</html>

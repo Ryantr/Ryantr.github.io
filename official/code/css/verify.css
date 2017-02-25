@@ -1,0 +1,165 @@
+/********chat********/
+.chatIcon{
+    position:fixed;
+    z-index: 999;
+    bottom:50px;
+    right:50px;
+    width:50px;
+    height:50px;
+    background: url(http://static.1sight.cn/official/code/image/contact.png) no-repeat;
+    background-size:cover;
+    background-position: left;
+    cursor: pointer;
+}
+.chatIcon:hover{
+    background-position: right;
+    width:150px;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+body{
+	min-width: 1200px;
+	width: expression_r( document.body.clientWidth < 1200 ? "1200px" : "auto" );
+}
+ul,li{
+	list-style: none;
+}
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+.clear{
+	clear: both;
+}
+.login_top{
+	height: 120px;
+	width: 100%;
+}
+.login_top .loginTop_t{
+	background: #cb9e6a;
+	height: 8px;
+}
+.login_top .loginTop_n{
+	height: 112px;
+	background: #333;
+}
+.login_top .loginTop_n .loginTop_z{
+	width: 80%;
+	margin: 0 auto;
+}
+.login_top .loginTop_n .loginTop_l{
+	float: left;
+	margin-top: 44px;
+}
+.login_top .loginTop_n .loginTop_r{
+	float: right;
+}
+.login_top .loginTop_r span{
+	margin-left: 60px;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+	line-height: 112px;
+}
+.login_top .loginTop_r span:hover{
+	font-weight: both;
+}
+.login_top .loginTop_r .span{
+	color: #808080;
+}
+
+/* ?? */
+
+.verifyNav_t{
+	width: 80px;
+	height: 80px;
+	border-radius: 80px;
+	background: #ccc;
+	margin: 120px auto 0;
+}
+.verifyNav_h{
+	font-size: 30px;
+	color: #1a1a1a;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+.verifyNav_n{
+	font-size: 16px;
+	color: #1a1a1a;
+	text-align: center;
+}
+.verifyNav_n span{
+	font-size: 16px;
+	color: #1a1a1a;
+	font-weight: bold;
+}
+.verifyNav_b{
+	margin-top: 16px;
+	font-size: 16px;
+	color: #1a1a1a;
+	text-align: center;
+}
+.verifyNav_but{
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	width: 260px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	margin: 80px auto 189px;
+	background: #cc9b66;
+	border-radius: 2px;
+}
+.verify_nav_2{
+	padding-top: 20px;
+	margin-bottom: 280px;
+}
+.verifyNav_n a{
+	font-size: 16px;
+	color: #c3935e;
+	text-decoration: underline;
+}
+
+/* ?? */
+
+.registerFoot_t{
+	width: 100%;
+	height: 80px;
+	background: #ededed;
+}
+.registerFoot_t ul{
+	width: 460px;
+	margin: 0 auto;
+}
+.registerFoot_t li{
+	float:left;
+	margin-right: 60px;
+	line-height: 78px;
+}
+.registerFoot_t li a{
+	font-size: 15px;
+	color: #757575;
+}
+.registerFoot_t li:nth-child(4){
+	margin-right: 0px;
+}
+.registerFoot_b{
+	width: 100%;
+	height: 40px;
+	background: #333;
+	color: #808080;
+	line-height: 40px;
+	text-align: center;
+	font-size: 13px;
+}

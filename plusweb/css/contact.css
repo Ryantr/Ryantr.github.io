@@ -1,0 +1,247 @@
+body{
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+    overflow: auto;
+    font-size: 62.5%;
+}
+h4,p{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;    
+}
+.navContainer{
+    margin-top:0;
+    width:100%;
+    height:120px;
+    background-color: #333333;
+}
+.colorful{
+    height:7%;
+    width:100%;
+    background-color: #cc9b66;
+}
+.nav{
+    width:940px;
+    height:93%;
+    margin:auto;
+}
+.headImg{
+    width:140px;
+    height:25%; 
+    margin-top:41px;
+    background:url(../image/white_logo.png) no-repeat center;
+    background-size: contain;
+    cursor:pointer;
+}
+
+/***************************/
+.mainContainer{
+    width:100%;
+    text-align: center;
+}
+.Atitle{
+    font-size: 3.0em;
+    color:#000;
+    font-weight: 400;
+    margin-top: 154px;
+    padding-bottom: 78px;
+}
+.content{
+    padding-left: 35px;
+    margin:auto;
+    text-align: center;
+    width:80%;
+}
+.titleContainer{
+    width:280px;
+    padding-top: 50px;
+    margin-left: 120px;
+    display: inline-block;
+    text-align: left;
+}
+
+.Btitle{
+    font-size: 2.4em;
+    font-weight: 400;
+    color:#000;
+}
+.titleContainer p {
+    font-size: 1.6em;
+    color:#4c4c4c;
+    margin-top: 24px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+/*************/
+.footerContainer{
+    width:100%;
+    height:60px;
+    padding-top: 40px;
+    background-color: #ededed;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.footerContainer a{
+    margin-left: 29px;
+    margin-right: 29px;
+    text-decoration:none;
+}
+.footerContainer h4{
+    display:inline-block; 
+    font-size: 1.6em;
+    color:#757575;
+    font-weight: 400;
+}
+.beian{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    background-color: #333;
+    text-align: center;
+}
+.beian p{
+    font-size: 14px;
+    color:#808080;
+}
+.meunContainer{display: none;}
+/*@media screen and (max-width: 1400px)  and (min-width: 1200px){
+.content{
+    width:90%;
+}
+}*/
+
+
+@media screen and (max-width: 640px){
+.navContainer{
+    width:560px;
+    height:120px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0;
+}
+.nav{
+    width:100%;
+    height:120px;
+}
+
+.headImg{
+    margin-top: 0;
+    height:116px;
+    width:137px;
+    background-position: center left ;
+}
+.othericon{
+    display: none;
+}
+.colorful{
+    height:4px;
+    margin-left: -40px;
+    width:640px;
+}
+
+#menuIcon{
+    position:absolute;
+    top:0;
+    width:40px;
+    height:120px;
+    right:40px;
+    background: url(../image/mobi/menu.png) no-repeat center;
+    display: block;
+}
+
+
+.footerContainer{
+    display: none;
+}
+.beian{
+    display: none;
+}
+/***************/
+.Atitle{
+    font-size: 4.0em;
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+.content{
+    text-align: left;
+    width:350px;
+    padding-left: 0;
+}
+.titleContainer{
+    padding-top: 60px;
+    margin-left: 0;
+    width: 350px;
+}
+
+.Btitle{
+    font-size: 2.6em;
+}
+.titleContainer p {
+    font-size: 2.0em;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+/**************/
+.meunContainer{
+    position:fixed;
+    width:386px;
+    height:100%;
+    padding-left: 68px;
+    padding-top: 32px;
+    top:0;
+    right:-500px;
+    text-align: left;
+    background-color: #ededed;
+    overflow-y:auto;
+    display: block;
+    transition: right 1s;
+    -moz-transition: right 1s; /* Firefox 4 */
+    -webkit-transition: right 1s; /* Safari 和 Chrome */
+    -o-transition: right 1s;
+}
+.meunshow{
+    right:0;
+    transition: right 1s;
+    -moz-transition: right 1s; /* Firefox 4 */
+    -webkit-transition: right 1s; /* Safari 和 Chrome */
+    -o-transition: right 1s;
+}
+#meunClose{
+    position:absolute;
+    width:38px;
+    height:38px;
+    top:40px;
+    right:40px;
+    background: url(../image/mobi/close_menu.png) no-repeat center;
+    z-index: 9999;
+}
+.meunContainer a{
+    text-decoration:none;
+}
+.meunContainer h4{
+    margin-top: 94px;
+    font-size: 28px;
+    color:#808080;
+}
+#mobi_partner{
+    padding-bottom: 98px;
+    border-bottom: 1px solid #ccc;
+}
+#fans{
+    width:320px;
+    font-size: 22px;
+    color:#b2b2b2;
+    margin-top: 98px;
+    padding-top: 54px;
+    border-top: 1px solid #ccc;
+}
+.fansIcon{
+    margin-top: 54px;
+    width:100%;
+}
+.fansIcon img{
+    width:100px;
+}
+#fansWeibo{
+    margin-left: 40px;
+}
+}

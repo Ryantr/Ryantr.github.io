@@ -1,0 +1,211 @@
+/********chat********/
+.chatIcon{
+    position:fixed;
+    z-index: 999;
+    bottom:50px;
+    right:50px;
+    width:50px;
+    height:50px;
+    background: url(http://static.1sight.cn/official/code/image/contact.png) no-repeat;
+    background-size:cover;
+    background-position: left;
+    cursor: pointer;
+}
+.chatIcon:hover{
+    background-position: right;
+    width:150px;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font-size: 12px;
+}
+body{
+	min-width: 1200px;
+	width: expression_r( document.body.clientWidth < 1200 ? "1200px" : "auto" );
+}
+.clear{
+	clear: both;
+	
+}
+.login_top{
+	height: 120px;
+	width: 100%;
+}
+.login_top .loginTop_t{
+	background: #cb9e6a;
+	height: 8px;
+}
+.login_top .loginTop_n{
+	height: 112px;
+	background: #333;
+}
+.login_top .loginTop_n .loginTop_z{
+	width: 1100px;
+	margin: 0 auto;
+}
+.login_top .loginTop_n .loginTop_l{
+	float: left;
+	margin-top: 44px;
+}
+.login_top .loginTop_n .loginTop_r{
+	float: right;
+}
+.login_top .loginTop_r span{
+	margin-left: 60px;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+	line-height: 112px;
+}
+.login_top .loginTop_r span:hover{
+	font-weight: both;
+}
+.login_top .loginTop_r .span{
+	color: #808080;
+}
+
+/* login_nav */
+.login_nav{
+	width: 100%;
+	height: 100%;
+}
+.loginNav_main .logo-main-logo{
+	margin-top: 40px;
+	text-align: center;
+}
+.logo-main-logo div{
+	width: 196px;
+	margin: 0 auto;
+}
+.logo-main-logo span{
+	margin-top: 20px;
+	float: left;
+}
+.logo-main-span{
+	display: block;
+	height: 10px;
+	border-bottom: 1px solid #ccc;
+	width: 40px;
+}
+.logo-main-span-zi{
+	margin: 0 10px;
+	font-size: 16px;
+}
+
+.logo-main-inp{
+	margin-top: 40px;
+	width: 380px;
+}
+.logo-inp{
+	display: block;
+	margin: 0 auto 20px;
+	width: 230px;
+	height: 40px;
+	border: 1px solid #ccc;
+	padding-left: 10px;
+	font-size: 14px;
+	color: #1a1a1a;
+}
+.logo-inp-02{
+	margin-bottom: 40px;
+}
+
+.logo-main-but{
+	width: 240px;
+	margin: 0 auto;
+
+}
+.logo-main-p1{
+	display: none;
+	color: #ff5640;
+	font-size: 14px;
+	margin: -23px 0 3px 69px;
+}
+.logo-main-p2{
+	display: none;
+	color: #ff5640;
+	font-size: 14px;
+	margin: -23px 0 3px 69px;
+}
+.logo-but{
+	width: 240px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+}
+.logo-but-01{
+	background: #cc9b66;
+	margin-bottom: 20px;
+}
+.logo-but-01:hover{
+	background: #c3935e;
+}
+.logo-but-02{
+	background: #808080;
+	margin-bottom: 30px;
+}
+.logo-but-02:hover{
+	background: #757575;
+}
+.logo-main-wang{
+	text-align: center;
+	font-size: 14px;
+	color: #1a1a1a;
+	cursor: pointer;
+}
+.logo-main-wang:hover{
+	font-weight:bold;
+}
+
+
+
+/* logo-main2-span-zi */
+
+.logo-main-logo .logo-main-zi_2{
+	text-align: center;
+	color: #1a1a1a;
+}
+.logo-main-zi_2_baio{
+	font-size: 22px;
+	font-weight: bold;
+	display: block;
+	margin-top: 40px;
+}
+.logo-inp_yanzheng{
+	width: 110px;
+	float: left;
+	margin-left: 70px;
+}
+.logo-inp_yanzheng1{
+	float: left;
+	width: 100px;
+	height: 42px;
+	background: #ccc;
+	margin-left: 20px;
+	font-size: 17px;
+}
+.logo-but_xia{
+	margin-top: 20px;
+	background: #cc9b66;
+	margin-bottom: 20px;
+}
+
+.logo-but_xia:hover{
+	background: #c3935e;
+}
+.loginNav_main_2,.loginNav_main_3{
+	display: none;
+}
+.logo-but_qingding{
+	margin-top: -10px;
+}

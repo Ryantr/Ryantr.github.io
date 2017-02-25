@@ -1,0 +1,191 @@
+/********chat********/
+.chatIcon{
+    position:fixed;
+    z-index: 999;
+    bottom:50px;
+    right:50px;
+    width:50px;
+    height:50px;
+    background: url(http://static.1sight.cn/official/code/image/contact.png) no-repeat;
+    background-size:cover;
+    background-position: left;
+    cursor: pointer;
+}
+.chatIcon:hover{
+    background-position: right;
+    width:150px;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+.main{
+	width: 100%;
+	background: #f2f2f2;
+	padding-bottom: 120px;
+}
+
+.main .title{
+	width: 1000px;
+	height: 80px;
+	margin: 0 auto;
+	text-align: left;
+	line-height: 100px;
+	font-size: 14px;
+}
+.main .infos{
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #FFF; 
+	padding-bottom: 20px;
+}
+.main .infos .info{
+	width: 800px;
+	padding-top: 50px;
+	padding-bottom: 50px; 
+	margin: 0 auto;
+	border-bottom: 1px solid #e9e9e9;
+	position: relative;
+}
+.main .infos .info img{
+	width: 100px;
+	height: 100px;
+	display: block;
+	float: left;
+}
+.main .infos .info p{
+	font-size: 15px;
+	width: 660px;
+	float: left;
+	text-align: left;
+	margin-left: 40px;
+	line-height: 27px;
+}
+.main .infos .info p #wait_xiu{
+	display: none;
+}
+.main .infos .info p #wait_pay{
+	color: #ff5640;
+}
+.main .infos .info .pay_btn{
+	position: absolute;
+	right: 0px;
+	bottom: 50px;
+	width: 160px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #cc9b66;
+	-moz-border-radius: 2px;      /* Gecko browsers */
+    -webkit-border-radius: 2px;   /* Webkit browsers */
+    border-radius:2px;            /* W3C syntax */
+    cursor: pointer;
+}
+.main .camera_info{
+	width: 800px;
+	margin: 0 auto;
+	background-color: #FFF;
+	padding-top: 40px;
+	padding-bottom: 50px; 
+
+}
+.main .camera_info .ca_ti{
+	text-align: left;
+	font-size: 27px;
+	color: #1a1a1a;
+	
+
+}
+.main .camera_info .radio{
+	width:80px;
+	height:80px; 
+	margin: 0 auto;
+	background-color:#cccccc; 
+	border-radius:40px;
+	-moz-border-radius: 40px;      /* Gecko browsers */
+    -webkit-border-radius: 40px;
+	margin-top: 20px;
+
+}
+.main .camera_info .pipei{
+	display: none;
+}
+.main .camera_info .weipi{
+	text-align: center;
+	font-size: 15px;
+	color: #4c4c4c;
+	margin-top: 30px;
+	
+}
+.main .camera_info .pipei .name{
+	text-align: center;
+	margin-top: 30px;
+	font-size: 24px;
+	color: #1a1a1a;
+}
+.main .camera_info .pipei .level{
+	text-align: center;
+	margin-top: 10px;
+}
+.main .camera_info .pipei .level img{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+
+}
+.main .camera_info .pipei .des{
+	font-size: 15px;
+	line-height: 20px;
+	color: #4c4c4c;
+	text-align: center;
+	margin-top: 15px;
+}
+.main .camera_info .des span{
+	color: #c3925e;
+	font-size: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.business {
+	width: 800px;
+	margin: 0 auto 100px;
+	padding-top: 60px;
+}
+.business .busi_title{
+	color: #1a1a1a;
+	font-size: 27px;
+	text-align: left;
+	margin-bottom: 10px;
+}
+.business .busi_title span{
+	display: inline-block;
+	float: right;
+	font-size: 27px;
+	font-weight: bold;
+}
+.business .busi_title img{
+	float: right;
+}
+.business .busi_info{
+	margin-top: 40px;
+}
+.business .busi_info p{
+	font-size: 22px;
+	color: #1a1a1a;
+
+}
+.business .busi_info ul{
+	width: 100%;
+	list-style: none;
+	margin-top: 20px;
+
+}
+.business .busi_info ul li{
+	line-height: 25px;
+	color: #4c4c4c;
+	font-size: 15px;
+	color: #4c4c4c;
+}

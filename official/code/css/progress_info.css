@@ -1,0 +1,225 @@
+/********chat********/
+.chatIcon{
+    position:fixed;
+    z-index: 999;
+    bottom:50px;
+    right:50px;
+    width:50px;
+    height:50px;
+    background: url(http://static.1sight.cn/official/code/image/contact.png) no-repeat;
+    background-size:cover;
+    background-position: left;
+    cursor: pointer;
+}
+.chatIcon:hover{
+    background-position: right;
+    width:150px;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+.main{
+	width: 100%;
+	background: #f2f2f2;
+
+}
+.main .menu{
+	width: 1000px;
+	height: 140px;
+	text-align: left;
+	font-size: 16px;
+	color: #999999;
+	line-height: 140px;
+	margin:0 auto;
+}
+.main .menu span{
+	font-size: 16px;
+	color: #1a1a1a;
+	font-weight: bold;
+}
+.main .progess_center{
+	width: 820px;
+	padding:0 90px;
+	margin: 0 auto;
+	border: 1px solid #e6e6e6;
+	background-color: #ffffff;
+
+}
+.main .progess_center .pro{
+	width: 480px;
+	height: 88px;
+	text-align: center;
+	padding-bottom: 50px;
+	padding-top: 72px;
+	margin: 0 auto
+
+}
+.main .progess_center .pro p{
+	width: 100px;
+
+	text-align: center;
+	display: block;
+	float: left;
+
+}
+.main .progess_center .pro .general img{
+
+	display: block;
+	width:40px;
+	height:40px; 
+	margin: 0 auto 24px;
+}
+
+.main .progess_center .pro p .pro_des{
+	display: block;	
+}
+.main .progess_center .pro .jian{
+	width: 24px;
+	height: 10px;
+	margin-top: 20px;
+	
+}
+.main .progess_center .pro .jian  img{
+	display: block;
+	
+}
+
+
+
+.sta_list{
+	width: 100%;
+	border-top: 1px solid #e6e6e6;
+}
+
+.sta_list .sta_des{
+	font-size: 20px;
+	font-weight: bold;
+	color: #1a1a1a;
+	margin-top: 50px;
+}
+.sta_list table{
+	margin-top: 90px;
+}
+.sta_list table tr{
+	height: 30px;
+	display: block;
+	
+}
+.sta_list table tr td{
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+}
+
+.sta_list table tr .rad{
+	width: 44px;
+	text-align: center;
+}
+.sta_list table tr .rad .radio{
+	display: block;
+	width:14px;
+	height:14px; 
+	margin: 8px auto 0;
+	background-color:#878787; 
+	border-radius:7px;
+	-moz-border-radius: 7px;      /* Gecko browsers */
+    -webkit-border-radius: 7px;
+	
+}
+.sta_list table tr .date{
+	margin-left: 40px;
+	font-size: 18px;
+	color: #808080;
+	
+}
+.sta_list table tr .weekday{
+	margin-left: 18px;
+	font-size: 18px;
+	color: #808080;
+	font-weight: bold;
+}
+.sta_list table tr .ordes{
+	margin-left: 50px;
+	font-size: 16px;
+	color: #808080;
+	
+}
+.sta_list table tr .ordes .bb{
+	display: inline-block;
+	float: left;
+	font-size: 16px;
+	color: #808080;
+	font-weight: bold;
+	
+}
+
+.sta_list table .now{
+	
+}
+.sta_list table .now .rad img{
+	height: 30px;
+	width: 30px;
+}
+.sta_list table .now .ordes .aa{
+	display: inline-block;
+	float: left;
+	margin-left: 18px;
+	font-size: 16px;
+	color: #c3935e;
+	font-weight: bold;
+}
+.sta_list table .now .date{
+	margin-left: 40px;
+	font-size: 18px;
+	color: #1a1a1a;
+	
+}
+.sta_list table .now .weekday{
+	margin-left: 18px;
+	font-size: 18px;
+	color: #1a1a1a;
+	font-weight: bold;
+}
+.sta_list table .now .ordes{
+	margin-left: 50px;
+	font-size: 16px;
+	color: #1a1a1a;
+	font-weight: bold;
+}
+.sta_list table .now .ordes .bb{
+	display: inline-block;
+	float: left;
+	font-size: 16px;
+	color: #1a1a1a;
+	font-weight: bold;
+	
+}
+.sta_list table .now .ordes .aa{
+	display: inline-block;
+	float: left;
+	margin-left: 18px;
+	font-size: 16px;
+	color: #c3935e;
+	font-weight: bold;
+}
+
+.sta_list table  .left_line{
+	height: 34px;
+}
+.sta_list table  .left_line  .one{
+	height: 34px;
+	width: 22px;
+	border-right: 1px solid #e6e6e6;
+}
+.sta_list table  .now_line{
+	height: 48px;
+}
+.sta_list table  .now_line .one{
+	height: 48px;
+	width: 22px;
+	border-right: 1px solid #e6e6e6;
+}
+
+
+

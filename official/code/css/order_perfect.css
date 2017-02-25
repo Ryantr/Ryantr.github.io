@@ -1,0 +1,395 @@
+/********chat********/
+.chatIcon{
+    position:fixed;
+    z-index: 999;
+    bottom:50px;
+    right:50px;
+    width:50px;
+    height:50px;
+    background: url(http://static.1sight.cn/official/code/image/contact.png) no-repeat;
+    background-size:cover;
+    background-position: left;
+    cursor: pointer;
+}
+.chatIcon:hover{
+    background-position: right;
+    width:150px;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+.main{
+	width: 100%;
+	background: #f2f2f2;
+	padding-bottom: 120px;
+}
+.main .order_process{
+	width: 406px;
+	height: 110px;
+	margin:0 auto;
+	padding-top: 50px;
+}
+.main .order_process hr{
+	height:1px;
+	width: 140px;
+	margin: 15px -17px 0 -17px;
+	float: left;
+	border:none;
+	border-top:1px solid #e6e6e6;
+}
+.main .order_process .status{
+	width: 64px;
+	float: left;
+	text-align: center;
+}
+.main .order_process .status .pic{
+	width:30px;
+	height:30px; 
+	margin: 0 auto;
+	background-color:#cc9b66; 
+	border-radius:15px;
+	-moz-border-radius: 15px;      /* Gecko browsers */
+    -webkit-border-radius: 15px; 
+}
+.main .order_process .pay  .pic{
+	background-color:#cccccc;
+}
+.main .order_process .appoint  .pic{
+	background-color:#cccccc;
+}
+.main .order_process p{
+	font-size: 16px;
+	color: #4c4c4c;
+	margin-top: 20px;
+}
+.main .order_process .perfect p{
+	color: #c3935e;
+}
+.main .order_process .status .pic span{
+	height:30px; 
+	line-height:30px; 
+	display:block; 
+	color:#FFF; 
+	text-align:center;
+}
+.main .content{
+	width: 1000px;
+	padding-bottom: 150px;
+	margin: 0 auto;
+	background-color: #FFF; 
+}
+
+.main .content .order_info{
+	width: 450px;
+	float: left;
+	margin: 60px 0 0 80px;
+	
+}
+.main .content .order_info tr{
+	height: 40px;
+	font-size: 14px;
+	color: #1a1a1a;
+	display: block;
+	margin-top: 20px;
+}
+.main .content .order_info tr:nth-child(1){
+	margin-top: 0px;
+}
+.main .content .order_info tr:nth-child(4){
+	height: 140px;
+	margin-top: 60px;
+}
+.main .content .order_info tr:nth-child(5){
+	margin-top: 50px;
+
+}
+.main .content .order_info tr:nth-child(7){
+	margin-top: 50px;
+
+}
+.main .content .order_info tr:nth-child(6){
+	margin-top: 50px;
+
+}
+.main .content .order_info tr .con{
+	width: 300px;
+	height: 40px;
+	border: 1px solid #cccccc;
+	padding-left:20px; 
+	
+}
+.main .content .order_info tr .time{
+	line-height: 40px;
+}
+.main .content .order_info tr .title{
+	padding-right: 30px;
+	font-size: 15px;
+	
+}
+.main .content .order_info tr .title_1{
+	margin-top: 10px;
+	display: block;
+	float: left;
+	
+}
+.main .content .order_info  tr .calendar{
+	width: 320px;
+	height: 380px;
+	border: 1px solid #cccccc;
+	position: absolute;
+	
+}
+.main .content .order_info tr .ruo{
+	
+	color: #000;
+	
+}
+.main .content .order_info tr textarea{
+	
+	overflow:hidden;
+	width:280px;
+	height:108px;
+	border:1px solid #cccccc;
+	padding: 16px 20px 16px 20px;
+	padding-top: 16px;
+	padding-left: 20px;
+	resize:none;
+}
+.main .content .order_info tr .ding{
+	position: relative;
+}
+.main .content .order_info tr .more{
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+}
+.main .content .order_info tr .pay1{
+	float: left;
+	margin-right: 30px;
+	line-height: 30px;
+}
+.main .content .order_info tr .btn_all{
+	height: 30px;
+	margin-top: 10px;
+	line-height: 40px;
+}
+.main .content .order_info tr .pay1 span{
+	display: inline-block;
+	float: right;
+	margin-left: 10px;
+
+}
+.main .content .order_info tr .pay2{
+	float: left;
+	line-height: 30px;
+}
+.main .content .order_info tr .pay2 span{
+	display: inline-block;
+	float: right;
+	margin-left: 10px;
+}
+
+.main .content .order_menu{
+	margin: 10px 0 0 20px;
+	float: left;
+}
+.main .content .order_menu .img{
+	width: 100px;
+	height: 100px;
+	background: url("../image/food2.jpg") no-repeat center;
+}
+.main .content .order_menu .title{
+	margin-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #cccccc;
+
+}
+.main .content .order_menu .title span{
+	display: inline-block;
+	float: right;
+}
+.main .content .order_menu .info{
+	margin-top: 10px;
+}
+.main .content .order_menu .info .info_t{
+	float: left;
+}
+.main .content .order_menu .info .info_i{
+	text-align: right;
+	float: right;
+	margin-top: 0;
+}
+.main .content .confirm{
+	width: 170px;
+	height: 45px;
+	background-color:#cc9b66;
+	margin: 100px auto 0;
+	text-align: center;
+	line-height: 45px;
+	color: #FFF;
+	font-size: 15px;
+	font-weight: bold; 
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+
+
+/*********************/
+.time{
+
+	cursor: pointer;
+	background:url(../image/arrow.png) no-repeat center right;
+	background-size:contain;
+}
+td{
+	position:relative;
+}
+.hourChose{
+	position:absolute;
+	z-index: 99;
+	top:40px;
+	left:0px;
+	height:0;
+	max-height: 160px;
+	overflow-y: auto;
+	overflow-x:hidden;
+	width:320px;
+	background-color:#fff;
+	border:none;
+
+	transition: height 0.2s;
+    -moz-transition: height 0.2s; /* Firefox 4 */
+    -webkit-transition: height 0.2s; /* Safari 和 Chrome */
+    -o-transition: height 0.2s; /* Opera */
+}
+.hourChose.show{
+	height:160px;
+	border:1px solid #ccc;
+
+	 transition: height 0.2s;
+    -moz-transition: height 0.2s; /* Firefox 4 */
+    -webkit-transition: height 0.2s; /* Safari 和 Chrome */
+    -o-transition: height 0.2s; /* Opera */
+}
+li{
+	padding-left: 20px;
+	line-height: 40px;
+	width:300px;
+	color:#1a1a1a;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	display: none;
+	cursor: pointer;
+}
+.hourChose.show li{
+	display: block;
+}
+li:hover{
+	color:#fafafa;
+	background-color:#cc9b66;
+}
+
+#dateChose{
+	cursor:pointer;
+}
+
+
+.qf_duihuan{
+	width: 100px;
+	height: 42px;
+	border: 0;
+	background: #cc9b66;
+	color: #fff;
+	font-size: 15px;
+	float: right;
+	margin-left: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.main .content .order_info tr .youhuima{
+	width: 200px;
+}
+
+
+
+
+.qf_yh_box{
+	width: 600px;
+	margin-left: 30px;
+	border: 1px solid #dbdbdb;
+}
+.main .content .order_info .qf_tr{
+	margin-top: 200px;
+}
+.qf_yh_top{
+	height: 40px;
+	border-bottom: 1px solid #dbdbdb;
+	background: #fafafa;
+}
+.qf_yh_top span:nth-child(1){
+	width: 300px;
+	display: block;
+	float: left;
+	line-height: 40px;
+	text-align: center;
+}
+.qf_yh_top span:nth-child(2){
+	width: 150px;
+	display: block;
+	float: left;
+	border: 1px solid #dbdbdb;
+	border-top:0;
+	border-bottom:0;
+	line-height: 40px;
+	text-align: center;
+}
+.qf_yh_top span:nth-child(3){
+	width: 148px;
+	display: block;
+	float: left;
+	line-height: 40px;
+	text-align: center;
+}
+
+.qf_yh_nav{
+	height: 120px;
+}
+.qf_yh_nav span:nth-child(1){
+	width: 300px;
+	display: block;
+	float: left;
+	line-height: 40px;
+}
+.qf_yh_nav span:nth-child(2){
+	width: 150px;
+	display: block;
+	float: left;
+	border: 1px solid #dbdbdb;
+	border-top:0;
+	border-bottom:0;
+	line-height: 30px;
+	text-align: center;
+}
+.qf_yh_nav span:nth-child(3){
+	width: 148px;
+	display: block;
+	float: left;
+	line-height: 30px;
+	text-align: center;
+}
+
+.qf_p1{
+	line-height: 120px;
+	float: left;
+	margin-left: 10px;
+}
+.qf_tr span{
+	font-size: 24px;
+	font-weight: bold;
+}
+.qf_ts{
+	color: red;
+	display: none;
+}

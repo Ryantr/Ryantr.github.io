@@ -1,0 +1,1083 @@
+body{
+    overflow-y: hidden;
+    overflow-x: auto;
+    font-size:62.5%;
+    min-width:1000px;
+}
+input{outline: none;}
+button{outline:none;border:none;text-decoration: none;}
+a{text-decoration: none;}
+h1{
+    font-size: 40px;
+    color:#fff; 
+}
+h2{
+    font-size: 30px;
+    color:#fff; 
+    font-weight: 300;
+}
+.mainContainer{
+    opacity: 0;
+}
+.topNavContainer{
+    position:fixed;
+    z-index:999;
+    top:0;
+    width:100%;
+    left:0;
+}
+.topNavContainer .topLogoImg{
+    margin-left: 50px;
+    margin-top: 40px;
+    width:7%;
+}
+.navBtnContainer{
+    float: right;
+    margin-top: 34px;
+    margin-right: 50px;
+}
+.navBtnContainer button{
+    background: rgba(255,255,255,0);
+    border:2px solid rgba(255,255,255,0);
+    width:120px;
+    height:40px;
+    border-radius: 2px;
+    color:#fff;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.navBtnContainer button:hover{
+    border:2px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+}
+.navBtnContainer.navBtnBlack button{
+    color:#1a1a1a;
+}
+.navBtnContainer.navBtnBlack button:hover{
+    border:2px solid rgba(51,51,51,0.2);
+    background: rgba(51,51,51,0.1);
+}
+
+.navLogout{
+    display: none;
+}
+.navLogin{
+    display: none;
+}
+.userInfoContainer{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height:60px;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+.userInfoContainer:hover{
+    height:320px;
+}
+.userInfo{
+    display: inline-block;
+    width:160px;
+    line-height: 30px;
+    padding:5px 10px 5px 30px;
+    color:#fafafa;
+    text-align: center;
+    vertical-align: middle;
+    border:2px solid rgba(255,255,255,0);
+}
+.userInfo.userInfoBlack{color:#1a1a1a;}
+.userInfo:hover{
+    border:2px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+}
+.userInfo.userInfoBlack:hover{
+    border:2px solid rgba(51,51,51,0.2);
+    background: rgba(51,51,51,0.1);
+}
+.userInfoName{
+    overflow:hidden;
+    white-space:nowrap;
+}
+.userInfoTx{
+    margin-right: 2px;
+    float: right;
+    width:30px;
+    height:30px;
+    background:#ccc no-repeat center;
+    background-size:cover;
+    border-radius: 15px;
+}
+.userInfoMenu{
+    position:absolute;
+    width:200px;
+    top:50px;
+    right:-7px;
+    background-color: #fff;
+    border-radius: 6px;
+    border:1px solid #dbdbdb;
+    display: none;
+}
+.userInfoMenu li{
+    width:140px;
+    line-height: 50px;
+    padding-left: 50px;
+    background: no-repeat;
+    background-position:20px;
+    border-radius: 6px;
+    color:#1a1a1a;      
+    text-align: left;
+    background-color:#fff;
+}
+.userInfoMenu li:hover{
+    padding-left: 60px;
+    background-position:30px;
+    background-color:#fafafa;
+}
+.userInfoMenu-arrow {
+    position:absolute;
+    top:-16px;                /* 上下位置 */
+    right:8px;             /* 箭头位置 */
+    width:0;
+    height:0;
+    border:solid 8px;
+    border-color: rgba(0,0,0,0)  rgba(0,0,0,0) #fff rgba(0,0,0,0) ; /* 箭头朝向 */
+}
+.userInfoMenu .listBtn{background-image:url(http://static.1sight.cn/official/code/image/listicon.png);}
+.userInfoMenu .cloudBtn{background-image:url(http://static.1sight.cn/official/code/image/cloudicon.png);}
+.userInfoMenu .setBtn{background-image:url(http://static.1sight.cn/official/code/image/seticon.png);}
+.userInfoMenu .signBtn{background-image:url(http://static.1sight.cn/official/code/image/signicon.png);}
+.userInfoMenu .logoutBtn{background-image:url(http://static.1sight.cn/official/code/image/logouticon.png);}
+
+.userInfoMenu .listBtn:hover{background-image:url(http://static.1sight.cn/official/code/image/listiconh.png);}
+.userInfoMenu .cloudBtn:hover{background-image:url(http://static.1sight.cn/official/code/image/cloudiconh.png);}
+.userInfoMenu .setBtn:hover{background-image:url(http://static.1sight.cn/official/code/image/seticonh.png);}
+.userInfoMenu .signBtn:hover{background-image:url(http://static.1sight.cn/official/code/image/signiconh.png);}
+.userInfoMenu .logoutBtn:hover{background-image:url(http://static.1sight.cn/official/code/image/logouticonh.png);}
+/********chat********/
+.chatIcon{
+    position:fixed;
+    z-index: 999;
+    bottom:50px;
+    right:50px;
+    width:50px;
+    height:50px;
+    background: url(http://static.1sight.cn/official/code/image/contact.png) no-repeat;
+    background-size:cover;
+    background-position: left;
+    cursor: pointer;
+}
+.chatIcon:hover{
+    background-position: right;
+    width:150px;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+
+/*********slide1**********/
+
+.section-1{
+    text-align: center;
+    background:url(http://static.1sight.cn/official/code/image/bg-01.jpg) no-repeat center;
+    background-size:cover; 
+}
+.section-1 h1{
+    margin-top: 13%;
+}
+.section-1 h2{
+    margin-top: 2%;
+}
+.researchContainer{
+    width:650px;
+    margin:auto;
+    margin-top: 4%;
+    position:relative;
+}
+.researchContainer input{
+    outline: none;
+    border: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+}
+.researchContainer #searchInput{
+    width:460px;
+    padding-left:50px; 
+    background:#fff url(http://static.1sight.cn/official/code/image/searchinput.png) no-repeat 20px; 
+}
+.researchContainer #searchBtn{
+    height: 52px;
+    margin-left: -6px;
+    width:140px;
+    background-color: #cc9b66;
+    color:#fff;
+    cursor: pointer;
+}
+.searchResultContainer{
+    position:absolute;
+    top:53px;
+    left:-1px;
+    width:510px;
+    height:0;
+    /*min-height: 180px;*/
+    background-color:rgba(0,0,0,0.2);
+    border:1px solid #333;
+    text-align: center;
+    /*display: none;*/
+}
+.searchResultContainer .ResultBtnContainer{
+    margin-top: 20px;
+    display: none;
+}
+
+.searchResultContainer .searchResultBtn{
+    display: inline-block;
+    margin-top: 10px;
+    padding:0 10px;
+    width:110px;
+    line-height: 40px;
+    background-color:rgba(0,0,0,0);
+    border:none;
+    color:rgba(255,255,255,0.6);
+    font-size: 14px;
+}
+.searchResultBtn:hover{
+    background-color:rgba(0,0,0,1);
+}
+.lineTitle-lm{
+    top: 20px;
+    line-height: 40px;
+    font-size: 14px;
+    color:rgba(255,255,255,0.6);
+    width:200px;
+    display: none;
+}
+.lineTitle-lm .line{
+    width:50px;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+}
+/*********slide2**********/
+.cardDoor{
+    position: relative;
+    display: inline-block;
+    line-height: 100%;
+    vertical-align: top;
+    height:100%;
+    width:17%;
+    cursor:pointer;
+    text-align: center;
+    
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+.cardDoor-1{
+    background:url(http://static.1sight.cn/official/code/image/back001.png) no-repeat center;
+    background-size:cover;
+}
+.cardDoor-2{
+    background:url(http://static.1sight.cn/official/code/image/back002.png) no-repeat center;
+    background-size:cover;
+}
+.cardDoor-3{
+    background:url(http://static.1sight.cn/official/code/image/back003.png) no-repeat center;
+    background-size:cover;
+}
+.cardDoor-4{
+    background:url(http://static.1sight.cn/official/code/image/back004.png) no-repeat center;
+    background-size:cover;
+}
+.cardDoor .doorMask{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:#000;
+    opacity: 0.6;
+    transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s; 
+    -o-transition: opacity 0.5s; 
+}
+.cardOpen .doorMask{
+    opacity: 0;
+    transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s; 
+    -o-transition: opacity 0.5s; 
+}
+.cardDoor.cardOpen{
+    width:49%;
+
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+.titleOpen{
+    position: absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    width:280px;
+    opacity: 0;
+
+    transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s; 
+    -o-transition: opacity 0.5s; 
+}
+.titleOpen h3{
+    font-size: 30px;
+    line-height: 40px;
+    color:#fff; 
+}
+.titleOpen p{
+    margin-top: 30px;
+    line-height: 28px;
+    font-size: 14px;
+    color:#fff; 
+    text-align: left;
+}
+
+.cardDoor.cardOpen .titleOpen{
+    opacity: 1;
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s; 
+    -o-transition: opacity 1s; 
+}
+.titleClose{
+    position: relative;
+    opacity: 1;
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s; 
+    -o-transition: opacity 1s;
+}
+.titleClose h5{
+    line-height: 1.5em;
+    font-size: 2em;
+    color:#fff;
+    letter-spacing: 1px;
+}
+.cardDoor.cardOpen .titleClose{
+    opacity: 0;
+    transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s; 
+    -o-transition: opacity 0.5s;
+}
+/*********slide3************/
+.picContainer{
+    width:72%;
+    margin:auto;
+}
+.picContainer h4{
+    font-size: 3em;
+    color:#fff;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+.picContainer h3{
+    margin-top: 30px;
+    font-size: 4em;
+    color:#fff;
+    letter-spacing: 1px;
+}
+.section-3{
+    position: relative;
+    background:url(http://static.1sight.cn/official/code/image/bg-02.jpg) no-repeat center;
+    background-size:cover; 
+    text-align: center;
+}
+.picContainer .cardPic{
+    width:28.5%;
+}
+.cardPic .cardPicBg{
+    position: relative;
+    border-radius: 6px;
+    background: no-repeat center;
+    background-size:cover;
+    cursor: pointer; 
+}
+.cardPicBg .hoverCover{
+    position:absolute;
+    height:0;
+    max-height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+    border-radius: 6px;
+    background-color:#a16e38;
+    opacity: 0.9;
+}
+.hoverCover p{
+    margin:auto;
+    color:#fff;
+    font-size: 1.8em;
+    display: none;
+}
+.cardPic .cardPicTitle{
+    font-size: 2.6em;
+    color:#fff;
+} 
+.cardPic.cardPicLeft{
+    float: left;
+    margin-left: 1.8%;
+}
+.cardPic.cardPicRight{
+    float: right;
+    margin-right: 1.8%;
+}
+.cardPic.cardPicMiddle{
+    margin-left:auto;
+    margin-right:auto;
+}
+.title-s{
+    position: absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    bottom: 60px;
+    font-size: 1.8em;
+    color:#fff;
+}
+.title-s span{
+    font-weight: 600;
+}
+/*********slide4************/
+.sevContainer{
+    position: relative;
+    width:50%;
+    height:100%;
+    margin-left: 50%;
+}
+.sevContainer .sevMask{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url(http://static.1sight.cn/official/code/image/mask.png) no-repeat center;
+    background-size:cover; 
+}
+.sevTitleContainer{
+    width:50%;
+    height:100%;
+    margin-left: 50%;   
+    background-color:#fff;
+    padding-top: 10%;
+}
+.sevContainer .sevPic{
+    width:100%;
+    height:100%;
+    background: no-repeat center;
+    background-size:cover; 
+    display: none;
+}
+
+.sevShow{
+    display: block !important;
+}
+
+.sevTitle{
+    width:50%;
+    margin:auto;
+}
+.sevType{
+    display: none;
+}
+.sevTitle h4{
+    font-size: 3em;
+    color:#333;
+    font-weight: 400; 
+    letter-spacing: 1px;
+}
+.sevTitle h3{
+    margin-top: 30px;
+    font-size: 3em;
+    line-height: 2em;
+    color:#333;
+    font-weight: 600; 
+    letter-spacing: 1px;
+}
+.sevTitle h3 span{
+    margin-left: 10px;
+    font-size: 0.8em;
+    color:#cc9b66;
+    font-weight: 600; 
+    letter-spacing: 0px;
+}
+.sevTitle h3 span sup{
+    font-size: 0.7em;
+}
+.sevTitle p{
+    font-size: 1.8em;
+    color: #808080;
+}
+.sevTitle .keyWords{
+    margin-top: 50px;
+    color:#1a1a1a;
+}
+.floatLeft{
+    float:left !important;
+    margin-left: 0;
+}
+
+.sevBtnContainer{
+    width:50%;
+    margin:auto;
+}
+.sevBtnContainer .sevBtn{
+    display: inline-block;
+    margin-top:20px;
+    width:45%;
+    font-size: 2em;
+    background-color:#fafafa;
+    border:1px solid #dbdbdb;
+    color:#1a1a1a;
+    text-align: center;
+}
+.sevBtn.secondBtn{
+    margin-left: 14px;
+}
+.sevBtn.sevBtnhover{
+    background-color:#cc9b66;
+    border:1px solid #b78044;
+    color:#fff;
+}
+/********slide7************/
+.section-7{
+    position:relative;
+    background:url(http://static.1sight.cn/official/code/image/map.jpg) no-repeat center;
+    background-size:cover;    
+}
+.mapTitleContainer{
+    position: absolute;
+    text-align: right;
+    right:13.5%;
+    bottom:10%;
+}
+.mapTitleContainer h3{
+    font-size: 4em;
+    color:#000;
+
+}
+.mapTitleContainer h5{
+    font-size: 2em;
+    color:#000;
+}
+.mapTitleContainer h5 span{
+    font-size: 1.5em;
+    color:#a63627;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.mapTitleContainer p{
+    margin-top: 20px;
+    font-size: 1.6em;
+    color:#000;
+}
+.point{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background-color:#a63627;
+    opacity: 0.7;
+    border-radius: 100%;
+
+}
+.point p{
+    position:absolute;
+    margin:auto;
+    border-radius: 50%;
+    border:1px solid #ff5640;
+    background-color:rgba(166,54,39,0.1);
+}
+.point1{right:35%;top:33%;}
+.point1 p{width:160px;height:160px;top:-77px;left:-77px;}
+.point2{right:46%;top:48%;}
+.point2 p{width:240px;height:240px;top:-117px;left:-117px;}
+.point3{right:55%;top:61%;}
+.point3 p{width:80px;height:80px;top:-37px;left:-37px;}
+.point4{right:42%;bottom:29%;}
+.point4 p{width:110px;height:110px;top:-52px;left:-52px;}
+.point5{right:50%;bottom:30%;}
+.point5 p{width:210px;height:210px;top:-102px;left:-102px;}
+.point6{right:60%;bottom:27%;}
+.point6 p{width:166px;height:166px;top:-83px;left:-83px;}
+.point7{right:49%;bottom:15%;}
+.point7 p{width:130px;height:130px;top:-62px;left:-62px;}
+
+/**********slide8************/
+.dataTable{
+    background:url(http://static.1sight.cn/official/code/image/backdata.png) no-repeat center;
+    background-size:cover;
+}
+.dataTableContainer{
+    position:relative;
+    float:left;
+    margin-left: 8%;
+    width:43%;
+    background: url(http://static.1sight.cn/official/code/image/data.png) no-repeat center;
+    background-size:contain;
+}
+.dataTableLine{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:0;/***40.8* *57.4**73.5**/
+    background: url(http://static.1sight.cn/official/code/image/dataline.png) no-repeat bottom;
+    background-size:cover;
+}
+.dataTableDLine-1{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:0;/*10* 30* 35* 100*/
+    height:100%;
+    background: url(http://static.1sight.cn/official/code/image/dataDline1.png) no-repeat left;
+    background-size:cover;
+}
+.dataTableDLine-2{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:0;/**40,50,70,100*********/
+    height:100%;
+    background: url(http://static.1sight.cn/official/code/image/dataDline2.png) no-repeat left;
+    background-size:cover;
+}
+.dataTablePoint{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:0;/***40.8* *57.4**73.5**/
+    background: url(http://static.1sight.cn/official/code/image/datapoint.png) no-repeat bottom;
+    background-size:cover;
+}
+.dataTableTitleContainer{
+    margin-left:60%;
+    width:25%;
+}
+.dataTableTitleContainer h3{
+    font-size: 4em;
+    font-weight: 400;
+    color:#1a1a1a;
+}
+.dataTableTitleContainer h4{
+    font-size: 2em;
+    line-height: 1.7em;
+    font-weight: 600;
+    color:#ff5640;
+}
+.dataTableTitleContainer h5{
+    font-size: 2em;
+    line-height: 1.7em;
+    font-weight: 600;
+    color:#cc9b66;
+}
+.dataTableTitleContainer p{
+    font-size: 2em;
+    color:#1a1a1a;
+}
+.dataTableTitleContainer .dataBtnContainer{
+    margin-top: 60px;
+    margin-left: 6px;
+}
+.dataBtnContainer button{
+    position: relative;
+    padding:0;
+    width:25%;
+    margin-left:-6px;
+    border:none;
+    -webkit-appearance: none;
+
+}
+.dataBtnContainer button:hover{
+    background-position: 0;
+}
+
+.dataBtnContainer .btn-1{
+    background: url(http://static.1sight.cn/official/code/image/icon01.png) no-repeat;
+    background-position: center;
+    background-size:  cover;
+}
+
+.dataBtnContainer .btn-2{
+    background: url(http://static.1sight.cn/official/code/image/icon02.png) no-repeat;
+    background-position: center;
+    background-size:  cover;
+}
+.dataBtnContainer .btn-3{
+    background: url(http://static.1sight.cn/official/code/image/icon03.png) no-repeat;
+    background-position: center;
+    background-size:  cover;
+}
+.dataBtnContainer .btn-4{
+    background: url(http://static.1sight.cn/official/code/image/icon04.png) no-repeat;
+    background-position: center;
+    background-size:  cover;
+}
+.dataBtnContainer .btnDisabled{
+    background-position: center !important; 
+}
+.dataBtnContainer .activeDateBtn{
+    background-position: 100%;
+    cursor: pointer;
+}
+
+.activeDateBtn .btnGuide{
+    position: absolute;
+    width:70%;
+    height:70%;
+    top:2%;
+    left:11%;
+    border-radius: 50%;
+    border:2px solid #999;
+    opacity: 0.2;
+}
+.btnGuide.btnGuide-s{
+    width:50%;
+    height:50%; 
+    top:12%;
+    left:21%;
+}
+
+.dataTableP1{
+    display: none;
+}
+.dataTableP2{
+    display: none;
+}
+.dataTableP1.sevShow{
+    display: block;
+}
+
+/**********slide9************/
+.section-9{
+    position:relative;
+    background:url(http://static.1sight.cn/official/code/image/comment.jpg) no-repeat center;
+    background-size:cover;   
+    text-align: center; 
+}
+.section-9 h3{
+    font-size: 4em;
+    color:#fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 11%;
+}
+.flyComments{
+    position:absolute;
+    width:28%;
+}
+.flyComments.firstRow{
+    top:35%;
+}
+.flyComments.secondRow{
+    top:60%;
+}  
+
+ .fly-1{
+    right:-20%;
+}
+.fly-2{
+    right:-60%;
+}
+/*.fly-3{
+    right:-100%;
+}*/
+.secondRow.fly-1{
+    right:-40%;
+}
+.secondRow.fly-2{
+    right:-80%;
+}
+
+/***********slide10*************/
+.section-10{
+    background-color: #fff;
+    text-align: center; 
+}
+.section-10 h3{
+    font-size: 4em;
+    color:#000;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 11%;
+}
+.section-10 h5{
+    font-size: 2em;
+    line-height: 1.5em;
+    color:#1a1a1a;
+    letter-spacing: 1px;
+}
+.partnerContainer{
+    width:50%;
+    margin:auto;
+    margin-top: 4%;
+}
+.partnerContainer .partnerIcon{
+    width:25%;
+    display: inline-block;
+    margin-left: -6px;
+}
+/*************slide11*****************/
+.section-11{
+    position:relative;
+    background:url(http://static.1sight.cn/official/code/image/back01.jpg) no-repeat center;
+    background-size:cover;  
+    text-align: center;  
+}
+.footLogo{
+    width:24%;
+    margin:auto;
+    margin-top: 10%;
+}
+.section-11 h3{
+    font-size: 4em;
+    color:#fff;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-top: 2%;
+}
+.toTopBtn{
+    margin-top: 5%;
+    width:12%;
+    color:#fff;
+    background-color:rgba(0,0,0,0);
+    border:1px solid #fff;
+    font-size: 2em;
+    cursor:pointer;
+}
+.footerContainer{
+    position:absolute;
+    width:100%;
+    bottom:4%;
+    left:0;
+}
+.footerContainer a{
+    font-size: 2em;
+    color:#fff;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+/********line*********/
+.lineTitle{
+    position:relative;
+    margin:auto;
+    text-align: center;
+}
+.lineTitle-sm{
+    font-size: 20px;
+    line-height: 40px;
+    color:#cc9b66;
+    width:80px;
+}
+.line{
+    position:absolute;
+    top:20px;
+    width:20px;
+    display: block;
+}
+.line-left{
+    left:0;
+}
+.line-right{
+    right:0;
+}
+.lineTitle-sm .line{
+    border-bottom: 1px solid #cc9b66;
+}
+
+/******************/
+
+.pagination{
+    position:fixed;
+    left:54px;
+    width:18px;
+    top:50%;
+    height:100%;
+    z-index:999;
+    text-align: center;
+}
+.pagination-pages{
+    position: relative;
+    width:10px;
+    height:10px;
+    background-color:rgba(255,255,255,0.6);
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.pagination-pages .pagination-pages-hover{
+    position: absolute;
+    top:-4px;
+    left:-4px;
+    width:18px;
+    height:18px;
+    background-color:rgba(255,255,255,0.4);
+    border-radius: 9px;
+    display: none;
+}
+.pagination-pages .pagination-pages-active{
+    position: absolute;
+    top:-4px;
+    left:-4px;
+    width:18px;
+    height:18px;
+    background-color:rgba(255,255,255,1);
+    border-radius: 9px;
+    display: none;
+}
+.pagination-pages-active.pagesActived{
+    display: block;
+}
+.pagination-guide {
+    position:absolute;
+    left:25px;
+    top:-8px;
+    width:80px;
+    height:28px;
+    line-height: 28px;
+    background:#000;
+    color:#fff;
+    font-size: 12px;
+    border-radius:5px;
+    display: none;
+    cursor: pointer;
+}
+.pagination-guide .pagination-guide-arrow {
+    position:absolute;
+    top:10px;                /* 上下位置 */
+    left:-8px;             /* 箭头位置 */
+    width:0;
+    height:0;
+    font-size:0;
+    border:solid 4px;
+    border-color:rgba(0,0,0,0) #000 rgba(0,0,0,0) rgba(0,0,0,0) ; /* 箭头朝向 */
+}
+.pagination-pages.pagination-pages-black{
+    background-color:rgba(76,76,76,0.6);
+}
+.pagination-pages.pagination-pages-black .pagination-pages-hover{
+    background-color:rgba(76,76,76,0.4);
+}
+.pagination-pages.pagination-pages-black .pagination-pages-active{
+    background-color:rgba(76,76,76,1);
+}
+@media screen and (max-width:1400px){
+    body{font-size: 40%;}
+}
+
+
+
+
+
+.qf_beijing{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 999;
+    filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+    -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+    opacity:0.5;/*其他，透明度50%*/
+}
+.qf_nav{
+    width: 700px;
+    height: 450px;
+    background: #fff;
+    position: fixed;
+    z-index: 1000;
+    top: 20%;
+    left: 26%;
+}
+.qf_nav_top{
+    height: 60px;
+    background: #f1f1f1;
+    width: 100%;
+}
+.qf_nav_top div{
+    font-size: 16px;
+    line-height: 60px;
+    float: left;
+    margin-left: 40px;
+    color: #666;
+}
+.qf_nav_top span{
+    font-size: 16px;
+    line-height: 60px;
+    float: right;
+    margin-right: 20px;
+    color: #666;
+    cursor: pointer;
+}
+.qf_nav_nav{
+    width: 600px;
+    height: 260px;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 0 auto;
+}
+.qf_dazi{
+    font-size: 16px; 
+    color: #666;
+    display:block;
+    text-align: center;
+    margin: 60px 0 40px;
+
+}
+.qf_wz_zi_1{
+    font-size: 14px;
+    color: #999;
+    display: block;
+    margin: 0 40px;
+    float: left;
+}
+.qf_weizhi img{
+    float: left;
+}
+.qf_didian{
+    font-size: 14px;
+    color: #666;
+    float: left;
+    margin-left: 10px;
+}
+.qf_dianji{
+    margin-top: 80px;
+}
+.qf_beijing_1{
+    float: left;
+    width: 150px;
+    height: 100px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.qf_shanghai_1{
+    float: left;
+    width: 150px;
+    height: 100px;
+    cursor: pointer;
+}
+.qf_qidai{
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    line-height: 70px;
+}
+
+.qf_tan{
+    display: none;
+}

@@ -1,0 +1,363 @@
+/********chat********/
+.chatIcon{
+    position:fixed;
+    z-index: 999;
+    bottom:50px;
+    right:50px;
+    width:50px;
+    height:50px;
+    background: url(http://static.1sight.cn/official/code/image/contact.png) no-repeat;
+    background-size:cover;
+    background-position: left;
+    cursor: pointer;
+}
+.chatIcon:hover{
+    background-position: right;
+    width:150px;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+body{
+	background: #f2f2f2;
+	width: 750px;
+}
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+/**
+orders
+*/
+.doc {
+	
+ 	margin: 30px 30px;
+ 	
+}
+.doc .details {
+	width: 100%;
+	background: url("../image/diline.png")  no-repeat bottom; 
+	margin-top: 30px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px; 
+	border-top: 1px solid #cecaca;
+	border-left: 1px solid #cecaca;
+	border-right: 1px solid #cecaca;  
+	padding-bottom: 5px; 
+}
+
+.doc ul {
+	margin-left: 50px;
+	list-style: none;
+}
+.doc ul li{
+	line-height: 48px;
+	font-size: 26px;
+}
+.doc .content{
+	color: #666666;
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 44px;
+	line-height: 22px;
+	background: #FFF;
+
+}
+.doc .content .imging{
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+
+}
+
+.doc .title{
+	height: 120px;
+	padding: 0px 40px;
+	line-height: 122px;
+	border-radius: 8px 8px 0  0; 
+	-moz-border-radius: 8px 8px 0  0; 
+	-webkit-border-radius: 8px 8px 0  0; 
+	font-size:20px;
+	font-weight: bold; 
+	background: #699df7;
+	color: #FFF;
+}
+.doc .details .title p{
+	float: right;
+	font-size: 26px;
+	filter:alpha(opacity=70);  
+    -moz-opacity:0.7;  
+    -khtml-opacity: 0.7;  
+    opacity: 0.7; 
+
+}
+.doc .details .title h5{
+	font-size: 28px;
+}
+.doc .details .title span{
+	font-size: 26px;
+	display: inline-block;
+	margin-left: 28px;
+
+}
+.doc .shoting{
+	background: #699df7;
+}
+.doc .waitpay{
+	background: #ff6450;
+}
+.doc .waitshot{
+	background: #f8bd00;
+}
+.doc .complete{
+	background: #75c025;
+}
+.doc .cancel{
+	background: #b3b3b3;
+}
+.doc .anchor{
+	margin-left: 28px;
+	float: right;
+	font-weight: normal; 
+	display: inline-block;
+
+}
+.doc .anchor .price{
+	float: left;
+}
+.doc .anchor .status{
+	float: right;
+	
+	
+}
+.doc .topline{
+	width: 100%;
+	background: #fff;
+}
+.doc .action{
+	width: 70%;
+	margin: 0 auto;
+	border-top: 2px dotted #cecaca;
+	padding: 30px 0 25px;
+	text-align: center;
+	color: #4385f5;
+	font-size: 26px;
+}
+.doc .action a{
+	color: #4385f5;
+}
+
+.empty{
+	width: 100%;
+	margin-top: 0px;
+}
+.empty img{
+	height: 80px;
+	display: block;
+	margin:380px auto 70px;
+
+}
+.empty .status{
+	line-height: 28px;
+	text-align: center;
+	width: 100%;
+}
+.empty .gowhere{
+	height: 90px;
+	width: 70%;
+	margin:150px auto ;
+	background: #699df7;
+	border-radius: 45px; 
+	-moz-border-radius: 45px; 
+	-webkit-border-radius: 45px; 
+	text-align: center;
+	line-height: 90px;
+}
+
+/**
+info
+*/
+
+.container{
+	
+}
+
+.container img{
+	width: 100%;
+}
+.container .topimg{
+	width: 100%;
+}
+.container p{
+	font-size: 20px
+}
+.container .title1{
+	font-size: 28px;
+	color: #4c4c4c;
+	margin-top: 70px;
+	text-align: center;
+	line-height: 48px;
+}
+.container .middle{
+	width: 92%;
+	margin:70px auto;
+	border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+}
+.container .bottom{
+	width: 92%;
+	margin:70px auto 0;
+}
+.container .bottom .lifepho{
+	display: block;
+	margin-bottom: 20px;
+	border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+}
+.container .notice{
+	width: 92%;
+	margin:34px auto 69px;
+	
+}
+.container .notice img{
+	width: 100%;
+}
+
+.container .makeorder{
+	margin: 60px 0px 0px;
+	width: 100%;
+	height: 110px;
+	background: #699DF7;
+	text-align: center;
+	line-height: 110px;
+	font-size: 30px;
+	color: #ffffff;
+}
+
+/*
+album_list
+我的相册
+*/
+
+.borders_img img{
+	width: 690px;
+}
+
+
+.borders{
+	margin: 40px 30px 0px;
+	border: 1px solid #dbdbdb;
+	background: #FFF;
+	border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px;
+	width: 690px;
+}
+.borders_qf{
+	margin-bottom: 40px;
+}
+.album_top .title{
+	line-height: 120px;
+	height: 120px;
+}
+.album_top .title img{
+	float: right;
+	margin:27px  -8px 27px 0;
+}
+.album_top .title span{
+	
+	display: inline-block;
+	margin-left: 30px;
+}
+ .font_style{
+	font-size: 28px;
+	color: #333333;
+}
+ .des_style{
+	font-size: 26px;
+	color: #666666;
+}
+.album_top .surface{
+	width: 100%;
+}
+.album_top img{
+	display: block;
+
+}
+.album_top .des{
+	height: 110px;
+	line-height: 110px;
+	margin-left: 0px;
+
+}
+.album_top .des img{
+	float: right;
+	padding:47px  40px 47px 0;
+
+}
+.album_top .des span{
+	display: inline-block;
+	margin-left: 30px;
+}
+.album{
+	margin-top: 20px; 
+	height: 320px;
+	position: relative;
+}
+.album .surface{
+	float: left;
+	width: 240px;
+	height: 240px;
+	
+	margin: 40px;
+}
+
+.album .album_des{
+	width: 320px;
+	float: left;
+	margin:50px 40px 50px 0;
+	
+}
+.album .album_des .img1{
+	position: absolute;
+	width: 100%;
+	text-align: right;
+	right: 40px;
+	top:120px;
+
+}
+.album .album_des .picture{
+	height: 92px;
+	line-height: 46px;
+	text-align: left;
+	margin-top:110px; 
+}
+
+/**
+album_info  
+*/
+.album_title{
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	background: #82bf50;
+	font-size: 26px;
+	color: #ffffff;
+}
+.album_content{
+	margin: 10px 2px 0px 10px;
+	float: left;
+}
+.album_content .info{
+	width: 238px;
+	height: 238px;
+	float: left; 
+	margin-left: 0px;
+	margin-right: 8px; 
+	margin-bottom: 8px;
+}

@@ -1,0 +1,290 @@
+/********chat********/
+.chatIcon{
+    position:fixed;
+    z-index: 999;
+    bottom:50px;
+    right:50px;
+    width:50px;
+    height:50px;
+    background: url(http://static.1sight.cn/official/code/image/contact.png) no-repeat;
+    background-size:cover;
+    background-position: left;
+    cursor: pointer;
+}
+.chatIcon:hover{
+    background-position: right;
+    width:150px;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+.main{
+	width:100%;
+	background-color: #f2f2f2;
+}
+
+.main .content{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+.main .content .left_nav{
+	width: 218px;
+	float: left;
+	border: 1px solid #dbdbdb;
+	border-radius:4px ;
+	-moz-border-radius: 4px;      /* Gecko browsers */
+    -webkit-border-radius: 4px; 
+}
+
+.main .content .left_nav .center{
+	height: 59px;
+	line-height: 60px;
+	background-color: #4d4d4d;
+	padding-left: 40px;
+	font-size: 16px;
+	color: #e5e5e5;
+	font-weight: bold;
+	border-bottom: 1px solid #e6e6e6;
+	border-radius:4px 4px 0 0;
+	-moz-border-radius: 4px;      /* Gecko browsers */
+    -webkit-border-radius: 4px 4px 0 0; 
+
+}
+.main .content .left_nav .nav{
+	height: 69px;
+	line-height: 70px;
+	background-color: #FFF;
+	padding-left: 50px;
+	border-bottom: 1px solid #f2f2f2;
+
+}
+.main .content .left_nav p{
+	cursor: pointer;
+}
+.main .content .left_nav .nav span{
+	font-size: 16px;
+	color: #1a1a1a;
+}
+.main .content .left_nav .nav img{
+	display: block;
+	float: right;
+	margin-right:20px;
+	margin-top: 34px;
+}
+
+.main .content .left_nav .nav_hover{
+	height: 69px;
+	line-height: 70px;
+	background-color: #fafafa;
+	padding-left: 60px;
+	font-weight: bold;
+	border-bottom: 1px solid #f2f2f2;
+}
+.main .content .left_nav .nav_hover span{
+	font-size: 16px;
+	font-weight: bold;
+	color: #1a1a1a;
+}
+.main .content .left_nav .nav_hover img{
+	display: block;
+	float: right;
+	margin-right:20px;
+	margin-top: 34px;
+}
+
+
+.main .content .right{
+	width: 758px;
+	float: left;
+	margin-left: 20px;
+}
+
+.main .content .right .center_info{
+	display: none;
+}
+.main .content .right  .hot_all{
+	width: 100%;
+	background-color: #FFF;
+	border: 1px solid #dbdbdb;
+	border-radius:4px;
+	-moz-border-radius: 4px;      /* Gecko browsers */
+    -webkit-border-radius: 4px; 
+}
+.main .content .right  .hot_all .title_all{
+	height: 59px;
+	line-height: 60px;
+	background-color: #4d4d4d;
+	padding-left: 40px;
+	font-size: 16px;
+	color: #e5e5e5;
+	font-weight: bold;
+	border-bottom: 1px solid #e6e6e6;
+	border-radius:4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;      /* Gecko browsers */
+    -webkit-border-radius: 4px 4px 0 0; 
+
+}
+.main .content .right  .hot_all  .tel{
+	height: 100px;
+	line-height: 100px;
+	padding-left: 40px;
+	font-size: 17px;
+	color: #1a1a1a;
+
+}
+.main .content .right .center_info .hot_all .hot_question{
+	height: 79px;
+	width: 720px;
+	line-height: 79px;
+	padding-left: 40px;
+	border-bottom: 1px solid #f2f2f2;
+	font-size: 15px;
+	color: #1a1a1a;
+
+}
+.main .content .right .center_info .hot_all .hot_question .radio{
+	width:20px;
+	height:20px;
+	float: left; 
+
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 30px;
+	background-color:#cccccc; 
+	border-radius:12px;
+	-moz-border-radius: 12px;      /* Gecko browsers */
+    -webkit-border-radius: 12px;
+	
+}
+.main .content .right .center_info .self, .artificial{
+	margin-top: 60px;
+	margin-bottom: 120px;
+}
+ 
+.main .content .right .center_info .self .self_info p{
+	height: 80px;
+	width: 250px;
+	float: left;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.main .content .right .center_info .self .self_info p:nth-child(1){
+	width: 254px;
+}
+.main .content .right .center_info .self .self_info p:nth-child(3){
+	width: 254px;
+}
+.main .content .right .center_info .self .self_info p .radio{
+	width:40px;
+	height:40px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	display: block;
+	
+	background-color:#cccccc; 
+	border-radius:20px;
+	-moz-border-radius: 20px;      /* Gecko browsers */
+    -webkit-border-radius: 20px;
+}
+.main  .content .right .sign{
+	display: none;
+}
+.main  .content .right .photo{
+	display: none;
+}
+.main  .content .right .pay{
+	display: none;
+}
+.main .newer_info .hot_all{
+	padding-bottom: 40px;
+}
+.main .newer_info .hot_all .title_all{
+	
+	margin-bottom: 47px;
+}
+
+.main .newer_info .hot_all .new_help{
+	margin-bottom: 60px;
+	
+}
+.main .newer_info .hot_all .new_help .radio{
+	width:20px;
+	height:20px;
+	float: left;
+	display: inline-block;
+	
+	margin-top: 5px;
+	margin-left: 50px;
+	background-color:#cccccc; 
+	border-radius:12px;
+	-moz-border-radius: 12px;      /* Gecko browsers */
+    -webkit-border-radius: 12px;
+	
+}
+.main .newer_info .hot_all .new_help p{
+	width: 590px;
+	float: left;
+	margin-left: 15px;
+	padding-top: 3px;
+}
+.main .newer_info .hot_all .new_help p .little{
+	display: block;
+	font-weight: bold;
+	font-size: 18px;
+	color: #1a1a1a;
+	
+}
+.main .newer_info .hot_all .new_help p .miao{
+	display: block;
+	margin-top: 20px;
+	line-height: 30px;
+	font-size: 15px;
+	color: #666666;
+}
+.main .newer_info .hot_all .new_help p .discount{
+	display: block;
+	margin-top: 40px;
+	line-height: 30px;
+	font-size: 16px;
+	color: #c3935e;
+	font-weight: bold;
+}
+.main .newer_info .hot_all .new_help p .yu{
+	
+	margin-top: 60px;
+	
+}
+.main .newer_info .hot_all .new_help p .dis_info{
+	display: block;
+	margin-top: 30px;
+	margin-left: 26px;
+	line-height: 24px;
+	font-size: 14px;
+	color: #666666;
+}
+.main .newer_info .hot_all .new_help p .blod{
+	font-weight: bold;
+	margin-top: 30px;
+}
+.main .newer_info .hot_all .new_help p .half{
+	font-weight: bold;
+	margin-top: 40px;
+}
+.main .newer_info .hot_all .new_help p .one {
+	margin-top: 0px;
+}
+.main .newer_info .hot_all .new_help p .two {
+	margin-top: 0px;
+}
+.main .newer_info .hot_all .new_help p .miao_one {
+	margin-top: 60px;
+}
+.main .newer_info .hot_all .new_help p .miao_two {
+	margin-top: 40px;
+}
+
+
+

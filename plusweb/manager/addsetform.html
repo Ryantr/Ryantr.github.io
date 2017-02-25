@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" /> 
+
+  <title>PLUS</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="css/addsetform.css">
+    <link rel="stylesheet" href="css/foothead.css">
+<!--   // <script src="http://static.qiezipai.cn/activity/js/util.js" type="text/javascript"></script> -->
+  <link rel="shortcut icon" type="image/x-icon" href="../image/customicon.png">
+  <script src="http://static.qiezipai.cn/activity/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(function(){
+        var win_H = $(window).height();
+        var win_W= $(window).width();
+
+        if(win_W<=640){
+            mobi(win_H);
+            $("body").css("width",640);
+            
+        }
+        else{
+            $(".title").show();
+            position(win_H,win_W); 
+            $(".Appdown").on("click",function(){
+                window.location.href="https://itunes.apple.com/us/app/plus/id1023380370";
+            });
+        }
+
+        $(".headImg").on("click",function(){
+            window.location.href="../index.html";
+        })
+
+        $(window).resize(function(){
+            win_H = $(window).height();
+            win_W= $(window).width();
+            if(win_W > 640)
+            {
+                position(win_H,win_W);
+            }
+        })
+        
+
+        $(".clickRadio").on("click",function(){
+            $(this).siblings('.clickRadio').removeClass('clickChecked');
+            $(this).addClass('clickChecked');
+        })
+
+        var slider1 = new scale('btn0', 'bar0', 'title0');
+        slider1.ondrag = function (pos, x) {
+            this.step.style.width = Math.max(0, x) + 'px';
+            this.title.innerHTML = parseInt(pos/3.3);
+        }
+        
+    });
+
+    function position(win_H,win_W){
+        if(win_W>640)
+        {
+            $(".navContainer").css("height",win_H*0.13);
+            var navH = $(".navContainer").height();
+            var headimgH = $(".headImg").height();
+            $(".headImg").css("top",(navH-headimgH)/2); //logo居中
+            var mainH = $(".mainContainer").height();
+            var foottop = win_H - navH - mainH - 260;
+            if(foottop > 40 )
+            {
+                $(".footerContainer").css("margin-top",foottop);
+            }else{
+                $(".footerContainer").css("margin-top",100);
+            }
+
+        }else{
+            $(".navContainer").css("height",120);
+            $(".headImg").css("margin-top",0);
+        }
+    };
+
+
+//drag
+scale = function (btn, bar, title) {
+    this.btn = document.getElementById(btn);
+    this.bar = document.getElementById(bar);
+    this.title = document.getElementById(title);
+    this.step = this.bar.getElementsByTagName("DIV")[0];
+    this.init();
+};
+scale.prototype = {
+    init: function () {
+        var f = this, g = document, b = window, m = Math;
+        f.btn.onmousedown = function (e) {
+            var x = (e || b.event).clientX;
+            var l = this.offsetLeft;
+            var max = f.bar.offsetWidth - this.offsetWidth;
+            g.onmousemove = function (e) {
+                var thisX = (e || b.event).clientX;
+                var to = m.min(max, m.max(-2, l + (thisX - x)));
+                f.btn.style.left = to + 'px';
+                f.ondrag(m.round(m.max(0, to / max) * 100), to);
+                b.getSelection ? b.getSelection().removeAllRanges() : g.selection.empty();
+            };
+            g.onmouseup = new Function('this.onmousemove=null');
+        };
+    },
+    ondrag: function (pos, x) {
+        this.step.style.width = Math.max(0, x) + 'px';
+        this.title.innerHTML = pos + '';
+    }
+}
+  </script>
+
+</head>
+
+<body>
+    <div class="navContainer">
+        <div class="colorful"></div>
+        <div class="firstNav">
+            <div class="headImg"></div>
+        </div>
+    </div>
+    <div class="mainContainer">
+        <div class="secondNavContainer  clearfix">
+            <div class="secondNav">
+                    <a href="" id="" class="setsNav">定制写真</a>
+                    <a href="" id="" class="setsNav">婚纱摄影</a>
+                    <a href="" id="" class="setsNav">婚纱摄影</a>
+                    <a href="" id="thelastCard" class="setsNav"></a>
+                <a href="" id="addSet">创建套系</a>
+            </div>
+        </div>
+    
+        <div class="title1">
+            <h3>创建套餐</h3>
+        </div>
+        
+        <div class="formContainer">
+            <h4 class="formTitle">
+                套餐类型
+            </h4>
+            <div class="btnContainer">
+                <div class="tagBtn">定制写真</div>
+                <div class="tagBtn">定制写真</div>
+                <div class="tagBtn">定制写真</div>
+            </div>
+
+            <h4 class="formTitle">
+                服务范围
+            </h4>
+            <div class="btnContainer">
+                <div class="tagBtn">定制写真</div>
+                <div class="tagBtn">定制写真</div>
+                <div class="tagBtn">定制写真</div>
+            </div>
+
+            <h4 class="formTitle">
+                基本信息
+            </h4>
+            <div class="inputContainer">
+                <label for="setName">
+                    套系名称
+                <input type="text" class="inputText" name="setName" value="">
+                </label>
+            </div>
+            <div class="inputContainer">
+                <label for="setName">
+                    服务城市
+                <input type="text" class="inputText" name="setCity" value="">
+                </label>
+            </div>
+
+
+            <h4 class="formTitle">
+                服务价格
+            </h4>
+            <div class="radioContainer">
+                <label>
+                    计费方式
+                <input type="hidden" id="standard" value="">
+                <div class="clickRadioContainer">
+                    <div class="clickRadio"></div>
+                    <span class="radioTitle">按张数计费</span> 
+
+                    <div class="clickRadio"></div>
+                    <span class="radioTitle">按组数计费</span> 
+                </div>
+                </label>
+            </div>
+            <div class="inputContainer">
+                <label for="setName">
+                    拍摄价格
+                <input type="text" class="inputText" name="setPrice" value="" maxlength="10">
+                </label>
+                <span class="inputUnit">元/组起</span>
+            </div>
+            <div class="inputContainer">
+                <label for="setName">
+                    拍摄数量
+                <input type="text" class="inputText" name="setCity" value="" maxlength="10">
+                </label>
+                <span class="inputUnit">张</span>
+            </div>
+
+            <h4 class="formTitle">
+                该服务价格下包含
+            </h4>
+            <div class="inputContainer">
+                <label for="setName">
+                    拍摄时长
+                <input type="text" class="inputText" name="setPrice" value="" maxlength="10">
+                </label>
+                <span class="inputUnit">小时</span>
+            </div>
+            <div class="inputContainer">
+                <label for="setName">
+                    原片张数
+                <input type="text" class="inputText" name="setCity" value="" maxlength="10">
+                </label>
+                <span class="inputUnit">张</span>
+            </div>
+            <div class="inputContainer">
+                <label for="setName">
+                    精修张数
+                <input type="text" class="inputText" name="setCity" value="" maxlength="10">
+                </label>
+                <span class="inputUnit">张</span>
+            </div>
+            <div class="radioContainer">
+                <label>
+                    拍摄服务
+                <input type="hidden" id="standard" value="">
+                <div class="clickRadioContainer">
+                    <div class="clickRadio"></div>
+                    <span class="radioTitle">提供</span> 
+
+                    <div class="clickRadio"></div>
+                    <span class="radioTitle">不提供</span> 
+                </div>
+                </label>
+            </div>
+            <div class="radioContainer">
+                <label>
+                    拍摄造型
+                <input type="hidden" id="standard" value="">
+                <div class="clickRadioContainer">
+                    <div class="clickRadio"></div>
+                    <span class="radioTitle">提供</span> 
+
+                    <div class="clickRadio"></div>
+                    <span class="radioTitle">不提供</span> 
+                </div>
+                </label>
+            </div>
+            <div class="radioContainer">
+                <label>
+                    原片赠送
+                <input type="hidden" id="standard" value="">
+                <div class="clickRadioContainer">
+                    <div class="clickRadio"></div>
+                    <span class="radioTitle">全送</span> 
+
+                    <div class="clickRadio"></div>
+                    <span class="radioTitle">不送</span> 
+                </div>
+                </label>
+            </div>
+            <div class="radioContainer">
+                <label>
+                    成品赠送
+                <input type="hidden" id="standard" value="">
+                <div class="clickRadioContainer">
+                    <div class="clickRadio"></div>
+                    <span class="radioTitle">全送</span> 
+
+                    <div class="clickRadio"></div>
+                    <span class="radioTitle">不送</span> 
+                </div>
+                </label>
+            </div>
+            <div class="textaeraContainer">
+                <label class="textareaLabel">补充说明</label>
+                <textarea name="additional" id="textareaText" placeholder="如：提供拍摄场地或者模特，费用另加"></textarea>
+            </div>
+            
+            <h5 class="sliderTitle">交图天数<span class="sliderTitleSpan" id="title0">0</span>天</h5>
+            <div class="sliderContainer" id="bar0">
+                <span class="sliderHandle" id="btn0"></span>
+                <div class="sliderLenght"></div>
+            </div>
+            <div class="sliderFooter"><span class="sliderS">当天</span><span class="sliderE">30天</span></div>
+            <h4 class="formTitle">
+                服务条款
+            </h4>
+            <h5 class="sliderTitle">预约支付定金比例为<span class="sliderTitleSpan" id="title1">0%</span></h5>
+            <div class="sliderContainer" id="bar1">
+                <span class="sliderHandle" id="btn1"></span>
+                <div class="sliderLenght"></div>
+            </div>
+            <div class="sliderFooter sliderMoreFooter"><span class="sliderS">0%</span><span class="sliderE">100%</span></div>
+            <h5 class="sliderTitle">拍摄前<span class="sliderTitleSpan" id="title2">0</span>天不可改期</h5>
+            <div class="sliderContainer" id="bar2">
+                <span class="sliderHandle" id="btn2"></span>
+                <div class="sliderLenght"></div>
+            </div>
+            <div class="sliderFooter sliderMoreFooter"><span class="sliderS">1天</span><span class="sliderE">15天+</span></div>
+            <h5 class="sliderTitle">拍摄前<span class="sliderTitleSpan" id="title3">0</span>天取消订单客户支付定金</h5>
+            <div class="sliderContainer" id="bar3">
+                <span class="sliderHandle" id="btn3"></span>
+                <div class="sliderLenght"></div>
+            </div>
+            <div class="sliderFooter"><span class="sliderS">当天</span><span class="sliderE">15天+</span></div>
+
+            <div class="submitContainer">
+                <input class="Btn" id="saveBtn" type="button" value="保存">
+                <input class="Btn" id="cancelBtn" type="button" value="取消">
+            </div>
+        </div>
+    </div>
+
+    <div class="beian">
+        <h5>对PLUS Space有什么疑问或者建议可以通过以下方式联系我们  <span>application@1sight.cn</span></h5>
+        <p>PLUS © 2015 All rights reserved  |  www.plusx.cn  |  京ICP备15009106号-3</p>
+    </div>
+
+    
+</body>
+</html>

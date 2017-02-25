@@ -1,0 +1,96 @@
+body{
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+    overflow: auto;
+    font-size: 62.5%;
+    overflow:auto;
+}
+h4,h3,p{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    font-weight: 100;    
+}
+.navContainer{
+    position:relative;
+    margin-top:0;
+    width:100%;
+    height:120px;
+    vertical-align: center;
+    background-color: #333333;
+}
+.colorful{
+    height:7%;
+    width:100%;
+    background-color: #cc9b66;
+}
+
+.headImg{
+    position:absolute;
+    width:140px;
+    height:25%; 
+    left:48px;
+    background:url(../../image/white_logo.png) no-repeat center;
+    background-size: contain;
+    cursor:pointer;
+}
+/****************/
+.mainContainer{
+    padding-top: 120px;
+    width:100%;
+    text-align: center;
+}
+.title{
+    display: none;
+}
+
+.title h3{
+    padding-top: 80px;
+    font-size: 30px;
+    font-weight: 400;
+}
+.title p{
+    padding-top: 40px;
+    font-size:16px;
+    line-height: 28px;
+    color:#1a1a1a;
+}
+.titleMobi{
+    display: none;
+}
+.titleMobi h3{
+    padding-top: 80px;
+    font-size: 32px;
+    font-weight: 400;
+}
+.titleMobi p{
+    padding-top: 40px;
+    font-size:22px;
+    line-height: 30px;
+    color:#1a1a1a;
+}
+
+/****************/
+.btnContainer{
+    padding-top: 100px;
+}
+.Appdown{
+    cursor: pointer;
+}
+
+/**********************/
+
+
+@media screen and (max-width: 640px){
+
+
+/***************/
+.title h3{
+    font-size: 30px;
+    font-weight: 400;
+}
+.title p{
+    font-size:16px;
+    color:#1a1a1a;
+}
+/**************/
+
+}

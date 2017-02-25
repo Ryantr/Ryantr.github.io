@@ -1,0 +1,415 @@
+body{
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+    overflow: auto;
+    font-size: 62.5%;
+}
+.navContainer{
+    margin-top:0;
+    width:100%;
+    height:120px;
+    background-color: #333333;
+}
+.colorful{
+    height:8px;
+    width:100%;
+    background-color: #cc9b66;
+}
+.nav{
+    width:940px;
+    height:112px;
+    margin:auto;
+}
+.headImg{
+    width:140px;
+    height:30px; 
+    margin-top:41px;
+    background:url(../image/white_logo.png) no-repeat center;
+    cursor:pointer;
+}
+
+/***************************/
+.mainContainer{
+    width:100%;
+    text-align: center;
+}
+.contentA{
+    height:390px;
+}
+.contentA h4{
+    font-size: 3em;
+    color:#000;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 110px;
+}
+.contentA p{
+    font-size: 1.6em;
+    color:#000;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-top: 86px;
+    line-height: 30px;
+}
+
+
+
+/*********************/
+
+.videoContainer{
+    position: relative;
+    width:100%;
+    height:810px;
+    background: url(../image/video_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+.videoIcon{
+    position: absolute;
+    width:90px;
+    height:90px;
+    background:url(../image/video_normal.png) no-repeat center;
+    margin:auto;
+    left:0;
+    right: 0;
+    top:0;
+    bottom:0;
+    cursor:pointer;
+}
+.videoIcon:hover{
+    background-image:url(../image/video_hover.png)
+}
+/*********************/
+.contentB{
+    margin-top: 182px;
+    text-align: center;
+}
+.contentB p{
+    font-size: 1.6em;
+    color:#4c4c4c;
+    font-weight: 100;
+}
+.contentB h4{
+    font-size: 3.0em;
+    color:#1a1a1a;
+    font-weight: 400;
+}
+.contentB h5{
+    font-size: 1.6em;
+    color:#000;
+    font-weight: 700;
+    margin-top: 74px;
+    padding-bottom: 10px;
+}
+#contentArrowA{
+    padding-top: 60px;
+    display: block;
+    margin:auto;
+}
+
+#titleA{
+    margin-top: 230px;
+}
+#p1{
+    margin-top: 70px;
+}
+#contentArrowB{
+    margin-top: 128px;
+}
+#titleB{
+    margin-top:124px; 
+    padding-bottom: 12px;
+}
+.sTitleP{
+    line-height: 35px;
+}
+#contentArrowC{
+    margin-top: 134px;
+}
+#titleC{
+    margin-top: 134px;
+    padding-bottom: 48px;
+}
+.doubleP{
+    margin-top: 38px;
+}
+/*****************/
+.contentC{
+    height:auto;
+    width:100%;
+    padding-bottom: 200px;
+    padding-top: 200px;   
+}
+.contentC img{
+    /*height:580px;*/
+    width:52%;
+    margin:auto;
+}
+/*************/
+.footerContainer{
+    width:100%;
+    height:60px;
+    padding-top: 40px;
+    background-color: #ededed;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.footerContainer a{
+    margin-left: 29px;
+    margin-right: 29px;
+    text-decoration:none;
+}
+.footerContainer h4{
+    display:inline-block; 
+    font-size: 1.6em;
+    color:#757575;
+    font-weight: 400;
+}
+.beian{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    background-color: #333;
+    text-align: center;
+}
+.beian p{
+    font-size: 14px;
+    color:#808080;
+}
+
+
+.meunContainer{display: none;}
+
+/*********************/
+.modalContainer{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
+    display: none;
+}
+
+.modalContent{
+    width:67%;
+    height:76%;
+    margin:auto;
+}
+
+#close{
+    position:absolute;
+    right:30px;
+    top:30px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+@media screen and (max-width: 800px){
+    .contentB{
+        width:80%;
+        margin-left: 10%;
+    }
+}
+
+
+@media screen and (max-width: 640px){
+.navContainer{
+    width:560px;
+    height:120px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0;
+}
+.nav{
+    width:100%;
+    height:120px;
+}
+
+.headImg{
+    margin-top: 0;
+    height:116px;
+    width:137px;
+    background-position: center left ;
+}
+.othericon{
+    display: none;
+}
+.colorful{
+    height:4px;
+    margin-left: -40px;
+    width:640px;
+}
+
+#menuIcon{
+    position:absolute;
+    top:0;
+    width:40px;
+    height:120px;
+    right:40px;
+    background: url(../image/mobi/menu.png) no-repeat center;
+    display: block;
+}
+
+
+.footerContainer{
+    display: none;
+}
+.beian{
+    display: none;
+}
+/***************/
+
+.contentA{
+    height:450px;
+}
+.contentA h4{
+    font-size: 4em;
+    margin-top: 100px;
+}
+.contentA p{
+    font-size: 2.2em;
+    margin-top: 50px;
+    line-height: 2.0em;
+}
+/*****************/
+
+.videoContainer{
+    height:400px;
+}
+/*********************/
+.contentB{
+    margin-top: 100px;
+    width:540px;
+    margin-left: 50px;
+}
+.contentB p{
+    font-size: 2.2em;
+}
+.contentB h4{
+    font-size: 4.0em;
+}
+.contentB h5{
+    font-size: 2.2em;
+    margin-top: 38px;
+    padding-bottom: 10px;
+}
+#titleA{
+    margin-top: 100px;
+}
+#p1{
+    margin-top: 50px;
+}
+#contentArrowB{
+    margin-top: 100px;
+}
+#titleB{
+    margin-top:100px; 
+    padding-bottom: 12px;
+}
+.sTitleP{
+    line-height: 2.0em;
+}
+#contentArrowC{
+    margin-top: 100px;
+}
+#titleC{
+    margin-top: 100px;
+    padding-bottom: 48px;
+}
+.doubleP{
+    margin-top: 20px;
+}
+.doubleP span{
+    display: block;
+    margin-top: 20px;
+}
+/*****************/
+.contentC{
+    height: auto;
+    padding-bottom: 80px;
+    padding-top: 100px;   
+}
+.contentC img{
+    height:auto;
+    width:560px;
+    margin:auto;
+}
+
+/*********************/
+
+.modalContent{
+    width:95%;
+    height:50%;
+}
+
+#close{
+    height:50px;
+    width:50px;
+}
+
+
+/**************/
+.meunContainer{
+    position:fixed;
+    width:386px;
+    height:100%;
+    padding-left: 68px;
+    padding-top: 32px;
+    top:0;
+    right:-500px;
+    text-align: left;
+    background-color: #ededed;
+    overflow-y:auto;
+    display: block;
+    transition: right 1s;
+    -moz-transition: right 1s; /* Firefox 4 */
+    -webkit-transition: right 1s; /* Safari 和 Chrome */
+    -o-transition: right 1s;
+}
+.meunshow{
+    right:0;
+    transition: right 1s;
+    -moz-transition: right 1s; /* Firefox 4 */
+    -webkit-transition: right 1s; /* Safari 和 Chrome */
+    -o-transition: right 1s;
+}
+#meunClose{
+    position:absolute;
+    width:38px;
+    height:38px;
+    top:40px;
+    right:40px;
+    background: url(../image/mobi/close_menu.png) no-repeat center;
+    z-index: 9999;
+}
+.meunContainer a{
+    text-decoration:none;
+}
+.meunContainer h4{
+    margin-top: 94px;
+    font-size: 28px;
+    color:#808080;
+}
+#mobi_partner{
+    padding-bottom: 98px;
+    border-bottom: 1px solid #ccc;
+}
+#fans{
+    width:320px;
+    font-size: 22px;
+    color:#b2b2b2;
+    margin-top: 98px;
+    padding-top: 54px;
+    border-top: 1px solid #ccc;
+}
+.fansIcon{
+    margin-top: 54px;
+    width:100%;
+}
+.fansIcon img{
+    width:100px;
+}
+#fansWeibo{
+    margin-left: 40px;
+}
+}

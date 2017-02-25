@@ -1,0 +1,172 @@
+/********chat********/
+.chatIcon{
+    position:fixed;
+    z-index: 999;
+    bottom:50px;
+    right:50px;
+    width:50px;
+    height:50px;
+    background: url(http://static.1sight.cn/official/code/image/contact.png) no-repeat;
+    background-size:cover;
+    background-position: left;
+    cursor: pointer;
+}
+.chatIcon:hover{
+    background-position: right;
+    width:150px;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+.main{
+	width: 100%;
+	background: #f2f2f2;
+	padding-bottom: 120px;
+}
+.main .menu{
+	width: 1000px;
+	height: 80px;
+	text-align: left;
+	font-size: 15px;
+	color: #999;
+	line-height: 100px;
+	margin:0 auto;
+}
+.main .notice_center{
+	width: 1000px;
+	margin: 0 auto;
+	border: 1px solid #e6e6e6;
+	background: #fff;
+
+}
+.main .notice_center .news{
+	width: 250px;
+	height: 70px;
+	border-right: 1px solid #e6e6e6;
+	float: left;
+	text-align: center;
+	line-height: 70px;
+
+
+}
+.main .notice_center .news .des{
+	display: inline-block;
+	float: right;
+	margin-right:22px; 
+	font-size: 16px;
+	color: #333333;
+}
+
+.main .notice_center .news .radio{
+
+	display: block;
+	width:20px;
+	height:20px; 
+	text-align: center;
+	font-size: 12px;
+	float: right;
+	margin-right: 70px;
+	margin-top:25px;
+	background-color:#ff5640; 
+	border-radius:14px;
+	-moz-border-radius: 14px;      /* Gecko browsers */
+    -webkit-border-radius: 14px;
+	
+}
+.main .notice_center .news .radio span{
+	height:20px; 
+	font-size: 14px;
+	line-height:20px; 
+	display:block; 
+	color:#FFF; 
+	text-align:center;
+}
+.main .notice_center .news .radios{
+	display: block;
+	width:30px;
+	height:20px; 
+	float: right;
+	margin-right: 70px;
+	margin-top:25px;
+	background-color:#878787; 
+	border-radius:14px;
+	-moz-border-radius: 14px;      /* Gecko browsers */
+    -webkit-border-radius: 14px;
+	
+}
+.main .notice_center .news .radios span{
+	height:20px; 
+	line-height:20px;
+	font-size: 14px; 
+	display:block; 
+	color:#FFF; 
+	text-align:center;
+}
+.main .notice_center .list{
+	width: 100%;
+	border-top: 1px solid #e6e6e6;
+}
+
+.main .notice_center .list .each{
+	padding:45px 90px; 
+	height: 100px;
+	border-bottom: 1px solid #e6e6e6;
+	
+}
+.main .notice_center .list .each:hover{
+	box-shadow: 1px 1px 5px #ccc;
+}
+.main .notice_center .list .each img{
+	display: block;
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+.main .notice_center .list .each .info{
+	float: left;
+	margin-left: 50px;
+}
+.main .notice_center .list .each .info .name .ti{
+	display: inline-block;
+	float: left;
+	font-size: 17px;
+	color: #1a1a1a;
+}
+.main .notice_center .list .each .info .name .create{
+	display: inline-block;
+	float: left;
+	line-height: 25px;
+	margin-left: 16px;
+	font-size: 14px;
+	color: #b2b2b2;
+}
+.main .notice_center .list .each .info .num{
+	font-size: 14px;
+	color: #999999;
+	margin-top: 30px;
+
+}
+.main .notice_center .list .each .info .num span{
+	font-size: 14px;
+	
+	
+}
+.main .notice_center .list .each .info .status{
+	font-size: 15px;
+	color: #c3935e;
+	margin-top: 10px;
+}
+.main .notice_center .list .each .info .status span{
+	font-size: 15px;
+	color: #c3935e;
+}
+.main .notice_center .list .each .mess_stu{
+	float: right;
+	font-size: 15px;
+	color: #ff5640;
+	font-weight: bold;
+	line-height: 100px;
+}
+
+

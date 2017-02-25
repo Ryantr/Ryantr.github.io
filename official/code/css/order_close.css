@@ -1,0 +1,201 @@
+/********chat********/
+.chatIcon{
+    position:fixed;
+    z-index: 999;
+    bottom:50px;
+    right:50px;
+    width:50px;
+    height:50px;
+    background: url(http://static.1sight.cn/official/code/image/contact.png) no-repeat;
+    background-size:cover;
+    background-position: left;
+    cursor: pointer;
+}
+.chatIcon:hover{
+    background-position: right;
+    width:150px;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+.main{
+	width: 100%;
+	background: #f2f2f2;
+	padding-bottom: 120px;
+}
+.main .order_process{
+	width: 406px;
+	height: 113px;
+	margin:0 auto;
+	padding-top: 47px;
+}
+.main .order_process p{
+	font-size: 16px;
+	color: #4c4c4c;
+	margin-top: 20px;
+}
+.main .order_process .pay  p{
+	color:#c3935e;
+}
+.main .order_process hr{
+	height:1px;
+	width: 140px;
+	margin: 15px -17px 0 -17px;
+	float: left;
+	border:none;
+	border-top:1px solid #e6e6e6;
+}
+.main .order_process .one{
+	border-top-color: #cc9b66;
+}
+.main .order_process .status{
+	width: 64px;
+	float: left;
+	text-align: center;
+}
+.main .order_process .status .pic_ok{
+	width:30px;
+	height:30px; 
+	margin: 0 auto;
+}
+.main .order_process .status .pic_ok img{
+	width:30px;
+	height:30px; 
+	
+}
+.main .order_process .status .pic{
+	width:30px;
+	height:30px; 
+	margin: 0 auto;
+	background-color:#cc9b66; 
+	border-radius:15px;
+	-moz-border-radius: 15px;      /* Gecko browsers */
+    -webkit-border-radius: 15px; 
+}
+.main .order_process .pay  .pic{
+	background-color:#cc9b66;
+}
+
+.main .order_process .appoint  .pic{
+	background-color:#cccccc;
+}
+
+.main .order_process .perfect p{
+	color: #4c4c4c;
+}
+.main .order_process .status .pic span{
+	height:30px; 
+	line-height:30px; 
+	display:block; 
+	color:#FFF; 
+	text-align:center;
+}
+
+
+.content{
+	width: 1000px;
+	background-color: #FFF;
+	margin: 0 auto; 
+	padding: 60px 0px 100px 0px;
+}
+
+.content .order{
+	width: 820px;
+	margin: 0 auto;
+	border-bottom:1px solid #e6e6e6; 
+}
+.clearfix{
+	clear: both;
+}
+.content .order .info{
+	width: 500px;
+	float: left;
+}
+.content .order .price{
+	width: 200px;
+	float: right;
+	font-size: 30px;
+	text-align: right;
+	color: #1a1a1a;
+}
+.content .order .info .order_img{
+	width: 100px;
+	height: 100px;
+	float: left;
+	display: block;
+}
+.content .order .info .pay_info{
+	width: 350px;
+	float: left;
+	margin-left: 40px;
+	text-align: left;
+	line-height: 24px;
+	font-size: 14px;
+	color: #1a1a1a;
+}
+.content .order .info .pay_info p{
+	text-align: left;
+	line-height: 24px;
+	font-size: 14px;
+	color: #1a1a1a;
+	display: none;
+}
+.content .order .info .pay_info .zhan{
+	font-size: 14px;
+	color: #c3935e;
+	margin-top: 20px;
+	margin-bottom: 60px;
+	cursor: pointer;
+}
+.content .order .info .pay_info .zhan span{
+	display: inline-block;
+	float: left;
+	
+}
+.content .order .info .pay_info .zhan img{
+	display: inline-block;
+	
+	margin-left: 10px;
+}
+.content .close{
+	width: 820px;
+	margin: 50px auto 0;
+}
+.content .close .radio{
+	width:60px;
+	height:60px; 
+	margin: 0 auto;
+	background-color:#ccc; 
+	border-radius:35px;
+	-moz-border-radius: 35px;      /* Gecko browsers */
+    -webkit-border-radius: 35px;
+	
+}
+.content .close .clo_title{
+	font-size: 27px;
+	color: #1a1a1a;
+	text-align: center;
+	margin-top: 40px;
+}
+.content .close .clo_status{
+	font-size: 14px;
+	line-height: 26px;
+	color: #1a1a1a;
+	text-align: center;
+	margin-top: 30px;
+}
+.content .close .again{
+	width: 180px;
+	height: 50px;
+	margin: 70px auto 0px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #cc9b66;
+	-moz-border-radius: 2px;      /* Gecko browsers */
+    -webkit-border-radius: 2px;   /* Webkit browsers */
+    border-radius:2px;  
+}

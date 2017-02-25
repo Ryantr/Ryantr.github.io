@@ -1,0 +1,212 @@
+body{
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+    overflow: auto;
+    font-size: 62.5%;
+}
+.navContainer{
+    margin-top:0;
+    width:100%;
+    height:120px;
+    background-color: #333333;
+}
+.colorful{
+    height:8px;
+    width:100%;
+    background-color: #cc9b66;
+}
+.nav{
+    width:940px;
+    height:112px;
+    margin:auto;
+}
+.headImg{
+    width:140px;
+    height:30px; 
+    margin-top:41px;
+    background:url(http://static.1sight.cn/official/code/image/logo.png) no-repeat center;
+    background-size: contain;
+    cursor:pointer;
+}
+
+/***************************/
+.mainContainer{
+    width:100%;
+    text-align: center;
+}
+.contentA{
+    height:390px;
+}
+.contentA h4{
+    font-size: 3em;
+    color:#000;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 110px;
+}
+.contentA p{
+    font-size: 1.6em;
+    color:#000;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-top: 86px;
+    line-height: 30px;
+}
+
+
+
+/*********************/
+
+.videoContainer{
+    position: relative;
+    width:100%;
+    height:810px;
+    background: url(http://static.1sight.cn/official/code/image/about/video_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+.videoIcon{
+    position: absolute;
+    width:90px;
+    height:90px;
+    background:url(http://static.1sight.cn/official/code/image/about/video_normal.png) no-repeat center;
+    margin:auto;
+    left:0;
+    right: 0;
+    top:0;
+    bottom:0;
+    cursor:pointer;
+}
+.videoIcon:hover{
+    background-image:url(http://static.1sight.cn/official/code/image/about/video_hover.png)
+}
+/*********************/
+.contentB{
+    margin-top: 140px;
+    text-align: center;
+}
+.contentB p{
+    font-size: 1.6em;
+    color:#4c4c4c;
+    font-weight: 100;
+}
+.contentB h4{
+    font-size: 3.0em;
+    color:#1a1a1a;
+    font-weight: 400;
+}
+.contentB h5{
+    font-size: 1.6em;
+    color:#000;
+    font-weight: 700;
+    margin-top: 74px;
+    padding-bottom: 10px;
+}
+#contentArrowA{
+    padding-top: 100px;
+    display: block;
+    margin:auto;
+}
+
+#titleA{
+    margin-top: 80px;
+    font-size: 30px;
+    color: #1a1a1a;
+}
+.p1_content{
+    margin: 80px  auto 0;
+    text-align: left;
+    width: 780px;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+#contentArrowB{
+    margin-top: 120px;
+}
+#titleB{
+    margin-top:90px; 
+}
+.sTitleP{
+    line-height: 35px;
+}
+#contentArrowC{
+    margin-top: 134px;
+}
+#titleC{
+    margin-top: 134px;
+    padding-bottom: 48px;
+}
+.doubleP{
+    margin-top: 38px;
+}
+/*****************/
+.contentC{
+    height:auto;
+    width:100%;
+    padding-bottom: 140px;
+    padding-top: 180px;   
+}
+.contentC img{
+    /*height:580px;*/
+    width:52%;
+    margin:auto;
+}
+/*************/
+.footerContainer{
+    width:100%;
+    height:60px;
+    padding-top: 40px;
+    background-color: #ededed;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.footerContainer a{
+    margin-left: 29px;
+    margin-right: 29px;
+    text-decoration:none;
+}
+.footerContainer h4{
+    display:inline-block; 
+    font-size: 1.6em;
+    color:#757575;
+    font-weight: 400;
+}
+.beian{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    background-color: #333;
+    text-align: center;
+}
+.beian p{
+    font-size: 14px;
+    color:#808080;
+}
+
+
+.meunContainer{display: none;}
+
+/*********************/
+.modalContainer{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
+    display: none;
+}
+
+.modalContent{
+    width:67%;
+    height:76%;
+    margin:auto;
+}
+
+#close{
+    position:absolute;
+    right:30px;
+    top:30px;
+    cursor: pointer;
+    z-index: 9999;
+}
+

@@ -1,0 +1,165 @@
+/********chat********/
+.chatIcon{
+    position:fixed;
+    z-index: 999;
+    bottom:50px;
+    right:50px;
+    width:50px;
+    height:50px;
+    background: url(http://static.1sight.cn/official/code/image/contact.png) no-repeat;
+    background-size:cover;
+    background-position: left;
+    cursor: pointer;
+}
+.chatIcon:hover{
+    background-position: right;
+    width:150px;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari 和 Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}
+body{
+	min-width: 1000px;
+}
+
+.title_top{
+	width: 100%;
+	height: 660px;
+	position: relative;
+	background: url(../image/camera_bg.jpg) no-repeat center;
+	z-index: -1;
+	overflow: hidden;
+}
+.title_top .bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+}
+.title_top .top01{
+	position: absolute;
+	float: left;
+	margin-top: 80px;
+	margin-left: 10%;
+	z-index: 1;
+}
+.title_top .top01 p{
+	text-align: left;
+	color: #ffffff;
+
+}
+.title_top .top01 img{
+	display: block;
+	width: 120px;
+	height: 120px;
+
+}
+.title_top .top01 .tit01{
+	font-size: 20px;
+	margin-top: 20px;
+	
+}
+.title_top .top01 .tit02{
+	font-size: 30px;
+	margin-top: 40px;
+	
+}
+.title_top .top01 .tit03{
+	font-size: 18px;
+	margin-top: 40px;
+	line-height: 28px;
+	
+}
+.title_top .top01 .tit03 span{
+	color: #c3935e;
+	font-size: 18px;
+}
+.title_top .animate{
+	width: 600px;
+	height: 680px;
+	position: absolute;
+	top: 560px;
+	right: 10%;
+}
+.title_top .animate img{
+	position: absolute;
+	
+}
+.title_top .animate .img01{
+	top: 120px;
+	right: 200px;
+	z-index: 2;
+}
+.title_top .animate .img02{
+	top: 100px;
+	right: 50px;
+	
+	z-index: 1;
+	
+}
+
+.main{
+	width: 100%;
+	background-color: #ffffff; 
+	margin-top: 80px;
+	padding-bottom: 160px;
+
+}
+.main .question{
+	width: 520px;
+	height: 80px;
+	margin: 0 auto;
+	font-size: 30px;
+	color: #1a1a1a;
+	text-align: center;
+	line-height: 80px;
+}
+.main .answer{
+	line-height: 32px;
+	font-size: 18px;
+	color: #1a1a1a;
+	text-align: center;
+}
+.main .answer span{
+	font-size: 18px;
+	font-weight: bold;
+	color: #1a1a1a;
+}
+.main .line{
+
+	 width:780px;
+     height:1px;
+     margin: 60px auto;
+
+     font-size:0;
+     background:#000000;
+}
+.main .radio{
+	width:100px;
+	height:100px; 
+	margin: 0 auto;
+	background-color:#cccccc; 
+	border-radius:50px;
+	-moz-border-radius: 50px;      /* Gecko browsers */
+    -webkit-border-radius: 50px;
+}
+.main .q02{
+	margin-bottom: 60px;
+
+}
+.main .little{
+	text-align: center;
+	font-size: 26px;
+	color: #1a1a1a;
+	margin: 40px auto; 
+}
+.main .answer01{
+text-align: center;
+	font-size: 18px;
+	color: #4c4c4c;
+	line-height: 32px;
+}
+.main .two{
+	margin-top: 70px;
+}

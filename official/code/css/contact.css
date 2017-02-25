@@ -1,0 +1,111 @@
+body{
+    font-family:"Microsoft YaHei",微软雅黑,"STHeiti Light","Microsoft JhengHei",华文细黑,sans-serif;
+    overflow: auto;
+    font-size: 62.5%;
+}
+h4,p{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;    
+}
+.navContainer{
+    margin-top:0;
+    width:100%;
+    height:120px;
+    background-color: #333333;
+}
+.colorful{
+    height:7%;
+    width:100%;
+    background-color: #cc9b66;
+}
+.nav{
+    width:940px;
+    height:93%;
+    margin:auto;
+}
+.headImg{
+    width:140px;
+    height:25%; 
+    margin-top:41px;
+    background:url(http://static.1sight.cn/official/code/image/logo.png) no-repeat center;
+    background-size:contain;
+    cursor:pointer;
+}
+
+/***************************/
+.mainContainer{
+    width:100%;
+    text-align: center;
+}
+.Atitle{
+    font-size: 3.0em;
+    color:#000;
+    font-weight: 400;
+    margin-top: 154px;
+    padding-bottom: 78px;
+}
+.content{
+    padding-left: 35px;
+    margin:auto;
+    text-align: center;
+    width:80%;
+}
+.titleContainer{
+    width:280px;
+    padding-top: 50px;
+    margin-left: 120px;
+    display: inline-block;
+    text-align: left;
+}
+
+.Btitle{
+    font-size: 2.4em;
+    font-weight: 400;
+    color:#000;
+}
+.titleContainer p {
+    font-size: 1.6em;
+    color:#4c4c4c;
+    margin-top: 24px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+/*************/
+.footerContainer{
+    width:100%;
+    height:60px;
+    padding-top: 40px;
+    background-color: #ededed;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.footerContainer a{
+    margin-left: 29px;
+    margin-right: 29px;
+    text-decoration:none;
+}
+.footerContainer h4{
+    display:inline-block; 
+    font-size: 1.6em;
+    color:#757575;
+    font-weight: 400;
+}
+.beian{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    background-color: #333;
+    text-align: center;
+}
+.beian p{
+    font-size: 14px;
+    color:#808080;
+}
+.meunContainer{display: none;}
+/*@media screen and (max-width: 1400px)  and (min-width: 1200px){
+.content{
+    width:90%;
+}
+}*/
+

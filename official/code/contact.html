@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" /> 
+  <!-- <meta name="viewport" content="width=device-width"> -->
+  <meta name="viewport" content="width=640"> 
+  <title>PLUS</title>
+  <link href="http://static.1sight.cn/official/code/css/reset.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://static.1sight.cn/official/code/css/contact.css">
+
+
+  <script src="http://static.1sight.cn/official/lib/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+  <!-- <script src="http://static.qiezipai.cn/activity/js/util.js" type="text/javascript"></script> -->
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="image/photographericon.png" /> -->
+<!--   // <script src="http://static.qiezipai.cn/activity/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+  // <script type="text/javascript" src="js/mobi.js"></script> --> 
+  <script type="text/javascript">
+    $(function(){
+        var win_H = $(window).height();
+        var win_W = $(window).width();
+        if(win_W<=640)
+        {
+          mobi(win_H);
+        }
+        $(window).resize(function() {
+          win_H = $(window).height();
+          win_W = $(window).width();
+        });
+        
+        $(".headImg").on("click",function(){
+            window.location.href="/index";
+        })
+        $('.footerContainer').css({'margin':'100px 0 0 0'})
+    })
+  </script>
+</head>
+
+<body>
+    <div class="navContainer">
+        <div class="colorful"></div>
+        <div class="nav">
+            <div class="headImg"></div>
+        </div>
+        <div id="menuIcon"></div>
+    </div>
+    <div class="mainContainer">
+            <h4 class="Atitle">联系我们</h4>
+        <div class="content">
+            <div class="titleContainer">
+                <h4 class="Btitle">公司名称</h4>
+                <p>承影互联（北京）科技有限公司</p>
+            </div>
+            <div class="titleContainer">
+                <h4 class="Btitle">商务合作</h4>
+                <p> bd@plusx.cn</p>
+            </div>
+            <div class="titleContainer">
+                <h4 class="Btitle">客服电话</h4>
+                <p>4000-520-362</p>
+            </div>
+
+            <div class="titleContainer">
+                <h4 class="Btitle">公司地址</h4>
+                <p>北京市朝阳区望京保利国际广场T3-301</p>
+            </div>
+            <div class="titleContainer">
+                <h4 class="Btitle">媒体采访</h4>
+                <p>xixi.yang@plusx.cn</p>
+            </div>
+            <div class="titleContainer"></div>
+        </div>
+    </div>
+    <div class="footerContainer">
+        <a href="http://plusx.cn/views/about.html" id="about"><h4>关于PLUS</h4></a>
+        <a href="http://plusx.cn/views/contact.html" id="contact"><h4>联系PLUS</h4></a>
+        <a href="http://plusx.cn/views/work.html" id="work"><h4>工作机会</h4></a>
+        <!-- <a href="partner.html" id="partner"><h4>合作伙伴</h4></a> -->
+    </div>
+<!--     <div class="meunContainer">
+        <div id="meunClose"></div>
+        <a href="about.html" id="mobi_about"><h4>关于PLUS</h4></a>
+        <a href="contact.html" id="mobi_contact"><h4>联系PLUS</h4></a>
+        <a href="work.html" id="mobi_work"><h4>工作机会</h4></a>
+        <a href="partner.html" id="mobi_partner"><h4>合作伙伴</h4></a>
+        <h4 id="fans">关注我们</h4>
+        <div class="fansIcon">
+            <img id="fansWechat" src="image/mobi/mobi_wechat.png">
+            <img id="fansWeibo" src="image/mobi/mobi_weibo.png">
+        </div>
+    </div> -->
+</body>
+</html>

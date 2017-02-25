@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" /> 
+
+  <meta name="viewport" content="target-densitydpi=device-dpi,width=640" > 
+  <title>PLUS商业</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="css/form.css">
+ <link rel="stylesheet" href="../css/foothead.css">
+  <script src="http://static.qiezipai.cn/activity/js/util.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="../image/customicon.png">
+  <script src="http://static.qiezipai.cn/activity/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/mobi.js"></script> 
+  <script type="text/javascript">
+
+    var name,phone,type,pricel,priceh,time,desc;
+
+    $(function(){
+        var win_H = $(window).height();
+        var win_W= $(window).width();
+        selector();
+
+        if(win_W<=640){
+            mobi(win_H);
+            $("body").css("width",640);
+            $("#typeMobi").on("click",function(){
+                $(".downArrow").toggleClass('uparrows');
+                $('.dropDownContainer').toggleClass('dropDownShow');
+            })
+        }else{
+            position(win_H,win_W);
+            $("body").css("min-width",1050);
+            $(".downArrow").on("click",function(){
+                $(this).toggleClass('uparrows');
+                $('.dropDownContainer').toggleClass('dropDownShow');
+            })
+        }
+
+        $(".headImg").on("click",function(){
+            window.location.href="../index.html";
+        })
+
+        $(window).resize(function(){
+            win_H = $(window).height();
+            win_W= $(window).width();
+            if(win_W > 640)
+            {
+                position(win_H,win_W);
+            }
+        })
+        $(".dropDownContainer li").on("click",function(){
+            var select = $(this).html();
+            $("input[name=type]").val(select);
+            $(".dropDownContainer").removeClass('dropDownShow');
+            $(".downArrow").removeClass('uparrows');
+        })
+        $(".cancal").on("click",function(){
+            window.location.href="business.html"
+        })
+        $(".submit").on("click",function(){
+            var flag = 0;
+            if(win_W > 640)
+            {
+                name = $("#company").val();
+                phone = $("#contact").val();
+                type = $("#type").val();
+                pricel = $("#moneylow").val();
+                priceh = $("#moneyhigh").val();
+                time = $("#time").val();
+                desc = $("#detail").val();
+                $("#mainform input").each(function(){
+                    var self= $(this);
+                    var tempv = $(this).val();
+                    if(tempv == "" || tempv == null )
+                    {
+                        self.css("border-color","red");
+                        self.focus(function() {
+                            self.css("border-color","#cc9b66");
+                        });
+                        self.blur(function(){
+                            self.css("border-color","#ccc");
+                        });  
+                    }else{
+                        flag++;                        
+                        if(flag==6)
+                        {
+                            sentEmail();
+                        }
+                    }
+                });
+            }else{
+                name = $("#companyMobi").val();
+                phone = $("#contactMobi").val();
+                type = $("#typeMobi").val();
+                pricel = $("#moneylowMobi").val();
+                priceh = $("#moneyhighMobi").val();
+                time = $("#timeMobi").val();
+                desc = $("#detailMobi").val();
+
+                $("#formMobi input").each(function(){
+                    var self= $(this);
+                    var tempv = $(this).val();
+
+                    if(tempv == "" || tempv == null )
+                    {
+                        self.css("border","1px solid red");
+                        self.focus(function() {
+                            self.css("border","none");
+                        }); 
+                    }else{
+                        flag++;
+                        if(flag==6)
+                        {
+                            sentEmail();
+                        }
+                    }
+                });                
+            }
+        })        
+    })
+    function sentEmail(){
+        $.ajax({
+            url: 'http://wx.plus.1sight.cn/business/order',
+            type: 'GET',
+            dataType:'jsonp',
+            jsonp : "callback",
+            jsonpCallback:"CallBack",
+            data: {
+                name: name,
+                phone:phone,
+                type:type,
+                price:pricel+"-"+priceh,
+                time:time,
+                desc:desc,
+                },
+            success:function(jsonp){
+                if (jsonp.result =="ok")
+                {
+                    window.location.href="formsucc.html"
+                }
+            }     
+        });
+    }
+    function position(win_H,win_W){
+        if(win_W>640)
+        {
+            $(".navContainer").css("height",win_H*0.13);
+            var navH = $(".navContainer").height();
+            var headimgH = $(".headImg").height();
+            $(".headImg").css("top",(navH-headimgH)/2); //logo居中
+
+        }else{
+            $(".navContainer").css("height",120);
+            $(".headImg").css("margin-top",0);
+        }
+    }
+    function selector(){
+        var dom1 = "<li>形象照</li><li>工作照</li><li>团队照</li>"
+        var dom2 = "<li>商业形象照</li><li>建组模特卡</li>"
+        var dom3 = "<li>时装</li><li>产品</li><li>建筑</li>"
+        var dom4 = "<li>会议</li><li>活动现场</li>"
+        var pageN = window.location.hash;
+        switch (pageN){
+        case "#1": $(".dropDownContainer ul").html(dom1);
+        break;
+        case "#2": $(".dropDownContainer ul").html(dom2);
+        break;
+        case "#3": $(".dropDownContainer ul").html(dom3);
+        break;
+        case "#4": $(".dropDownContainer ul").html(dom4);
+        break;
+        default:
+        $(".dropDownContainer ul").append(dom1+dom2+dom3+dom4);
+        $(".dropDownContainer").css("overflow","auto");
+        break;
+        }
+    }
+  </script>
+</head>
+
+<body>
+    <div class="navContainer">
+        <div class="colorful"></div>
+        <div class="headImg"></div>
+        <div id="menuIcon"></div>
+    </div>
+    <div class="formContainer">
+        <div class="formMainContainer">
+        <form id="mainform">
+            <div class="items">
+                <label for="company">公司名称</label>
+                <input id="company" class="ll" name="name" type="text" placeholder="公司名称">
+            </div>
+            <div class="items">
+                <label for="contact">联系方式</label>
+                <input id="contact" class="ll" name="phone" type="text" placeholder="联系方式">
+            </div>
+            <div class="items">
+                <label for="type">拍摄类型</label>
+                <input id="type" class="ss" name="type" type="text" placeholder="拍摄类型" readonly>
+                <div class="downArrow">
+                    <img id="arrows" src="image/arrows.png">
+                </div>
+                <div class="dropDownContainer">
+                   <ul>
+
+                   </ul> 
+                </div>
+            </div>
+            <div class="items">
+                <label for="moneylow">拍摄预算</label>
+                <input id="moneylow" class="ss" name="moneylow" type="tel" placeholder="最低预算">
+                <span style="padding-left:8px;padding-right:8px;color:#808080">—</span>
+                <input id="moneyhigh" class="ss" name="moneyhigh" type="tel" placeholder="最高预算">
+                <span style="position:absolute;left:260px;top:0px;line-height:50px;font-size:16px;color:#1a1a1a">元</span>
+                <span style="position:absolute;left:500px;top:0px;line-height:50px;font-size:16px;color:#1a1a1a">元</span>
+            </div>
+            <div class="items">
+                <label for="time">用图时间</label>
+                <input id="time" class="ss" name="time" type="text" placeholder="如：2015.9.30">
+            </div>
+            <div class="items">
+                <label for="detail" style="vertical-align:top;margin-top:10px;">具体需求</label>
+                <textarea id="detail" name="detail" class="ll"placeholder="如：几个拍摄，风格等..."></textarea>
+            </div>
+        </form>
+        <div class="btnContainer">
+            <input type="button" class="submit" value="提交订单">
+            <input type="button" class="cancal" value="返回上一页">
+        </div>
+        </div>
+    </div>
+    
+
+    <div class="formMainContainerMobi">
+        <form id="formMobi">
+            <div class="items">
+                <input id="companyMobi" name="company" type="text" placeholder="公司名称">
+            </div>
+            <div class="items">
+                <input id="contactMobi" name="contact" type="text" placeholder="联系方式">
+            </div>
+            <div class="items">
+                <input id="typeMobi" name="type" type="text" placeholder="拍摄类型" readonly>
+                <div class="downArrow">
+                    <img id="arrows" src="image/arrows.png">
+                </div>
+                <div class="dropDownContainer dropDownContainerMobi">
+                   <ul>
+
+                   </ul> 
+                </div>
+            </div>
+            <div class="items">
+                <p>拍摄预算(元)</p>
+                <input id="moneylowMobi" name="moneylow" type="tel" placeholder="最低预算">
+                <input id="moneyhighMobi" name="moneyhigh" type="tel" placeholder="最高预算">
+            </div>
+            <div class="items">
+                <input id="timeMobi" name="time" type="text" placeholder="如：2015.9.30">
+            </div>
+            <div class="items">
+                <p>具体需求</p>
+                <textarea id="detailmobi" name="detail" placeholder="如：几个拍摄，风格等..."></textarea>
+            </div>
+        </form>
+        <div class="btnContainer">
+            <input type="button" class="submit" value="提交订单">
+            <input type="button" class="cancal" value="返回上一页">
+        </div>
+    </div>
+
+
+
+    <div class="footerContainer">
+        <a href="../about.html" id="about"><h4>关于PLUS</h4></a>
+        <a href="../contact.html" id="contact"><h4>联系PLUS</h4></a>
+        <a href="../work.html" id="work"><h4>工作机会</h4></a>
+        <a href="../partner.html" id="partner"><h4>合作伙伴</h4></a>
+    </div>
+    <div class="beian">
+        <p>PLUS © 2015 All rights reserved  |  www.plusx.cn  |  京ICP备15009106号-3</p>
+    </div>
+
+    <div class="meunContainer">
+        <div id="meunClose"></div>
+        <a href="../about.html" id="mobi_about"><h4>关于PLUS</h4></a>
+        <a href="../contact.html" id="mobi_contact"><h4>联系PLUS</h4></a>
+        <a href="../work.html" id="mobi_work"><h4>工作机会</h4></a>
+        <a href="../partner.html" id="mobi_partner"><h4>合作伙伴</h4></a>
+        <h4 id="fans">关注我们</h4>
+        <div class="fansIcon">
+            <img id="fansWechat" src="../image/mobi/mobi_wechat.png">
+            <img id="fansWeibo" src="../image/mobi/mobi_weibo.png">
+        </div>
+    </div>
+</body>
+</html>
