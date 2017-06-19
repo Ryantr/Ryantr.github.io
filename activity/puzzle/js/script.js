@@ -107,6 +107,7 @@ puzzleGame.prototype = {
                     "left": j * this.cellWidth,
                     "top": i * this.cellHeight,
                     "background": "url(" + this.img + ")",
+                    "backgroundSize": "6.6rem,6.6rem",
                     "backgroundPosition": (-j) * this.cellWidth + "px " + (-i) * this.cellHeight + "px"
                 });
                 this.cellArr.push($(_cell));
@@ -283,7 +284,7 @@ function timer(intDiff){
 
 $(document).ready(function(e) {
   var pg = new puzzleGame({
-    img: "image/test.jpg"
+    img: "./image/sample/test.jpg"
   });
 
   timer(intDiff);
