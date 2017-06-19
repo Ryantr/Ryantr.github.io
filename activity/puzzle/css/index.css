@@ -1,0 +1,95 @@
+/**tianran**/
+body,html{width:100%;height:100%;}
+.container{text-align: center;width:100%;height:100%;overflow: hidden;}
+.run_box{position: absolute;bottom:4.9rem;width:3.38rem;height:3.58rem;left:0;right:0;margin:auto;}
+.icon-yi{opacity: 0;position: absolute;bottom:0;left:0;}
+.icon-yi.icon-show{opacity: 1;}
+
+.earth{position: absolute;bottom:-4.5rem;left:-3.1rem;width:12.75rem;}
+.earthR{animation:zhuan 5s infinite linear;-moz-animation:zhuan 5s infinite linear;-webkit-animation:zhuan 5s infinite linear;transform-origin:6.75rem 6.07rem;-webkit-transform-origin:6.75rem 6.07rem;}
+
+@keyframes zhuan
+{
+  0% {transform:rotate(0deg);-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg); -o-transform:rotate(0deg);}
+  100% {transform:rotate(360deg);-ms-transform:rotate(360deg);-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg); -o-transform:rotate(360deg);}
+}
+
+@-moz-keyframes zhuan
+{
+  0% {transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+  100% {transform:rotate(360deg);-webkit-transform:rotate(360deg);}
+}
+
+@-webkit-keyframes zhuan
+{
+  0% {transform:rotate(0deg);-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg); -o-transform:rotate(0deg);}
+  100% {transform:rotate(360deg);-ms-transform:rotate(360deg);-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg); -o-transform:rotate(360deg);}
+}
+
+.icon {
+  display: inline-block;
+  background-size: 15.42rem 10.32rem;
+  background-image:url(../image/sprite_index.png);
+}
+.icon-1 {
+  background-position: 0rem -3.06rem;
+  width: 3.38rem;
+  height: 3.58rem;
+}
+.icon-2 {
+  background-position: -3.48rem -3.06rem;
+  width: 3.38rem;
+  height: 3.58rem;
+}
+.icon-3 {
+  background-position: -7.6rem 0rem;
+  width: 3.38rem;
+  height: 3.58rem;
+}
+.icon-4 {
+  background-position: 0rem -6.74rem;
+  width: 3.38rem;
+  height: 3.58rem;
+}
+.icon-5 {
+  background-position: -3.48rem -6.74rem;
+  width: 3.38rem;
+  height: 3.58rem;
+}
+.icon-6 {
+  background-position: -6.96rem -6.74rem;
+  width: 3.38rem;
+  height: 3.58rem;
+}
+.btn-container{ 
+  position:absolute;
+  bottom:0.8rem;
+  width: 4.34rem;
+  height: 2rem;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.icon-btn {
+  position:absolute;
+  top:0.2rem;
+  left:0;
+  background-position: -11.08rem 0rem;
+  width: 4.34rem;
+  height: 1.36rem;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+.icon-btn.down{
+  transform: translate3d(1rem,0.8rem,0);
+  -webkit-transform:translate3d(1rem,0.8rem,0);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+.icon-title {
+  margin:auto;
+  margin-top:0.8rem;
+  background-position: 0rem 0rem;
+  width: 7.5rem;
+  height: 2.96rem;
+}

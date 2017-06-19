@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>test</title>
+<script src="js/rem_r.js" type="text/javascript"></script>
+<link href="css/reset.css" type="text/css" rel="stylesheet" />
+<link href="css/index.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="header_container">
+			<div class="icon icon-title"></div>
+		</div>
+		<img class="earth earthR" src="image/earth.png">
+
+		<div class="run_box">
+			 <div class="icon icon-1 icon-yi icon-show"></div>
+			 <div class="icon icon-2 icon-yi"></div>
+			 <div class="icon icon-3 icon-yi"></div>
+			 <div class="icon icon-4 icon-yi"></div>
+			 <div class="icon icon-5 icon-yi"></div>
+			 <div class="icon icon-6 icon-yi"></div>
+		</div>
+		<div class="btn-container">
+			<a href="javascript:viod(0);" class="icon icon-btn"></a>
+		</div>
+	</div>
+
+</body>
+
+<script type="text/javascript">   
+	$(function(){
+		var iconId = 0;
+		var yiZoom = setInterval(function(){
+			$(".run_box .icon").eq(iconId+1).addClass("icon-show");
+			$(".run_box .icon").eq(iconId).removeClass("icon-show");
+			iconId ++;
+			if(iconId >= 5){iconId = parseInt(-1)}
+		},200)
+
+		$(".btn-container").on("touchstart",function(){
+			event.preventDefault();
+			$(this).children(".icon-btn").addClass("down");
+		})
+		$(".btn-container").on("touchend",function(){
+			event.preventDefault();
+			$(this).children(".icon-btn").removeClass("down");
+			setTimeout(function(){
+				window.location.href="game.html";
+			},300)
+		})
+	});
+</script> 
+</html>
