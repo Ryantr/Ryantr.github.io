@@ -283,7 +283,7 @@ function timer(intDiff){
 
 $(document).ready(function(e) {
   var pg = new puzzleGame({
-    img: "img/test.jpg"
+    img: "image/test.jpg"
   });
 
   timer(intDiff);
