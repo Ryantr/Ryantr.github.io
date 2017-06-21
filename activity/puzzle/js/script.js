@@ -45,13 +45,26 @@ var puzzleGame = function(options){
  this.isInit = false;
  this.isBind = false;
  self.clickBusy = false;
- this.start();
+ this.imgloaded();
 };
 puzzleGame.prototype = {
+    imgloaded:function(){
+        var self = this;
+        var img = new Image();
+        img.src =  self.img;
+        if(img.complete) { 
+            self.start();
+            return;
+        }
+        img.onload = function () {
+            self.start();
+        };
+    },
     start:function(){
         this.init();
         this.menu();
         this.play();
+        timerfun(intDiff);
     },
     set: function(options){
         this.level = options.level === 0 ? 0 : (options.level || 1);
@@ -342,14 +355,13 @@ $(document).ready(function(e) {
         img: "./image/sample/test2.jpg"
     });
 
-    timerfun(intDiff);
+
 
     $("#renew").on("click",function(){
        // puzzleGame.isInit = false;
         pg.start();
         clearInterval(timer);
         $('#second_show').html('<s></s>'+intDiff+'秒');
-        timerfun(intDiff);
     })
 
     //var imgArray = []
@@ -361,6 +373,5 @@ $(document).ready(function(e) {
 
         clearInterval(timer);
         $('#second_show').html('<s></s>'+intDiff+'秒');
-        timerfun(intDiff);
     })
 });
