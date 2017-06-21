@@ -45,14 +45,17 @@
 		$(".btn-container").on("touchstart",function(){
 			event.preventDefault();
 			$(this).children(".icon-btn").addClass("down");
-		})
-		$(".btn-container").on("touchend",function(){
-			event.preventDefault();
-			$(this).children(".icon-btn").removeClass("down");
 			setTimeout(function(){
 				window.location.href="game.html";
 			},300)
 		})
+		// $(".btn-container").on("touchend",function(){
+		// 	event.preventDefault();
+		// 	$(this).children(".icon-btn").removeClass("down");
+		// 	setTimeout(function(){
+		// 		window.location.href="game.html";
+		// 	},300)
+		// })
 	});
 </script> 
 </html>

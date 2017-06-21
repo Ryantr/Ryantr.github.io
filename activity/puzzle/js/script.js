@@ -33,6 +33,9 @@ var puzzleGame = function(options){
  this.time = 400;
  this.thisLeft = 0;
  this.thisTop = 0;
+ this.nextLeft= 0;
+ this.nextTop = 0;
+
  this.nextIndex;
  this.thisIndex;
  
@@ -41,6 +44,7 @@ var puzzleGame = function(options){
  
  this.isInit = false;
  this.isBind = false;
+ self.clickBusy = false;
  this.start();
 };
 puzzleGame.prototype = {
@@ -114,7 +118,8 @@ puzzleGame.prototype = {
                 this.e_playArea.append(_cell);
             }
         }
-        console.log(this.imgArr)
+        console.log(this.imgArr);
+        console.log(this.cellArr)
     },
     randomImg:function(){
         var ran,arr;
@@ -130,6 +135,8 @@ puzzleGame.prototype = {
             arr.splice(ran,1);
         }
         $("#p").html(this.ranArr.join())
+
+        console.log(this.ranArr)
     },
     bindCell:function(){
         var self = this;
@@ -137,20 +144,33 @@ puzzleGame.prototype = {
         this.cb_cellDown.add(self.cellDown);
         for(var i = 0, len = this.cellArr.length; i<len; i++){
             this.cellArr[i].on({
-    // "mouseover": function(){
-    //  $(this).addClass("hover");
-    // },
-    // "mouseout": function(){
-    //  $(this).removeClass("hover");
-    // },
-    // "mousedown": function(e){
-    //  self.cb_cellDown.fire(e, $(this), self);
-    //  return false;
-    // },
-            "touchstart": function(e){
-                self.cb_cellDown.fire(e, $(this), self);
-                console.log($(this))
-                    return false;
+                // "touchstart": function(e){
+                //     self.cb_cellDown.fire(e, $(this), self);
+                //     console.log($(this))
+                //     return false;
+                // }
+
+                "click":function(e){
+                    if(!self.clickBusy){
+                        $(this).toggleClass("selected");
+                        if($(".selected").length == 1){
+                            self.thisTop = $(this).css("top");
+                            self.thisLeft = $(this).css("left");
+                            self.thisIndex = Math.floor(parseInt(self.thisTop)/self.cellHeight)*self.cellCol;
+                            self.thisIndex += Math.floor(parseInt(self.thisLeft)/self.cellWidth);
+                            console.log(self.thisIndex);
+                        } else if($(".selected").length == 2){
+                            self.clickBusy = true;
+
+                            self.nextTop = $(this).css("top");
+                            self.nextLeft = $(this).css("left");
+                            self.nextIndex = Math.floor(parseInt(self.nextTop)/self.cellHeight)*self.cellCol;
+                            self.nextIndex += Math.floor(parseInt(self.nextLeft)/self.cellWidth);
+                            console.log(self.nextIndex);
+                            $(".selected").removeClass("selected");
+                            self.myChangeCell();
+                        }
+                    }
                 }
             });
         }
@@ -193,7 +213,6 @@ puzzleGame.prototype = {
 
                 _ti = Math.floor( _ty / self.cellHeight );
                 _tj = Math.floor( _tx / self.cellWidth );
-                //console.log(self.cellCol)
                 //console.log(_ti+"!"+_tj);
                 self.nextIndex = _ti*self.cellCol + _tj;
                 if(self.nextIndex == self.thisIndex){
@@ -204,6 +223,44 @@ puzzleGame.prototype = {
                 }
                 
             }
+        })
+    },
+    myChangeCell:function(){
+        var self = this,
+        _tc = this.cellArr[this.thisIndex],
+        _tl = this.thisLeft,
+        _tt = this.thisTop,
+        _nc = this.cellArr[this.nextIndex],
+        _nl = this.nextLeft,
+        _nt = this.nextTop;
+
+        _nc.css("zIndex",98);
+
+        this.cellArr[this.nextIndex] = _tc;
+        this.cellArr[this.thisIndex] = _nc;
+
+        this.ranArr[this.nextIndex] = this.ranArr[this.nextIndex] + this.ranArr[this.thisIndex];
+        this.ranArr[this.thisIndex] = this.ranArr[this.nextIndex] - this.ranArr[this.thisIndex];
+        this.ranArr[this.nextIndex] = this.ranArr[this.nextIndex] - this.ranArr[this.thisIndex];
+
+        _tc.animate({
+            "left": _nl,
+            "top": _nt
+            },self.time,self.easing,function(){
+                _tc.css("zIndex","");
+                self.clickBusy = false;
+            
+        })
+
+        _nc.animate({
+            "left": _tl,
+            "top": _tt
+            },self.time,self.easing,function(){
+                _nc.css("zIndex","");
+                self.clickBusy = false;
+                self.check();
+            
+            //if(!self.cb_cellDown.has(self.cellDown)) self.cb_cellDown.add(self.cellDown);
         })
     },
     changeCell:function(){
@@ -255,21 +312,19 @@ puzzleGame.prototype = {
         });
     },
     check:function(){
-        this.e_playCount.html( ++ this.playCount);
+        // this.e_playCount.html( ++ this.playCount);
         if(this.ranArr.join() == this.imgArr.join()){
             this.success();
         }
     },
     success:function(){
-        alert("ok");
-        this.score += this.scoreArr[this.level]
-        this.e_playScore.html(this.score);
+        alert("恭喜，假装进入下一关");
     }
 }
 
-var intDiff = parseInt(30);//倒计时总秒数量
+var intDiff = parseInt(40);//倒计时总秒数量
 var timer;
-function timer(intDiff){
+function timerfun(intDiff){
     timer = setInterval(function(){
         if(intDiff > 0){
             $('#second_show').html('<s></s>'+intDiff+'秒');
@@ -283,9 +338,29 @@ function timer(intDiff){
 
 
 $(document).ready(function(e) {
-  var pg = new puzzleGame({
-    img: "./image/sample/test.jpg"
-  });
+    var pg = new puzzleGame({
+        img: "./image/sample/test2.jpg"
+    });
 
-  timer(intDiff);
+    timerfun(intDiff);
+
+    $("#renew").on("click",function(){
+       // puzzleGame.isInit = false;
+        pg.start();
+        clearInterval(timer);
+        $('#second_show').html('<s></s>'+intDiff+'秒');
+        timerfun(intDiff);
+    })
+
+    //var imgArray = []
+    $("#change").on("click",function(){
+        var imgname = Math.ceil(Math.random()*5);
+        pg = new puzzleGame({
+            img: "./image/sample/test"+imgname+".jpg"
+        });
+
+        clearInterval(timer);
+        $('#second_show').html('<s></s>'+intDiff+'秒');
+        timerfun(intDiff);
+    })
 });
