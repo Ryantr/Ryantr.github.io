@@ -169,17 +169,16 @@ puzzleGame.prototype = {
                         if($(".selected").length == 1){
                             self.thisTop = $(this).css("top");
                             self.thisLeft = $(this).css("left");
-                            self.thisIndex = Math.floor(parseInt(self.thisTop)/self.cellHeight)*self.cellCol;
-                            self.thisIndex += Math.floor(parseInt(self.thisLeft)/self.cellWidth);
-                            alert(parseInt(self.thisLeft)/self.cellWidth);
+                            self.thisIndex = Math.floor(parseInt(self.thisTop)/parseInt(self.cellHeight))*self.cellCol;
+                            self.thisIndex += Math.floor(parseInt(self.thisLeft)/parseInt(self.cellWidth));
+                            alert(Math.floor(parseInt(self.thisLeft)/parseInt(self.cellWidth)));
                         } else if($(".selected").length == 2){
                             self.clickBusy = true;
 
                             self.nextTop = $(this).css("top");
                             self.nextLeft = $(this).css("left");
-                            self.nextIndex = Math.floor(parseInt(self.nextTop)/self.cellHeight)*self.cellCol;
-                            self.nextIndex += Math.floor(parseInt(self.nextLeft)/self.cellWidth);
-                            alert(self.nextIndex);
+                            self.nextIndex = Math.floor(parseInt(self.nextTop)/parseInt(self.cellHeight))*self.cellCol;
+                            self.nextIndex += Math.floor(parseInt(self.nextLeft)/parseInt(self.cellWidth));
                             $(".selected").removeClass("selected");
                             self.myChangeCell();
                         }
