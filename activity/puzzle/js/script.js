@@ -171,7 +171,7 @@ puzzleGame.prototype = {
                             self.thisLeft = $(this).css("left");
                             self.thisIndex = Math.floor(parseInt(self.thisTop)/parseInt(self.cellHeight))*self.cellCol;
                             self.thisIndex += Math.floor(parseInt(self.thisLeft)/parseInt(self.cellWidth));
-                            alert(Math.floor(parseInt(self.thisLeft)/parseInt(self.cellWidth)));
+                            // alert(Math.floor(parseInt(self.thisLeft)/parseInt(self.cellWidth)));
                         } else if($(".selected").length == 2){
                             self.clickBusy = true;
 
