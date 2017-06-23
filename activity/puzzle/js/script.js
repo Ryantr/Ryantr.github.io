@@ -171,7 +171,7 @@ puzzleGame.prototype = {
                             self.thisLeft = $(this).css("left");
                             self.thisIndex = Math.floor(parseInt(self.thisTop)/self.cellHeight)*self.cellCol;
                             self.thisIndex += Math.floor(parseInt(self.thisLeft)/self.cellWidth);
-                            console.log(self.thisIndex);
+                            alert(self.thisIndex);
                         } else if($(".selected").length == 2){
                             self.clickBusy = true;
 
@@ -179,7 +179,7 @@ puzzleGame.prototype = {
                             self.nextLeft = $(this).css("left");
                             self.nextIndex = Math.floor(parseInt(self.nextTop)/self.cellHeight)*self.cellCol;
                             self.nextIndex += Math.floor(parseInt(self.nextLeft)/self.cellWidth);
-                            console.log(self.nextIndex);
+                            alert(self.nextIndex);
                             $(".selected").removeClass("selected");
                             self.myChangeCell();
                         }
@@ -338,6 +338,9 @@ puzzleGame.prototype = {
 var intDiff = parseInt(40);//倒计时总秒数量
 var timer;
 function timerfun(intDiff){
+    if(typeof timer != "undefined"){
+        clearInterval(timer);
+    }
     timer = setInterval(function(){
         if(intDiff > 0){
             $('#second_show').html('<s></s>'+intDiff+'秒');
@@ -360,7 +363,6 @@ $(document).ready(function(e) {
     $("#renew").on("click",function(){
        // puzzleGame.isInit = false;
         pg.start();
-        clearInterval(timer);
         $('#second_show').html('<s></s>'+intDiff+'秒');
     })
 
@@ -370,8 +372,6 @@ $(document).ready(function(e) {
         pg = new puzzleGame({
             img: "./image/sample/test"+imgname+".jpg"
         });
-
-        clearInterval(timer);
         $('#second_show').html('<s></s>'+intDiff+'秒');
     })
 });
