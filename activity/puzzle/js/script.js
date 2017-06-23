@@ -345,7 +345,7 @@ function timerfun(intDiff){
             $('#second_show').html('<s></s>'+intDiff+'秒');
             intDiff--;
         }else{
-            alert("失败了")
+            //alert("失败了")
             clearInterval(timer)
         }
     }, 1000);
@@ -356,7 +356,6 @@ $(document).ready(function(e) {
     var pg = new puzzleGame({
         img: "./image/sample/test2.jpg"
     });
-
 
 
     $("#renew").on("click",function(){
@@ -373,4 +372,20 @@ $(document).ready(function(e) {
         });
         $('#second_show').html('<s></s>'+intDiff+'秒');
     })
+
+
+    $(".main-container").height($(window).height());
+
+    carZoom()
 });
+
+function carZoom(){
+    var ele = $('.carZoom');
+    var idx = 1;
+
+    mfinterval = setInterval(function(){
+        if(idx > 6) idx = 1;
+        ele.attr('src','image/car'+idx+'.png');
+        idx++;
+    },200);
+};
