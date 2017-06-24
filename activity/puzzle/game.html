@@ -3,48 +3,63 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-<title>test</title>
+<title>宇宙无敌拼图</title>
 <script src="js/rem_r.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/script.js?v0.1"></script>
-
+<link href="css/reset.css" type="text/css" rel="stylesheet" />
 <link href="css/style.css" type="text/css" rel="stylesheet" />
 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/script.js?v0.1"></script>
 </head>
 <body>
-
-<div class="main-container container-1 clearfix">
-	<div class="icon icon-change icon-change-1"></div>
-
-
-	<div class="title-container">
-		<div class="icon icon-title-1"></div>
-		<div class="timer-box">
-			<span class="icon icon-timer timer-1">1</span>
-			<span class="icon icon-timer timer-2">2</span>
-			<span class="icon icon-timer timer-3">0</span>
+	<!--loading-->
+	<div class="loading-container">
+		<img src="./image/earth-gif.gif" class="loading-gif">
+	</div>
+	<!--index-->
+	<div class="index-container">
+		<div class="header_container">
+			<div class="icon-index icon-title"></div>
+		</div>
+		<img class="earth earthR" src="image/earth.png">
+		<div class="run-box">
+			<div class="icon-index icon-1 icon-yi icon-show"></div>
+			<div class="icon-index icon-2 icon-yi"></div>
+			<div class="icon-index icon-3 icon-yi"></div>
+			<div class="icon-index icon-4 icon-yi"></div>
+			<div class="icon-index icon-5 icon-yi"></div>
+			<div class="icon-index icon-6 icon-yi"></div>
+		</div>
+		<div class="btn-container">
+			<a href="javascript:viod(0);" class="icon-index icon-btn"></a>
 		</div>
 	</div>
+	<!--game-->
+	<div class="main-container container-1">
+		<div class="icon icon-change icon-change-1"></div>
 
-	<div class="play_wrap">
-		<div id="play_area" class="one"></div>
-		<div class="icon icon-border"></div>
-	</div>
 
-	<div class="footer-container">
-		<div class="icon icon-flag"></div>
-		<div class="icon icon-line"></div>
-		<img class="carZoom" src="image/car1.png"/>
-	</div>
+		<div class="title-container">
+			<div class="icon icon-title-1"></div>
+			<div class="timer-box">
+				<span class="icon icon-timer timer-1">1</span>
+				<span class="icon icon-timer timer-2">2</span>
+				<span class="icon icon-timer timer-3">0</span>
+			</div>
+		</div>
 
-	<!-- <div class="time-item">
+		<div class="play_wrap">
+			<div id="play_area" class="one"></div>
+			<div class="icon icon-border"></div>
+		</div>
 
-		<strong id="second_show">40秒</strong>
-		
-	</div>
-	<div id="renew">重新开始</div> -->
+		<div class="footer-container">
+			<div class="icon icon-flag"></div>
+			<div class="icon icon-line"></div>
+			<img class="carZoom" src="image/car1.png"/>
+		</div>
 	
-	<div class="play_menu">
+		<div class="play_menu">
 		<!-- <a id="play_btn_start" class="play_btn" href="javascript:void(0);" unselectable="on">开始</a>
 		<a id="play_btn_level" class="play_btn" href="javascript:void(0);" unselectable="on">
 			<span class="level_text">4 x 4</span>
@@ -60,21 +75,7 @@
 	
 		<!-- <p>完成：<span id="play_score">0</span></p>
 		<p>交换：<span id="play_count">0</span></p> -->
-		<!-- <p>说明：<br>
-		
-		-点击开始，小图片将随机打乱；<br>
-		
-		-拖动小图片可交换位置，顺序完全正确则为成功；<br>
-		
-		-难度分“3x3”、“4x4”、“6x6”三级；<br>
-		
-		-对应的分值为100、200、400；
-		
-		</p> -->
+		</div>
 	</div>
-	
-</div>
-
-
 </body>
 </html>

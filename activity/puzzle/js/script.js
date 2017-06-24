@@ -52,10 +52,10 @@ puzzleGame.prototype = {
         var self = this;
         var img = new Image();
         img.src =  self.img;
-        if(img.complete) { 
-            self.start();
-            return;
-        }
+        // if(img.complete) { 
+        //     self.start();
+        //     return;
+        // }
         img.onload = function () {
             self.start();
         };
@@ -99,8 +99,9 @@ puzzleGame.prototype = {
             this.cellCol = this.levelArr[this.level][1];
             this.cellWidth = this.areaWidth/this.cellCol;
             this.cellHeight = this.areaHeight/this.cellRow;
+
+
             this.init();
-            console.log(this.cellHeight)
         }
         this.e_playCount.html(this.playCount = 0);
         this.randomImg();
@@ -112,7 +113,8 @@ puzzleGame.prototype = {
         this.cellArr = [];
         this.imgArr = [];
         this.e_playArea.html("");
-
+        console.log(this.cellHeight)
+        console.log(this.cellWidth)
         for(var i = 0; i<this.cellRow; i++){
             for(var j = 0; j<this.cellCol; j++){
                 this.imgArr.push(i*this.cellCol + j);
@@ -124,15 +126,15 @@ puzzleGame.prototype = {
                     "left": j * this.cellWidth,
                     "top": i * this.cellHeight,
                     "background": "url(" + this.img + ")",
-                    "backgroundSize": "6.6rem,6.6rem",
+                    "backgroundSize": "5.8rem,5.8rem",
                     "backgroundPosition": (-j) * this.cellWidth + "px " + (-i) * this.cellHeight + "px"
                 });
                 this.cellArr.push($(_cell));
                 this.e_playArea.append(_cell);
             }
         }
-        console.log(this.imgArr);
-        console.log(this.cellArr)
+        //console.log(this.imgArr);
+        //console.log(this.cellArr)
     },
     randomImg:function(){
         var ran,arr;
@@ -351,12 +353,32 @@ function timerfun(intDiff){
     }, 1000);
 } 
 
+function carZoom(){
+    var ele = $('.carZoom');
+    var idx = 1;
 
-$(document).ready(function(e) {
-    var pg = new puzzleGame({
-        img: "./image/sample/test2.jpg"
-    });
+    mfinterval = setInterval(function(){
+        if(idx > 6) idx = 1;
+        ele.attr('src','image/car'+idx+'.png');
+        idx++;
+    },200);
+};
 
+
+
+$(function(){
+    var winH = $(window).height();
+    var winW = $(window).width();
+    console.log(winH);
+    $(".loading-container,.index-container,.main-container").height(winH);
+
+
+    setTimeout(function(){
+        var pg = new puzzleGame({
+            img: "./image/sample/test2.jpg"
+        });
+    },300)
+    
 
     $("#renew").on("click",function(){
        // puzzleGame.isInit = false;
@@ -374,18 +396,31 @@ $(document).ready(function(e) {
     })
 
 
-    $(".main-container").height($(window).height());
-
+    // 小车动画
     carZoom()
-});
 
-function carZoom(){
-    var ele = $('.carZoom');
-    var idx = 1;
+    var iconId = 0;
+    var yiZoom = setInterval(function(){
+        $(".run-box .icon-index").eq(iconId+1).addClass("icon-show");
+        $(".run-box .icon-index").eq(iconId).removeClass("icon-show");
+        iconId ++;
+        if(iconId >= 5){iconId = parseInt(-1)}
+    },200)
 
-    mfinterval = setInterval(function(){
-        if(idx > 6) idx = 1;
-        ele.attr('src','image/car'+idx+'.png');
-        idx++;
-    },200);
-};
+    $(".btn-container").on("touchstart",function(){
+        event.preventDefault();
+        $(this).children(".icon-btn").addClass("down");
+        setTimeout(function(){
+            window.location.href="game.html";
+        },300)
+    })
+})
+
+function isLoaded(imgs,callbak){
+    if(Array.isArray(imgs)){
+        var leg_ = imgs.length();
+        for(i=0;i<leg_;i++){
+            
+        }
+    }
+}
