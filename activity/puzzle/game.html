@@ -21,7 +21,7 @@
 		<div class="header_container">
 			<div class="icon-index icon-title"></div>
 		</div>
-		<img class="earth earthR" src="image/earth.png">
+		<img class="earth earthR" data-src="image/earth.png">
 		<div class="run-box">
 			<div class="icon-index icon-1 icon-yi icon-show"></div>
 			<div class="icon-index icon-2 icon-yi"></div>
@@ -38,7 +38,6 @@
 	<div class="main-container container-1">
 		<div class="icon icon-change icon-change-1"></div>
 
-
 		<div class="title-container">
 			<div class="icon icon-title-1"></div>
 			<div class="timer-box">
@@ -51,6 +50,9 @@
 		<div class="play_wrap">
 			<div id="play_area" class="one"></div>
 			<div class="icon icon-border"></div>
+			<div class="loading-small">
+				<img class="loading-gif" src="./image/earth-gif.gif">
+			</div>
 		</div>
 
 		<div class="footer-container">
@@ -75,6 +77,40 @@
 	
 		<!-- <p>完成：<span id="play_score">0</span></p>
 		<p>交换：<span id="play_count">0</span></p> -->
+		</div>
+
+		<!--rule-->
+		<div class="modal-container" id="modal-rule">
+			<div class="modal-content icon icon-rule">
+				<div class="modal-close icon icon-close"></div>
+				<a class="icon icon-know" href="javascript:viod(0);"></a>
+			</div>
+		</div>
+
+		<!--next-->
+		<div class="modal-container" id="modal-next" style="display: block;">
+			<div class="modal-content icon icon-modalback">
+				<div class="modal-close icon icon-close"></div>
+				<div class="modal-content-section">
+					<div class="icon icon-jiesuo"></div>
+					<img src="./image/sample/test2.jpg" class="whole-pintu" />
+					<div class="text-box">
+						<p class="modal-key">本关用时：<span class="modal-value">250秒</span></p>
+						<p class="modal-key">目的地：<span class="modal-value">五道营</span></p>
+						<p class="modal-key">目的地介绍：</p>
+						<p class="modal-value">吧拉很快就啊哈SD卡是几号卡号是的空间好看吧拉很快就啊哈SD卡是几号卡号是的空间好看吧拉很快就啊哈SD卡是几号卡号是的空间好看</p>
+					</div>
+				</div>
+				<img src="./image/win.png" class="win-s"/>
+				<a class="icon icon-again" href="javascript:viod(0);"></a>
+			</div>
+		</div>
+		<!--failed-->
+		<div class="modal-container" id="modal-next">
+			<div class="modal-content icon icon-failed">
+				<a class="icon icon-again" href="javascript:viod(0);"></a>
+				<a class="icon icon-toshare" href=""></a>
+			</div>
 		</div>
 	</div>
 </body>

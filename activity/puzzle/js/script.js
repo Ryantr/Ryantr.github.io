@@ -50,17 +50,19 @@ var puzzleGame = function(options){
 puzzleGame.prototype = {
     imgloaded:function(){
         var self = this;
+        $(".loading-small").fadeIn();
         var img = new Image();
         img.src =  self.img;
-        // if(img.complete) { 
-        //     self.start();
-        //     return;
-        // }
+        if(img.complete){ 
+            self.start();
+            return;
+        }
         img.onload = function () {
             self.start();
         };
     },
     start:function(){
+        $(".loading-small").fadeOut();
         this.init();
         this.menu();
         this.play();
@@ -99,7 +101,6 @@ puzzleGame.prototype = {
             this.cellCol = this.levelArr[this.level][1];
             this.cellWidth = this.areaWidth/this.cellCol;
             this.cellHeight = this.areaHeight/this.cellRow;
-
 
             this.init();
         }
@@ -159,12 +160,6 @@ puzzleGame.prototype = {
         this.cb_cellDown.add(self.cellDown);
         for(var i = 0, len = this.cellArr.length; i<len; i++){
             this.cellArr[i].on({
-                // "touchstart": function(e){
-                //     self.cb_cellDown.fire(e, $(this), self);
-                //     console.log($(this))
-                //     return false;
-                // }
-
                 "click":function(e){
                     if(!self.clickBusy){
                         $(this).toggleClass("selected");
@@ -188,56 +183,6 @@ puzzleGame.prototype = {
                 }
             });
         }
-    },
-    cellDown:function(e,_cell,self){
-  // var //self = this,
-  // _x = e.pageX - _cell.offset().left,
-  // _y = e.pageY - _cell.offset().top;
-
-        var _x = e.originalEvent.targetTouches[0].pageX - _cell.offset().left,
-            _y = e.originalEvent.targetTouches[0].pageY - _cell.offset().top;
-
-        self.thisLeft = _cell.css("left");
-        self.thisTop = _cell.css("top");
-        self.thisIndex = Math.floor(parseInt(self.thisTop)/self.cellHeight)*self.cellCol;
-        console.log(self.thisIndex);
-        self.thisIndex += Math.floor(parseInt(self.thisLeft)/self.cellWidth);
-        _cell.css("zIndex",99);
-        $(document).on({
-            "touchmove": function(e){
-                _cell.css({
-                    "left": e.originalEvent.targetTouches[0].pageX - self.offX - _x,
-                    "top": e.originalEvent.targetTouches[0].pageY - self.offY - _y
-                })
-            },
-            "touchend": function(e){
-                $(document).off("touchstart");
-                $(document).off("touchmove");
-                $(document).off("touchend");
-                self.cb_cellDown.empty();
-                if( e.originalEvent.changedTouches[0].pageX - self.offX < 0 || e.originalEvent.changedTouches[0].pageX - self.offX > self.areaWidth || e.originalEvent.changedTouches[0].pageY - self.offY < 0 || e.originalEvent.changedTouches[0].pageY - self.offY > self.areaHeight ){
-                    //边界以外区域
-                    self.returnCell();
-                    return;
-                }
-
-                var _tx, _ty, _ti, _tj;
-                _tx = e.originalEvent.changedTouches[0].pageX - self.offX;
-                _ty = e.originalEvent.changedTouches[0].pageY - self.offY;
-
-                _ti = Math.floor( _ty / self.cellHeight );
-                _tj = Math.floor( _tx / self.cellWidth );
-                //console.log(_ti+"!"+_tj);
-                self.nextIndex = _ti*self.cellCol + _tj;
-                if(self.nextIndex == self.thisIndex){
-                    self.returnCell();
-                }else{
-                    //console.log("!!!");
-                    self.changeCell();
-                }
-                
-            }
-        })
     },
     myChangeCell:function(){
         var self = this,
@@ -273,57 +218,7 @@ puzzleGame.prototype = {
                 _nc.css("zIndex","");
                 self.clickBusy = false;
                 self.check();
-            
-            //if(!self.cb_cellDown.has(self.cellDown)) self.cb_cellDown.add(self.cellDown);
         })
-    },
-    changeCell:function(){
-        var self = this,
-        _tc = this.cellArr[this.thisIndex],
-        _tl = this.thisLeft,
-        _tt = this.thisTop,
-        _nc = this.cellArr[this.nextIndex],
-        _nl = (this.nextIndex % this.cellCol) * this.cellWidth,
-        _nt = Math.floor(this.nextIndex / this.cellCol) * this.cellHeight;
-
-        _nc.css("zIndex",98);
-  
-        this.cellArr[this.nextIndex] = _tc;
-        this.cellArr[this.thisIndex] = _nc;
-
-        this.ranArr[this.nextIndex] = this.ranArr[this.nextIndex] + this.ranArr[this.thisIndex];
-        this.ranArr[this.thisIndex] = this.ranArr[this.nextIndex] - this.ranArr[this.thisIndex];
-        this.ranArr[this.nextIndex] = this.ranArr[this.nextIndex] - this.ranArr[this.thisIndex];
-
-        _tc.animate({
-            "left": _nl,
-            "top": _nt
-            },self.time,self.easing,function(){
-                _tc.removeClass("hover");
-                _tc.css("zIndex","");
-        })
-
-        _nc.animate({
-            "left": _tl,
-            "top": _tt
-            },self.time,self.easing,function(){
-                _nc.removeClass("hover");
-                _nc.css("zIndex","");
-            self.check();
-   
-            if(!self.cb_cellDown.has(self.cellDown)) self.cb_cellDown.add(self.cellDown);
-        })
-    },
-    returnCell:function(){
-        var self = this;
-        this.cellArr[this.thisIndex].animate({
-            "left": self.thisLeft,
-            "top": self.thisTop
-            },self.time,self.easing,function(){
-                $(this).removeClass("hover");
-                $(this).css("zIndex","");
-                if(!self.cb_cellDown.has(self.cellDown)) self.cb_cellDown.add(self.cellDown);
-        });
     },
     check:function(){
         // this.e_playCount.html( ++ this.playCount);
@@ -333,10 +228,68 @@ puzzleGame.prototype = {
     },
     success:function(){
         alert("恭喜，假装进入下一关");
+    },
+    failed:function(){
+        $("#modal-failed").fadeIn();
     }
 }
 
-var intDiff = parseInt(40);//倒计时总秒数量
+
+
+
+
+var pintu,indexImgs,carImgs,winH,winW;
+$(function(){
+    winH = $(window).height();
+    winW = $(window).width();
+
+    indexImgs = ["./image/sprite_index.png","./image/earth.png","./image/sprite_game.png"];
+    //var gameImgs = "./image/sprite_game.png";
+    carImgs = ["./image/car1.png","./image/car2.png","./image/car3.png","./image/car4.png","./image/car5.png","./image/car6.png"];
+    $(".loading-container,.index-container,.main-container").height(winH);
+
+    isLoaded(indexImgs,indexLoaded());
+
+
+   
+
+
+
+    //var imgArray = []
+    $("#change").on("click",function(){
+        var imgname = Math.ceil(Math.random()*5);
+        pintu = new puzzleGame({
+            img: "./image/sample/test"+imgname+".jpg"
+        });
+        $('#second_show').html('<s></s>'+intDiff+'秒');
+    })
+    //进入游戏
+    $(".btn-container").on("touchstart",function(){
+        event.preventDefault();
+        $(this).children(".icon-btn").addClass("down");
+        setTimeout(function(){
+            $(".main-container").fadeIn();
+            gameLoad();
+            $(".index-container").fadeOut();
+        },300)
+    })
+    //弹窗事件
+    $(".icon-know").on("touchstart",function(){
+        $(this).parents(".modal-container").fadeOut();
+    })
+
+    $(".modal-close").on("touchstart",function(){
+        $(this).parents(".modal-container").fadeOut();
+    })
+
+    $(".icon-again").on("click",function(){
+       // puzzleGame.isInit = false;
+       pintu.start();
+       $('#second_show').html('<s></s>'+intDiff+'秒');
+    })
+})
+//计时器
+var intDiff = parseInt(100);//倒计时总秒数量
 var timer;
 function timerfun(intDiff){
     if(typeof timer != "undefined"){
@@ -346,13 +299,75 @@ function timerfun(intDiff){
         if(intDiff > 0){
             $('#second_show').html('<s></s>'+intDiff+'秒');
             intDiff--;
+            toTimer(intDiff)
         }else{
             //alert("失败了")
+            if(typeof pintu != "undefined") pintu.failed;
             clearInterval(timer)
         }
     }, 1000);
 } 
+function toTimer(num) {
+    var b_ = parseInt(num/100);
+    var s_ = parseInt((num%100)/10);
+    var g_ = parseInt(((num%100)%10));
+    result_ = (num || 0).toString().split('');
+    $(".timer-1").html(b_);
+    $(".timer-2").html(s_);
+    $(".timer-3").html(g_);
+}
 
+//图片加载完毕
+function isLoaded(imgs,callbak){
+    if(Array.isArray(imgs)){
+        var leth_ = imgs.length;
+        var loaded_ = 0;
+        for(i=0;i<leth_;i++){
+            var imgobj_ = new Image();
+            imgobj_.src = imgs[i];
+            imgobj_.onload = function(){
+                loaded_++;
+            };
+            if(loaded_ == leth_){
+                callbak;
+            }
+        }
+    }else{
+        var imgobj_ = new Image();
+        imgobj_.src = imgs;
+        imgobj_.onload = function(){
+            callbak;
+        };
+    }
+}
+
+//主页加载图片加载完毕
+function indexLoaded(){
+    $(".earthR").attr("src",$(".earthR").attr("data-src"));
+    $(".index-container").fadeIn();
+    $(".loading-container").fadeOut();
+    //小蚁动画
+    var iconId = 0;
+    var yiZoom = setInterval(function(){
+        $(".run-box .icon-index").eq(iconId+1).addClass("icon-show");
+        $(".run-box .icon-index").eq(iconId).removeClass("icon-show");
+        iconId ++;
+        if(iconId >= 5){iconId = parseInt(-1)}
+    },200)
+}
+//游戏初始化
+function gameLoad(){
+    //初始化游戏
+    pintu = new puzzleGame({
+        img: "./image/sample/test2.jpg"
+    });
+    
+    isLoaded(carImgs,carZoom());
+}
+
+
+
+//汽车帧图加载完毕
 function carZoom(){
     var ele = $('.carZoom');
     var idx = 1;
@@ -363,64 +378,3 @@ function carZoom(){
         idx++;
     },200);
 };
-
-
-
-$(function(){
-    var winH = $(window).height();
-    var winW = $(window).width();
-    console.log(winH);
-    $(".loading-container,.index-container,.main-container").height(winH);
-
-
-    setTimeout(function(){
-        var pg = new puzzleGame({
-            img: "./image/sample/test2.jpg"
-        });
-    },300)
-    
-
-    $("#renew").on("click",function(){
-       // puzzleGame.isInit = false;
-        pg.start();
-        $('#second_show').html('<s></s>'+intDiff+'秒');
-    })
-
-    //var imgArray = []
-    $("#change").on("click",function(){
-        var imgname = Math.ceil(Math.random()*5);
-        pg = new puzzleGame({
-            img: "./image/sample/test"+imgname+".jpg"
-        });
-        $('#second_show').html('<s></s>'+intDiff+'秒');
-    })
-
-
-    // 小车动画
-    carZoom()
-
-    var iconId = 0;
-    var yiZoom = setInterval(function(){
-        $(".run-box .icon-index").eq(iconId+1).addClass("icon-show");
-        $(".run-box .icon-index").eq(iconId).removeClass("icon-show");
-        iconId ++;
-        if(iconId >= 5){iconId = parseInt(-1)}
-    },200)
-
-    $(".btn-container").on("touchstart",function(){
-        event.preventDefault();
-        $(this).children(".icon-btn").addClass("down");
-        setTimeout(function(){
-            window.location.href="game.html";
-        },300)
-    })
-})
-
-function isLoaded(imgs,callbak){
-    if(Array.isArray(imgs)){
-        var leg_ = imgs.length();
-        for(i=0;i<leg_;i++){
-            
-        }
-    }
-}
