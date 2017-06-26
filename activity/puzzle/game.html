@@ -10,18 +10,20 @@
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/script.js?v0.1"></script>
+<script type="text/javascript" src="js/uuid.js"></script>
 </head>
 <body>
 	<!--loading-->
 	<div class="loading-container">
-		<img src="./image/earth-gif.gif" class="loading-gif">
+		<img src="/resource/img/earth-gif.gif" class="loading-gif">
 	</div>
 	<!--index-->
 	<div class="index-container">
 		<div class="header_container">
 			<div class="icon-index icon-title"></div>
+			<img class="blink" src="/resource/img/blink.gif"/>
 		</div>
-		<img class="earth earthR" data-src="image/earth.png">
+		<img class="earth earthR" data-src="/resource/img/earth.png">
 		<div class="run-box">
 			<div class="icon-index icon-1 icon-yi icon-show"></div>
 			<div class="icon-index icon-2 icon-yi"></div>
@@ -51,32 +53,15 @@
 			<div id="play_area" class="one"></div>
 			<div class="icon icon-border"></div>
 			<div class="loading-small">
-				<img class="loading-gif" src="./image/earth-gif.gif">
+				<img class="loading-gif" src="/resource/img/earth-gif.gif">
 			</div>
+			<div class="play_wrap_succ_mask"></div>
 		</div>
 
 		<div class="footer-container">
 			<div class="icon icon-flag"></div>
 			<div class="icon icon-line"></div>
-			<img class="carZoom" src="image/car1.png"/>
-		</div>
-	
-		<div class="play_menu">
-		<!-- <a id="play_btn_start" class="play_btn" href="javascript:void(0);" unselectable="on">开始</a>
-		<a id="play_btn_level" class="play_btn" href="javascript:void(0);" unselectable="on">
-			<span class="level_text">4 x 4</span>
-			<span class="level_icon"></span>
-		</a> -->
-		<!-- <div class="level_menu" id="play_menu_level">
-			<ul>
-				<li><a href="javascript:void(0);" level=0 >3 x 3</a></li>
-				<li><a href="javascript:void(0);" level=1 >4 x 4</a></li>
-				<li><a href="javascript:void(0);" level=2 >6 x 6</a></li>
-			</ul>
-		</div> -->
-	
-		<!-- <p>完成：<span id="play_score">0</span></p>
-		<p>交换：<span id="play_count">0</span></p> -->
+			<img class="carZoom" src="/resource/img/car1.png"/>
 		</div>
 
 		<!--rule-->
@@ -88,20 +73,20 @@
 		</div>
 
 		<!--next-->
-		<div class="modal-container" id="modal-next" style="display: block;">
+		<div class="modal-container" id="modal-next">
 			<div class="modal-content icon icon-modalback">
 				<div class="modal-close icon icon-close"></div>
 				<div class="modal-content-section">
 					<div class="icon icon-jiesuo"></div>
-					<img src="./image/sample/test2.jpg" class="whole-pintu" />
+					<img src="" class="whole-pintu" />
 					<div class="text-box">
-						<p class="modal-key">本关用时：<span class="modal-value">250秒</span></p>
+						<p class="modal-key">本关用时：<span class="modal-value value-time">250秒</span></p>
 						<p class="modal-key">目的地：<span class="modal-value">五道营</span></p>
 						<p class="modal-key">目的地介绍：</p>
-						<p class="modal-value">吧拉很快就啊哈SD卡是几号卡号是的空间好看吧拉很快就啊哈SD卡是几号卡号是的空间好看吧拉很快就啊哈SD卡是几号卡号是的空间好看</p>
+						<p class="value-desc">吧拉很快就啊哈SD卡是几号卡号是的空间好看吧拉很快就啊哈SD卡是几号卡号是的空间好看吧拉很快就啊哈SD卡是几号卡号是的空间好看</p>
 					</div>
 				</div>
-				<img src="./image/win.png" class="win-s"/>
+				<img src="/resource/img/win.png" class="win-s"/>
 				<a class="icon icon-again" href="javascript:viod(0);"></a>
 			</div>
 		</div>
@@ -112,6 +97,26 @@
 				<a class="icon icon-toshare" href=""></a>
 			</div>
 		</div>
+		<!--succ-->
+		<div class="modal-container" id="modal-succ">
+			<div class="modal-content icon icon-modalback">
+				<div class="modal-close icon icon-close"></div>
+				<div class="modal-content-section">
+					<div class="icon icon-tongguan"></div>
+					<img src="" class="whole-pintu" />
+					<div class="text-box">
+						<p class="modal-key">本关用时：<span class="modal-value value-time">250秒</span></p>
+						<p class="modal-key">目的地：<span class="modal-value">五道营</span></p>
+						<p class="modal-key">目的地介绍：</p>
+						<p class="value-desc"></p>
+					</div>
+				</div>
+				<img src="/resource/img/win.png" class="win-l"/>
+				<a class="icon icon-again" href="javascript:viod(0);"></a>
+				<a class="icon icon-toshare" href="javascript:viod(0);"></a>
+			</div>
+		</div>
+
 	</div>
 </body>
 </html>

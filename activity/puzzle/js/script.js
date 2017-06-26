@@ -238,7 +238,7 @@ puzzleGame.prototype = {
 
 
 
-var pintu,indexImgs,carImgs,winH,winW;
+var pintu,indexImgs,carImgs,winH,winW,pintuImg;
 $(function(){
     winH = $(window).height();
     winW = $(window).width();
@@ -251,8 +251,15 @@ $(function(){
     isLoaded(indexImgs,indexLoaded());
 
 
-   
-
+    $.ajax({
+        type: "GET",
+        url: "",
+        data:"",
+        dataType: "json",
+        success: function(data){
+                
+        }
+    });
 
 
     //var imgArray = []
@@ -269,7 +276,7 @@ $(function(){
         $(this).children(".icon-btn").addClass("down");
         setTimeout(function(){
             $(".main-container").fadeIn();
-            gameLoad();
+            isLoaded(carImgs,carZoom());
             $(".index-container").fadeOut();
         },300)
     })
@@ -355,16 +362,14 @@ function indexLoaded(){
         if(iconId >= 5){iconId = parseInt(-1)}
     },200)
 }
+
 //游戏初始化
 function gameLoad(){
     //初始化游戏
     pintu = new puzzleGame({
-        img: "./image/sample/test2.jpg"
+        img: pintuImg
     });
-    
-    isLoaded(carImgs,carZoom());
 }
-
 
 
 //汽车帧图加载完毕

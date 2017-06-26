@@ -35,10 +35,10 @@ h4,h5,h3,h2,h1,p,span,input,textarea{
 #play_area.three .play_cell{border:1px solid #8242d7;}
 #play_area.four .play_cell{border:1px solid #21c080;}
 #play_area.five .play_cell{border:1px solid #e64f84;}
+#play_area.succ .play_cell{border:none;}
+.play_wrap_succ_mask{display:none;width:90%;height:90%;position: absolute;top:0;left:0;bottom:0;right:0;margin:auto;background-color:rgba(255,255,255,0.5);border-radius:0.3rem;z-index: 250;}
 
 .icon-border{position: absolute;top:-2px;left:0;z-index:100;}
-
-
 
 #second_show{font-size: 0.5rem;text-align: center;display: inline-block;margin:0.2rem;}
 #renew,#change{font-size: 0.4rem;text-align: center;display: block;margin:0.2rem;line-height: 1.8;margin:0.2rem 0.5rem;background:red;}
@@ -60,15 +60,19 @@ h4,h5,h3,h2,h1,p,span,input,textarea{
 #modal-failed .icon-toshare{position:absolute;bottom:0.6rem;right:0.4rem;}
 #modal-failed .icon-again{position:absolute;bottom:0.6rem;left:0.4rem;}
 
-.modal-content-section{position:relative;width:4.6rem;height:6.8rem;margin-top:1.1rem;margin-left:1rem;background: #ccc;text-align: center;}
+.modal-content-section{position:relative;width:4.6rem;height:6.8rem;margin-top:1.1rem;margin-left:1rem;text-align: center;}
 .win-s{width:2.5rem;position: absolute;bottom:0.5rem;left:0.3rem;}
 #modal-next .icon-again{position:absolute;bottom:0.7rem;right:0.7rem;}
 .whole-pintu{display:block;width:1.7rem;height:1.7rem;margin:auto;margin-top: 0.2rem;}
 .text-box{text-align: left;}
 .modal-key{font-size:0.3rem;color:#e8186c;margin-top: 0.15rem;font-weight: bold;}
+.value-time{letter-spacing: 2px;}
 .modal-value{font-size:0.3rem;color:#000;display: inline-block;}
-
-
+.value-desc{font-size:0.3rem;color:#000;margin-top: 0.1rem;line-height: 1.4;}
+.win-l{position:absolute;width:5.38rem;height:5.09rem;top:0;bottom:0;left:0;right:0;margin:auto;transform:scale(0.1);-webkit-transform:scale(0.1);opacity: 0.3;}
+.win-l.show{opacity:1;transform:scale(0.8);-webkit-transform:scale(0.8);transition: all 0.5s;-webkit-transition: all 0.5s;}
+#modal-succ .icon-toshare{position:absolute;bottom:0.6rem;right:0.4rem;}
+#modal-succ .icon-again{position:absolute;bottom:0.6rem;left:0.4rem;}
 
 /******/
 .icon {
@@ -218,7 +222,7 @@ h4,h5,h3,h2,h1,p,span,input,textarea{
 .run-box{position: absolute;bottom:4.9rem;width:3.38rem;height:3.58rem;left:0;right:0;margin:auto;}
 .icon-yi{opacity: 0;position: absolute;bottom:0;left:0;}
 .icon-yi.icon-show{opacity: 1;}
-
+.blink{position:absolute;top:0;left:0;width:100%;}
 .earth{position: absolute;bottom:-4.5rem;left:-3.1rem;width:12.75rem;}
 .earthR{animation:zhuan 5s infinite linear;-moz-animation:zhuan 5s infinite linear;-webkit-animation:zhuan 5s infinite linear;transform-origin:6.75rem 6.07rem;-webkit-transform-origin:6.75rem 6.07rem;}
 
