@@ -15,7 +15,7 @@ var puzzleGame = function(options){
  this.offY = this.e_playArea.offset().top;
  
  this.levelArr = [[3,3],[4,4],[6,6]];
- this.level = 0;
+ this.level = 2;
  this.scoreArr = [100,200,400];
  this.score = 0;
  this.playCount = 0;
@@ -251,17 +251,7 @@ $(function(){
     isLoaded(indexImgs,indexLoaded());
 
 
-    $.ajax({
-        type: "GET",
-        url: "",
-        data:"",
-        dataType: "json",
-        success: function(data){
-                
-        }
-    });
-
-
+gameLoad()
     //var imgArray = []
     $("#change").on("click",function(){
         var imgname = Math.ceil(Math.random()*5);
@@ -367,7 +357,8 @@ function indexLoaded(){
 function gameLoad(){
     //初始化游戏
     pintu = new puzzleGame({
-        img: pintuImg
+        //img: pintuImg
+        img:"./image/sample/test1.jpg"
     });
 }
 
